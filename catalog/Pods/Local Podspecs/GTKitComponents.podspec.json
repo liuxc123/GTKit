@@ -1,0 +1,160 @@
+{
+  "name": "GTKitComponents",
+  "version": "0.0.1",
+  "summary": "This spec is an aggregate of all the GTKit Components.",
+  "homepage": "https://github.com/your/repo",
+  "authors": "Catalog",
+  "license": "Apache 2.0",
+  "source": {
+    "git": "https://github.com/your/repo.git",
+    "tag": "0.0.1"
+  },
+  "requires_arc": true,
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
+  },
+  "subspecs": [
+    {
+      "name": "ShadowElevations",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/ShadowElevations/src/*.h",
+      "source_files": "components/ShadowElevations/src/*.{h,m}"
+    },
+    {
+      "name": "ShadowLayer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/ShadowLayer/src/*.h",
+      "source_files": "components/ShadowLayer/src/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/ShadowElevations": [
+
+        ]
+      }
+    },
+    {
+      "name": "Typography",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Typography/src/*.h",
+      "source_files": [
+        "components/Typography/src/*.{h,m}",
+        "components/Typography/src/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTKitComponents/private/Application": [
+
+        ],
+        "GTKitComponents/private/Math": [
+
+        ]
+      }
+    },
+    {
+      "name": "private",
+      "subspecs": [
+        {
+          "name": "Application",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/private/Application/src/*.h",
+          "source_files": "components/private/Application/src/*.{h,m}"
+        },
+        {
+          "name": "KeyboardWatcher",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/private/KeyboardWatcher/src/*.h",
+          "source_files": "components/private/KeyboardWatcher/src/*.{h,m}",
+          "dependencies": {
+            "GTKitComponents/private/Application": [
+
+            ]
+          }
+        },
+        {
+          "name": "Math",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/private/Math/src/*.h",
+          "source_files": "components/private/Math/src/*.{h,m}"
+        },
+        {
+          "name": "Overlay",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/private/Overlay/src/*.h",
+          "source_files": [
+            "components/private/Overlay/src/*.{h,m}",
+            "components/private/Overlay/src/private/*.{h,m}"
+          ]
+        },
+        {
+          "name": "ShapeLibrary",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/private/ShapeLibrary/src/*.h",
+          "source_files": [
+            "components/private/ShapeLibrary/src/*.{h,m}",
+            "components/private/ShapeLibrary/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "GTKitComponents/private/Shapes": [
+
+            ],
+            "GTKitComponents/private/Math": [
+
+            ]
+          }
+        },
+        {
+          "name": "Shapes",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/private/Shapes/src/*.h",
+          "source_files": [
+            "components/private/Shapes/src/*.{h,m}",
+            "components/private/Shapes/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "GTKitComponents/ShadowLayer": [
+
+            ],
+            "GTKitComponents/private/Math": [
+
+            ]
+          }
+        },
+        {
+          "name": "UIMetrics",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/private/UIMetrics/src/*.h",
+          "source_files": [
+            "components/private/UIMetrics/src/*.{h,m}",
+            "components/private/UIMetrics/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "GTKitComponents/private/Application": [
+
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+framework module GTComponentsExamples {
+  umbrella header "GTComponentsExamples-umbrella.h"
+
+  export *
+  module * { export * }
+}

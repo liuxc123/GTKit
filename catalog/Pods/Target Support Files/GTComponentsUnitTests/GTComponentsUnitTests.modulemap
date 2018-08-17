@@ -1,0 +1,6 @@
+framework module GTComponentsUnitTests {
+  umbrella header "GTComponentsUnitTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

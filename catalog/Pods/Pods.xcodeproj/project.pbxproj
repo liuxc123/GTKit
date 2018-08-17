@@ -1,0 +1,2047 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		014E61B52F051650A62E1D63DEE02F18 /* GTCOverlayObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE7DC76CD52BBF7A9172C923CCD6CB2 /* GTCOverlayObserver.m */; };
+		01ADFAB465E6FE24ABD73BB5F868B07F /* GTCTypography.h in Headers */ = {isa = PBXBuildFile; fileRef = FD7D435AEF0EB9601B858EEEFFCBA2B6 /* GTCTypography.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05360FBCC4FAD381F92381BDB9556B87 /* OverlayNoopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 311C93AA5DC0B0E51D25B1C39872A3D9 /* OverlayNoopTests.m */; };
+		0B53BF5B65253E9EEF008E84F7F18350 /* GTCShadowElevations.m in Sources */ = {isa = PBXBuildFile; fileRef = 414C8323436304962D125DB51F91AEC0 /* GTCShadowElevations.m */; };
+		0E867C4DDFC7481191BEC2EE5F2BECA4 /* UIApplication+AppExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = CCF75B07CDFD6B29BCBA731DA0CD5743 /* UIApplication+AppExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		112989B620FBCCE0301C8B29704BFFCF /* GTTypography.h in Headers */ = {isa = PBXBuildFile; fileRef = 4905633FA2A3549F16C987002D058109 /* GTTypography.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		129670419CF6D3695AB142DC656626D6 /* GTFRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = CCC077061F7802B474EC54A3852D077C /* GTFRuntime.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1471249E548623E9523E814D0860B18D /* GTCShapedShadowLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EF2888FF6BD0CE048C8A7057112109 /* GTCShapedShadowLayer.m */; };
+		1712A82463D5D93DFFAE09F274D110E4 /* Pods-UnitTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AFC7FA6503FD9C3D5522E60C612E891 /* Pods-UnitTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F25B978F66F78BD0232E9B929ABF702 /* UIFontDescriptor+GTCTypography.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0CFCBD249EF8EF8A02A830CD7A58E0 /* UIFontDescriptor+GTCTypography.m */; };
+		202017B3571522A1DC326A2023E6C9D4 /* UIFont+GTCTypography.m in Sources */ = {isa = PBXBuildFile; fileRef = DB64FBFC48AA5A3AA91FABB4256B4495 /* UIFont+GTCTypography.m */; };
+		24C17074D1CCA0DCBB8A4181B3CA7A21 /* GTCOverlayObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 5896989F5BC79BA9773E368408095071 /* GTCOverlayObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		293FD28042C6A858E003C07F56BFEF45 /* GTCCurvedRectShapeGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = F0496C85D56F380706EAD3772F831F05 /* GTCCurvedRectShapeGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A0DC33A67788950B6E43B68B89F67E5 /* TypographyCustomFontViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 898D4C21C7501BE71508EC7D965C6A27 /* TypographyCustomFontViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CC454F9DCAD381E7D8B840E5F514429 /* GTFCatalogExample.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B20AE2A6BD11B3EF42369C37B832942 /* GTFCatalogExample.h */; };
+		2D93DCB581160ECC10D43947C200A53D /* TypographyMaterialStylesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C2DDA669368F650C989E0162437A2E /* TypographyMaterialStylesViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2FA8A77F53640D42C3919C9381D86297 /* ShadowDragSquareExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A95E4338EB9CC6E5E2BE7EA4BEB097C /* ShadowDragSquareExampleViewController.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		304C63235763B57C3536850FDAFA8D0C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D41C8778BF25F9D9E630450E6C67B2 /* XCTest.framework */; };
+		305B59FDF47EB5ABE2BA6901846C1A58 /* GTCShapedView.m in Sources */ = {isa = PBXBuildFile; fileRef = C27A61B2F66BF0C84ACED70C3703B875 /* GTCShapedView.m */; };
+		3385D070A5C5A1616B31C3467826B752 /* TypographyFontListExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F37B355659E2BAB3E0BA00203B27C8 /* TypographyFontListExample.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		35972F0C822A29A2A88B794272DFDB42 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A766453322653C6157CD41B6FEDCF1BD /* Foundation.framework */; };
+		384203E4C9F1E1FC0914AB82CB20DEF1 /* GTCEdgeTreatment.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F81989AE5F2AA856972FA2F52731CB /* GTCEdgeTreatment.m */; };
+		396BEDC87E95CF13F2B9DAA95A4554FC /* GTCPathGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E3F806ADC6D1CA1F1F7256B25F8E32 /* GTCPathGenerator.m */; };
+		3A15CA0BDEB2ABFAE9199F0C8C59E723 /* GTCCornerTreatment.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F53693EAD6583601B190DAFCAD556D4 /* GTCCornerTreatment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C7B282CAEFB100480FF53F2D51DEF7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A766453322653C6157CD41B6FEDCF1BD /* Foundation.framework */; };
+		3E5B0D3681E63B129519A39465C7D1D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A766453322653C6157CD41B6FEDCF1BD /* Foundation.framework */; };
+		454D4535B77336B58D90FF4788977804 /* ShadowedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0637DD35E40848955DA48ED411095CE /* ShadowedViews.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		456C9825CFBBBC7FCA1C390086A3BE3A /* GTShapeLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 403CD9578C66D535F39C2C5548023A2D /* GTShapeLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45DB50DE9F299B0F9852093193992569 /* GTOverlay.h in Headers */ = {isa = PBXBuildFile; fileRef = 206E3FAC1A6D54A394DD69B5B1231BC1 /* GTOverlay.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49B382532B2A9513B5565E2C4251582C /* GTShapes.h in Headers */ = {isa = PBXBuildFile; fileRef = 71F065B29E47F8ABDA814CD2392EBBD5 /* GTShapes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E08D17FD02689F0F59660713071341B /* GTCSlantedRectShapeGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = D3DA1F52CDC782E69273D1A08679217C /* GTCSlantedRectShapeGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E2F762958E4627999F1960FA7478FBA /* GTCRoundedCornerTreatment.h in Headers */ = {isa = PBXBuildFile; fileRef = 698C7CBEF5B1115C558E2E965826952B /* GTCRoundedCornerTreatment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F9038DDAC5DFA88F8E9762AE77451D4 /* GTCOverlayObserverTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = FDC46D4B7CD0A62DE796B566DAB9F284 /* GTCOverlayObserverTransition.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4FA2B62BC7102F244570C7F42CE0B832 /* GTCCutCornerTreatment.m in Sources */ = {isa = PBXBuildFile; fileRef = B44C37885EBEF5A949929E9DDEE8E6BE /* GTCCutCornerTreatment.m */; };
+		52AD2DF2A78D6DABAA84EC7D77226170 /* GTCOverlayImplementor.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0D6E587B9DD9822AFBE018481AD57C /* GTCOverlayImplementor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54E1C9F6CEB0CB8941705AF5A8BB34E5 /* GTCPillShapeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C654F69CBB19876B88343B30E2BE7C /* GTCPillShapeGenerator.m */; };
+		56AA0EC6E449FE2E53A2E62EA90B5ECA /* Pods-Catalog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D471790876D14C99076D7A5DBF9073 /* Pods-Catalog-dummy.m */; };
+		5A460FE4638EC0B6348B15055E6DC56E /* GTFRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = BA48F7E504479AA5E165821774A94394 /* GTFRuntime.m */; };
+		5C6179C92281F090405C55A1E2C0FAB6 /* GTCOverlayTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 7376013188799E0FE58C3AFC7A2FB61B /* GTCOverlayTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D4590FA995F4A6FA54A9927E8FFFAE0 /* GTCShadowElevations.h in Headers */ = {isa = PBXBuildFile; fileRef = B444FD355BC3551E8E8C7276CC62231D /* GTCShadowElevations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E84BAEBA0B72F95B6FF7EDCA966EA30 /* GTKeyboardWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 208DAF34610E8D6F89417CFC82392D3F /* GTKeyboardWatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62B0653B08576654B47F88B6339EC48A /* GTCOverlayUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = F8C19CE44B87EAEFCBA9BF491A834F4A /* GTCOverlayUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		655D27A9171D49BFD6F0EA0538924FDC /* GTCFontTextStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 21574817009D51F2E9D9DA4B74DA3AF8 /* GTCFontTextStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BC5A5C860B3DFD9DA59FC82ACBDC6E3 /* GTKitComponents-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A4A3DF17DEB2D6A3881328CBFF46F7 /* GTKitComponents-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C1DFA5B2ACCB988329BCBCA1B71369A /* GTApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 08A1E9C7934014A015AEAF7D5A05CDC3 /* GTApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E92266A2B46B736C9B3064CA7386F42 /* TypographySimpleExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F66CAC2DEA1A665D44BDBA4BC8AC05F /* TypographySimpleExampleViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6FE141F644CEAE89A39EF6720B49672F /* GTComponentsExamples-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D43DBFA4620FF5E91F66DE7104C89F7B /* GTComponentsExamples-dummy.m */; };
+		70369AA60D4B7CE92EBBA0039EAC08DB /* GTCPathGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BED252A2318F2F15C16EC4A53DFE368 /* GTCPathGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		756570B56EB36C7C39FF46C4EDBE6861 /* GTComponentsUnitTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B226A853630DFBAF14340B562463A9A /* GTComponentsUnitTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		772D2F5F9857E645DF2D06AAC103D131 /* GTComponentsUnitTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D452C83CE95B1CCBA6159E451E0B9A /* GTComponentsUnitTests-dummy.m */; };
+		77A1910C698E704BD7841DB30D0A9AD7 /* GTCLayoutMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C71F81302819978A2D2DE2E96641DB1 /* GTCLayoutMetrics.m */; };
+		79256A5A125FD864ED4954330624F6A1 /* ZShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BB7D0C88ECD3403AD19DBD1C8B288D /* ZShadow.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		79943D2AA1CD594EA7D1BADCA75DBD52 /* GTCOverlayUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F114476664CFEEC05EAC32853AF63BC /* GTCOverlayUtilities.m */; };
+		79FDA97E44024270A3A5B4532C9B10A7 /* GTCTriangleEdgeTreatment.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D656562C7B0EE77182FD560704B04D /* GTCTriangleEdgeTreatment.m */; };
+		7D38B323F760E51CBF4886B4E63693C1 /* GTCMathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A562A1DF4BD73E8266F02213E9AA32 /* GTCMathTests.m */; };
+		822D200E1A1E65E14BC346768771F607 /* ShadowDragSquareExample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C297D5DFEEA02C11C46286D243DEA74D /* ShadowDragSquareExample.storyboard */; };
+		82CD19A8200456139B262D8733BC2CB0 /* UIFont+GTCTypographyPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = E01E1FFDA61FCB7CF330616E524BD4D2 /* UIFont+GTCTypographyPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		836B5F5AEC498A5E7DA904C873D9BB74 /* GTCFontTraits.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE48510B4E42DF7C8C35543E6E2C877 /* GTCFontTraits.m */; };
+		83B413219F7E57424C0A0C4344532414 /* GTCCurvedRectShapeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5664AC70D67C8CFD17A9E81E818E12 /* GTCCurvedRectShapeGenerator.m */; };
+		84D54A8898BDF0655EEC4B954458E555 /* GTCOverlayObserverOverlay.h in Headers */ = {isa = PBXBuildFile; fileRef = 074D11C32C86AEE1C76709D25F222452 /* GTCOverlayObserverOverlay.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8C325F7AB18DB65DB6DD6E7D290B0044 /* GTShadowLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 414318E2A1FEA803597C69A092433850 /* GTShadowLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D87882000A1460682B9B41844D21F7B /* GTFCatalogExample.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 3B20AE2A6BD11B3EF42369C37B832942 /* GTFCatalogExample.h */; };
+		8E817ABF3C7A5A3DFE5381AF46CEC778 /* GTCMath.h in Headers */ = {isa = PBXBuildFile; fileRef = AFBBF05C531EF2F8D23760B5966C2FB5 /* GTCMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8FDE46265F9ABAFFDFDA5ACD1832D36D /* GTKitComponents-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8336E1BCE75DD9EDEAE21B64D9F9B4BC /* GTKitComponents-dummy.m */; };
+		90FE1EB6B2258957728F1B19171F7B69 /* GTCCurvedCornerTreatment.m in Sources */ = {isa = PBXBuildFile; fileRef = 591E863B7196AC0C8CD6E974B222A7DB /* GTCCurvedCornerTreatment.m */; };
+		914F8BF2911762C7B4FAE0BFC469DF5A /* GTCShapedShadowLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = F383217693C772440EC7CDF2544CE3AC /* GTCShapedShadowLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94AD55D5F3E5760BFBF5D45B4F7E13CC /* GTCShapedView.h in Headers */ = {isa = PBXBuildFile; fileRef = D526BC43F079A35F3943822FB06CBE32 /* GTCShapedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94E946A26E56505E98E85ED99238EBB5 /* GTCShadowLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C3AC038C95D14861FA168E59CDCD7204 /* GTCShadowLayer.m */; };
+		95FBD7BC19FBDF4D49ECCEDDD72D7649 /* UIFont+GTCTypography.h in Headers */ = {isa = PBXBuildFile; fileRef = CFC11C63223CFC82C2D644DB66CF098B /* UIFont+GTCTypography.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99022E551C82AC39E8E822A85181956F /* GTCShadowLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 255F9F6CE67A110D31CDCCBF63B99CF8 /* GTCShadowLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C57FC7EC8EEFCA2032B59F377097078 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A766453322653C6157CD41B6FEDCF1BD /* Foundation.framework */; };
+		9CAB79DCCE57EA5427151421973437DE /* GTCCurvedCornerTreatment.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B3892696EDC64E11801AEFF1AC26618 /* GTCCurvedCornerTreatment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9DCE0D071124636324F0303CE3EDE6FC /* GTCRoundedCornerTreatment.m in Sources */ = {isa = PBXBuildFile; fileRef = 111F470E71F9DDF6DB4E19DEAE041A19 /* GTCRoundedCornerTreatment.m */; };
+		9FFE6F62FB223D6E582864C34C2BE607 /* ExampleShadowedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4BB7B941C8238DDDEAFF35F651F973 /* ExampleShadowedView.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A6806A490404DF736BC3E141D948F68F /* GTCOverlayObserverTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E85BAC024792BCBB69FF792231E48A /* GTCOverlayObserverTransition.m */; };
+		A9316D7CF0AC41BD13875F6397791D75 /* GTFNodeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD607732597102287883DBC8EEE868E /* GTFNodeListViewController.m */; };
+		ABB7A3224B6709C6AFC639AF1315B711 /* GTFNodeListViewController.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = B5EF77A647CD2A355AAB68AE5145C6DC /* GTFNodeListViewController.h */; };
+		AE5C19D8FAFE95B6A4338932B1F0CCD2 /* UIFont+GTCSimpleEquality.h in Headers */ = {isa = PBXBuildFile; fileRef = 96719DD007FE32B217A1570494E51001 /* UIFont+GTCSimpleEquality.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF2A9F8533609152578E027E5C06F6C4 /* GTCRectangleShapeGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = E9D31AFAE943A77D8E8464814C00BF5B /* GTCRectangleShapeGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2BB8BCE0098ACF9E8A1AB49137D1AE0 /* KeyboardWatcherNoopTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8063444D563AB89D79255A6F65FB109C /* KeyboardWatcherNoopTest.m */; };
+		B3C0269DB156E6C87E81A1AEEE073F1A /* GTCCornerTreatment.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C257C61FF67E15D0C5C9D972B2912E /* GTCCornerTreatment.m */; };
+		B82F8D45B4F438B9D79DB72A2DBD80A6 /* GTComponentsExamples-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19EC10143E80CA2B4B3E50A69C4C2BF8 /* GTComponentsExamples-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B83947B4933E9729F0D366F5C18A6845 /* UIFontDescriptor+GTCTypography.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CC8F257A7D8AAA72626A6B1880F1DDF /* UIFontDescriptor+GTCTypography.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8C5F8B59291C2D0218C5DBD736A8EF5 /* TypographyCustomFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B180F520AB3B975A9F8195FDC18479D9 /* TypographyCustomFontViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B8E939A8025F8B0FB4E8A019B7DAA059 /* GTCatalog.h in Headers */ = {isa = PBXBuildFile; fileRef = 236B5C0B4E1A81524C5AC35E3ADD1320 /* GTCatalog.h */; };
+		BA3B4EB0AB50DECC148A3C0FC697D04A /* GTCOverlayAnimationObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = D58EF3B6A00105E2DE3B10265D4CBE79 /* GTCOverlayAnimationObserver.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BA5976834ED94430A9A04E7743F93F45 /* GTCFontTraits.h in Headers */ = {isa = PBXBuildFile; fileRef = B1C02F4FFC04F818645B786D23286023 /* GTCFontTraits.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BC34357382182F3E6B3ED5C442D9E8EC /* Pods-UnitTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C24CAC7C80673AC8D909D24EDBDE3BB3 /* Pods-UnitTests-dummy.m */; };
+		C185E2F4D5C93CD5E8205E6818E8BC6A /* UIApplication+AppExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C59F9063ADBA7E39C5FCBA2F9FCCD38 /* UIApplication+AppExtensions.m */; };
+		C18AE5082F49892BEF1004D9738F4086 /* TypographySimpleExampleViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D911D9198B8EA46A6FC14C4B2A848A9 /* TypographySimpleExampleViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3631257B009F179DEF7935F0CB8FB55 /* GTCCutCornerTreatment.h in Headers */ = {isa = PBXBuildFile; fileRef = 712ABEB1A63DF42CACBE344DE7D2B60F /* GTCCutCornerTreatment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C40BAE5FCBC52C45BFB92A03012CA14B /* GTCOverlayAnimationObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 04335D5DB2400D79A0FCC01459907A4B /* GTCOverlayAnimationObserver.m */; };
+		C46F4CCC66A59B94D8C56FE274DF2150 /* UIFont+GTCSimpleEquality.m in Sources */ = {isa = PBXBuildFile; fileRef = 6553B848DE8A328082C6915F048A8649 /* UIFont+GTCSimpleEquality.m */; };
+		C4FCE3625C661EA846EF703A358713A8 /* GTCTriangleEdgeTreatment.h in Headers */ = {isa = PBXBuildFile; fileRef = 8715AA1BC270720F5D02E8F60A8302B9 /* GTCTriangleEdgeTreatment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C78FF4FE6AE2AFD477E61C97C4EBD770 /* GTCKeyboardWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C68E9113CF0E94CA82FDD4D51FB0DD1 /* GTCKeyboardWatcher.m */; };
+		CA9DD865D74BE9B476B58180EE76A476 /* GTCSlantedRectShapeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C31924EED90D8B7F34DF239DF081F0E3 /* GTCSlantedRectShapeGenerator.m */; };
+		D24C4968BD0855809091466381E2FE7C /* GTFNodeListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B5EF77A647CD2A355AAB68AE5145C6DC /* GTFNodeListViewController.h */; };
+		D4D7331BBFAB937E59E46BE82D82BBAA /* TypographyMaterialStylesViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F5F7C579C35FEBFFA4BE9DEBE3C8945 /* TypographyMaterialStylesViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4F1F0E38FAF373CD2FE46A482C84C1E /* GTCPillShapeGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CC292551594C97C5F8449A75A5F00B8 /* GTCPillShapeGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D639A9DAC8BB6F849B31D4B06A7E6893 /* GTCShapeGenerating.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F6E4B35AAFB91B1E7708EFC1C7E5100 /* GTCShapeGenerating.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6418982E6BC5CCEE16147071EC42318 /* ZShadow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56A82EC52CE3A666856B41C24FA2B8B /* ZShadow.xib */; };
+		DEB0D30209D2ED8A149C6CB221C52B16 /* UIFont+GTCTypographyPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50928BECD50731C2E89D5A7758F43F3C /* UIFont+GTCTypographyPrivate.m */; };
+		E2B264CF9A15339EE5EB76DA418F0D25 /* ShapesShadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39A7594F81CAFD4FEAE4E7D3C369816 /* ShapesShadows.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E741BEC64B224B0AF069722A3CBD9C35 /* GTCLayoutMetrics.h in Headers */ = {isa = PBXBuildFile; fileRef = 118C1EC8CD8E4FD16DA7B1C954968902 /* GTCLayoutMetrics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E96BA1805D4693FA9C231C2FB0B45378 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A766453322653C6157CD41B6FEDCF1BD /* Foundation.framework */; };
+		E9794932F02AD6655334C94078FAAF6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A766453322653C6157CD41B6FEDCF1BD /* Foundation.framework */; };
+		ED01F40636EC849A6D2AD6A6DF67B450 /* GTCOverlayObserverOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6D0617B12A730887E76138534C5E63 /* GTCOverlayObserverOverlay.m */; };
+		EE1C38D6AD8DCC92F9096609892FB359 /* GTKitComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE88515B4E5D0FC94C078AFDCAC5CA05 /* GTKitComponents.framework */; };
+		EE2CE2D0FBA788B0E58617E7B325C2C8 /* GTCatalog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A0D3D3B7150B374574E05D15F431E31 /* GTCatalog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF3A44E9892690E2E04E7959952E93C2 /* GTKitComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE88515B4E5D0FC94C078AFDCAC5CA05 /* GTKitComponents.framework */; };
+		EF4202083D7761F6C25ED0A7F43F3F00 /* GTShadowElevations.h in Headers */ = {isa = PBXBuildFile; fileRef = EBCE0A39D5B5ECCEE841077D9832AEA6 /* GTShadowElevations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFC88E4168434725BFCA9AF69B115BDD /* GTUIMetrics.h in Headers */ = {isa = PBXBuildFile; fileRef = 207C772264E725D9D9AF327F47947585 /* GTUIMetrics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F37EE672911B52BDAE30F85B1D79F29F /* GTCEdgeTreatment.h in Headers */ = {isa = PBXBuildFile; fileRef = 95527534CD74C600B60A5A9F82D16731 /* GTCEdgeTreatment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F721A8CD8BDBA81467EAFA2A54BD7017 /* GTCatalog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A33D5D365F078A68261B7ED891D5FD16 /* GTCatalog-dummy.m */; };
+		F8338A06E6738AE12AB03F3CBBDB39AD /* Pods-Catalog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6523890F32CBF6207680357CA59D2FF2 /* Pods-Catalog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA85F317A04DA0DC067BD012A5026DCA /* GTCatalog.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 236B5C0B4E1A81524C5AC35E3ADD1320 /* GTCatalog.h */; };
+		FB4E960D436FAB053CF4386942F1FEB9 /* GTMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4CD3B18C1D9678F64F26D605A0DF6A /* GTMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBC095C276BB776DF296CE62598E3CD3 /* GTCTypography.m in Sources */ = {isa = PBXBuildFile; fileRef = C17B93BA05820321D14157F92B453CC9 /* GTCTypography.m */; };
+		FF4E03B975C4280240EBB4210B36402D /* GTCKeyboardWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 808A8ECBDB413777DDE38F9DB68B7224 /* GTCKeyboardWatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF8B8E33C0A492BDA5C04008BF473CE7 /* GTCRectangleShapeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B523806FB61A43D907C9D9E5A8008 /* GTCRectangleShapeGenerator.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		11AB5013CB9000DE5DB3A44CD337C32B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C09F4236451228FDB645FDB63E278CD1;
+			remoteInfo = GTKitComponents;
+		};
+		35C7B4481EFA310544FE7370F494B7DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B75EE7DAC15838019EF4CFC71ECC1D0B;
+			remoteInfo = GTComponentsUnitTests;
+		};
+		37C08F182BEE9A67A6CD975545B4D9CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 688A67C0E5F60FA3D9A0A044F5BC385B;
+			remoteInfo = GTCatalog;
+		};
+		761CFB25B0385466350E14AF09252EB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 218CD328B2568BEC2DC8FD73B367C110;
+			remoteInfo = GTComponentsExamples;
+		};
+		AE9D5360F68B01D941BAFC29E627F8F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C09F4236451228FDB645FDB63E278CD1;
+			remoteInfo = GTKitComponents;
+		};
+		B8399BC74122E810785E440747DB2655 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C09F4236451228FDB645FDB63E278CD1;
+			remoteInfo = GTKitComponents;
+		};
+		CA88CE61A6F5C6E032EEA134B0B008F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 688A67C0E5F60FA3D9A0A044F5BC385B;
+			remoteInfo = GTCatalog;
+		};
+		FD72351F8205FF37A7726E0C1E51AFF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C09F4236451228FDB645FDB63E278CD1;
+			remoteInfo = GTKitComponents;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EF042B9FC353BBFB2983A54CCE99E2E3 /* Copy . Public Headers */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(PUBLIC_HEADERS_FOLDER_PATH)/.";
+			dstSubfolderSpec = 16;
+			files = (
+				FA85F317A04DA0DC067BD012A5026DCA /* GTCatalog.h in Copy . Public Headers */,
+				8D87882000A1460682B9B41844D21F7B /* GTFCatalogExample.h in Copy . Public Headers */,
+				ABB7A3224B6709C6AFC639AF1315B711 /* GTFNodeListViewController.h in Copy . Public Headers */,
+			);
+			name = "Copy . Public Headers";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		04335D5DB2400D79A0FCC01459907A4B /* GTCOverlayAnimationObserver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTCOverlayAnimationObserver.m; sourceTree = "<group>"; };
+		074D11C32C86AEE1C76709D25F222452 /* GTCOverlayObserverOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTCOverlayObserverOverlay.h; sourceTree = "<group>"; };
+		08A1E9C7934014A015AEAF7D5A05CDC3 /* GTApplication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTApplication.h; path = components/private/Application/src/GTApplication.h; sourceTree = "<group>"; };
+		0B6D0617B12A730887E76138534C5E63 /* GTCOverlayObserverOverlay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTCOverlayObserverOverlay.m; sourceTree = "<group>"; };
+		0EBC4E2704BDCE6FDF45A53E32EDBEEC /* Pods-UnitTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UnitTests.modulemap"; sourceTree = "<group>"; };
+		0F4BB7B941C8238DDDEAFF35F651F973 /* ExampleShadowedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExampleShadowedView.swift; sourceTree = "<group>"; };
+		111F470E71F9DDF6DB4E19DEAE041A19 /* GTCRoundedCornerTreatment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTCRoundedCornerTreatment.m; path = components/private/ShapeLibrary/src/GTCRoundedCornerTreatment.m; sourceTree = "<group>"; };
+		118C1EC8CD8E4FD16DA7B1C954968902 /* GTCLayoutMetrics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCLayoutMetrics.h; path = components/private/UIMetrics/src/GTCLayoutMetrics.h; sourceTree = "<group>"; };
+		12EFEE67DB07D69A3578FF0A52A313F7 /* GTComponentsUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTComponentsUnitTests.framework; path = GTComponentsUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14C257C61FF67E15D0C5C9D972B2912E /* GTCCornerTreatment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTCCornerTreatment.m; path = components/private/Shapes/src/GTCCornerTreatment.m; sourceTree = "<group>"; };
+		14D656562C7B0EE77182FD560704B04D /* GTCTriangleEdgeTreatment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTCTriangleEdgeTreatment.m; path = components/private/ShapeLibrary/src/GTCTriangleEdgeTreatment.m; sourceTree = "<group>"; };
+		19EC10143E80CA2B4B3E50A69C4C2BF8 /* GTComponentsExamples-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTComponentsExamples-umbrella.h"; sourceTree = "<group>"; };
+		1A29323EE3B7DBC236EAF6804F870884 /* Pods-Catalog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Catalog.debug.xcconfig"; sourceTree = "<group>"; };
+		1CC8F257A7D8AAA72626A6B1880F1DDF /* UIFontDescriptor+GTCTypography.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIFontDescriptor+GTCTypography.h"; path = "components/Typography/src/UIFontDescriptor+GTCTypography.h"; sourceTree = "<group>"; };
+		1F53693EAD6583601B190DAFCAD556D4 /* GTCCornerTreatment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCCornerTreatment.h; path = components/private/Shapes/src/GTCCornerTreatment.h; sourceTree = "<group>"; };
+		206E3FAC1A6D54A394DD69B5B1231BC1 /* GTOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTOverlay.h; path = components/private/Overlay/src/GTOverlay.h; sourceTree = "<group>"; };
+		207C772264E725D9D9AF327F47947585 /* GTUIMetrics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTUIMetrics.h; path = components/private/UIMetrics/src/GTUIMetrics.h; sourceTree = "<group>"; };
+		208DAF34610E8D6F89417CFC82392D3F /* GTKeyboardWatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTKeyboardWatcher.h; path = components/private/KeyboardWatcher/src/GTKeyboardWatcher.h; sourceTree = "<group>"; };
+		21574817009D51F2E9D9DA4B74DA3AF8 /* GTCFontTextStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCFontTextStyle.h; path = components/Typography/src/GTCFontTextStyle.h; sourceTree = "<group>"; };
+		22F37B355659E2BAB3E0BA00203B27C8 /* TypographyFontListExample.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TypographyFontListExample.swift; sourceTree = "<group>"; };
+		236B5C0B4E1A81524C5AC35E3ADD1320 /* GTCatalog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCatalog.h; path = src/GTCatalog.h; sourceTree = "<group>"; };
+		255F9F6CE67A110D31CDCCBF63B99CF8 /* GTCShadowLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCShadowLayer.h; path = components/ShadowLayer/src/GTCShadowLayer.h; sourceTree = "<group>"; };
+		28E3F806ADC6D1CA1F1F7256B25F8E32 /* GTCPathGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTCPathGenerator.m; path = components/private/Shapes/src/GTCPathGenerator.m; sourceTree = "<group>"; };
+		2B3892696EDC64E11801AEFF1AC26618 /* GTCCurvedCornerTreatment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCCurvedCornerTreatment.h; path = components/private/ShapeLibrary/src/GTCCurvedCornerTreatment.h; sourceTree = "<group>"; };
+		2BED252A2318F2F15C16EC4A53DFE368 /* GTCPathGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCPathGenerator.h; path = components/private/Shapes/src/GTCPathGenerator.h; sourceTree = "<group>"; };
+		2C80109308D3DB762862353159C9A97F /* Pods-Catalog-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Catalog-resources.sh"; sourceTree = "<group>"; };
+		2CC3B076246EFEC614B8CDE7037AC7AF /* Pods_Catalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Catalog.framework; path = "Pods-Catalog.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D46A71357ECB7AD4189DBB05EE49E21 /* GTComponentsExamples-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTComponentsExamples-prefix.pch"; sourceTree = "<group>"; };
+		2DFF976D6A1DCA52AD8B0291A5B4A30D /* Pods-Catalog-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Catalog-frameworks.sh"; sourceTree = "<group>"; };
+		2E8EB60BDE655D1FFC76C2719DA17B0F /* GTCatalog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GTCatalog.modulemap; sourceTree = "<group>"; };
+		2E9A4D2F82D5F56D07AB0DD67BDF70EE /* GTKitComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTKitComponents.framework; path = GTKitComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EBC7BC13CCBB71750372F67BF69A612 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F66CAC2DEA1A665D44BDBA4BC8AC05F /* TypographySimpleExampleViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TypographySimpleExampleViewController.m; sourceTree = "<group>"; };
+		311C93AA5DC0B0E51D25B1C39872A3D9 /* OverlayNoopTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OverlayNoopTests.m; sourceTree = "<group>"; };
+		339E7863EDBB7532110D04A68D45608F /* GTComponentsExamples.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = GTComponentsExamples.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3539AB09675AA3156703BE2F96A1D00F /* GTComponentsUnitTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTComponentsUnitTests.xcconfig; sourceTree = "<group>"; };
+		389BD6425ADF57E4C94E198CCECA9592 /* Pods-Catalog-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Catalog-acknowledgements.plist"; sourceTree = "<group>"; };
+		3A58C2C9AD3CB1EF4122AD2F10758351 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B20AE2A6BD11B3EF42369C37B832942 /* GTFCatalogExample.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTFCatalogExample.h; path = src/GTFCatalogExample.h; sourceTree = "<group>"; };
+		3BD03B42E9580822D6781C61550772C3 /* GTKitComponents.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = GTKitComponents.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3E3706B47B6BB5ACC342B4C9B754B7A6 /* Pods-UnitTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UnitTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3F114476664CFEEC05EAC32853AF63BC /* GTCOverlayUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTCOverlayUtilities.m; sourceTree = "<group>"; };
+		403CD9578C66D535F39C2C5548023A2D /* GTShapeLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTShapeLibrary.h; path = components/private/ShapeLibrary/src/GTShapeLibrary.h; sourceTree = "<group>"; };
+		414318E2A1FEA803597C69A092433850 /* GTShadowLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTShadowLayer.h; path = components/ShadowLayer/src/GTShadowLayer.h; sourceTree = "<group>"; };
+		414C8323436304962D125DB51F91AEC0 /* GTCShadowElevations.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTCShadowElevations.m; path = components/ShadowElevations/src/GTCShadowElevations.m; sourceTree = "<group>"; };
+		47A5DC5A7960FC84AA1C80502AD69ABC /* GTKitComponents.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTKitComponents.xcconfig; sourceTree = "<group>"; };
+		48F81989AE5F2AA856972FA2F52731CB /* GTCEdgeTreatment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTCEdgeTreatment.m; path = components/private/Shapes/src/GTCEdgeTreatment.m; sourceTree = "<group>"; };
+		4905633FA2A3549F16C987002D058109 /* GTTypography.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTTypography.h; path = components/Typography/src/GTTypography.h; sourceTree = "<group>"; };
+		4C4CD3B18C1D9678F64F26D605A0DF6A /* GTMath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMath.h; path = components/private/Math/src/GTMath.h; sourceTree = "<group>"; };
+		4F6E4B35AAFB91B1E7708EFC1C7E5100 /* GTCShapeGenerating.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCShapeGenerating.h; path = components/private/Shapes/src/GTCShapeGenerating.h; sourceTree = "<group>"; };
+		50928BECD50731C2E89D5A7758F43F3C /* UIFont+GTCTypographyPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIFont+GTCTypographyPrivate.m"; sourceTree = "<group>"; };
+		510BAA448DB10AE71AFB2F4BA44C40AE /* Pods_UnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UnitTests.framework; path = "Pods-UnitTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		539E25BAAADE882306F553ED00B5F96D /* GTComponentsUnitTests-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTComponentsUnitTests-prefix.pch"; sourceTree = "<group>"; };
+		576E67D4B27275BFF580F07666CA7BC5 /* Pods-Catalog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Catalog.modulemap"; sourceTree = "<group>"; };
+		5896989F5BC79BA9773E368408095071 /* GTCOverlayObserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCOverlayObserver.h; path = components/private/Overlay/src/GTCOverlayObserver.h; sourceTree = "<group>"; };
+		591E863B7196AC0C8CD6E974B222A7DB /* GTCCurvedCornerTreatment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTCCurvedCornerTreatment.m; path = components/private/ShapeLibrary/src/GTCCurvedCornerTreatment.m; sourceTree = "<group>"; };
+		5A95E4338EB9CC6E5E2BE7EA4BEB097C /* ShadowDragSquareExampleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShadowDragSquareExampleViewController.swift; sourceTree = "<group>"; };
+		5AFC7FA6503FD9C3D5522E60C612E891 /* Pods-UnitTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UnitTests-umbrella.h"; sourceTree = "<group>"; };
+		5C02EA0F3D9F72EE854DE84DB16598D9 /* Pods-Catalog-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Catalog-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5C71F81302819978A2D2DE2E96641DB1 /* GTCLayoutMetrics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTCLayoutMetrics.m; path = components/private/UIMetrics/src/GTCLayoutMetrics.m; sourceTree = "<group>"; };
+		5F5F7C579C35FEBFFA4BE9DEBE3C8945 /* TypographyMaterialStylesViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TypographyMaterialStylesViewController.h; sourceTree = "<group>"; };
+		62C2DDA669368F650C989E0162437A2E /* TypographyMaterialStylesViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TypographyMaterialStylesViewController.m; sourceTree = "<group>"; };
+		63D41C8778BF25F9D9E630450E6C67B2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6523890F32CBF6207680357CA59D2FF2 /* Pods-Catalog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Catalog-umbrella.h"; sourceTree = "<group>"; };
+		6553B848DE8A328082C6915F048A8649 /* UIFont+GTCSimpleEquality.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIFont+GTCSimpleEquality.m"; path = "components/Typography/src/UIFont+GTCSimpleEquality.m"; sourceTree = "<group>"; };
+		6578C448D7543D28E92F296E3B92BE82 /* GTCatalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTCatalog.framework; path = GTCatalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		687719F80F5BA26E2444B13268FE7994 /* GTComponentsExamples.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTComponentsExamples.xcconfig; sourceTree = "<group>"; };
+		698C7CBEF5B1115C558E2E965826952B /* GTCRoundedCornerTreatment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCRoundedCornerTreatment.h; path = components/private/ShapeLibrary/src/GTCRoundedCornerTreatment.h; sourceTree = "<group>"; };
+		6B5664AC70D67C8CFD17A9E81E818E12 /* GTCCurvedRectShapeGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTCCurvedRectShapeGenerator.m; path = components/private/ShapeLibrary/src/GTCCurvedRectShapeGenerator.m; sourceTree = "<group>"; };
+		6DCE54197EC3594B026EFEA7CB82501D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E0D6E587B9DD9822AFBE018481AD57C /* GTCOverlayImplementor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCOverlayImplementor.h; path = components/private/Overlay/src/GTCOverlayImplementor.h; sourceTree = "<group>"; };
+		6E7EE40670E58D1ECCDC9B6A003AB422 /* Pods-UnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UnitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		712ABEB1A63DF42CACBE344DE7D2B60F /* GTCCutCornerTreatment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCCutCornerTreatment.h; path = components/private/ShapeLibrary/src/GTCCutCornerTreatment.h; sourceTree = "<group>"; };
+		71F065B29E47F8ABDA814CD2392EBBD5 /* GTShapes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTShapes.h; path = components/private/Shapes/src/GTShapes.h; sourceTree = "<group>"; };
+		722EC171FEA60A3799AF48EFB53913D2 /* GTKitComponents.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GTKitComponents.modulemap; sourceTree = "<group>"; };
+		7376013188799E0FE58C3AFC7A2FB61B /* GTCOverlayTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCOverlayTransitioning.h; path = components/private/Overlay/src/GTCOverlayTransitioning.h; sourceTree = "<group>"; };
+		75196E2DE0A3FC31385923829FCCF899 /* GTComponentsUnitTests.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = GTComponentsUnitTests.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		78D9A1DC8B3F2EFD9CACE2B525CC94C5 /* GTComponentsExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTComponentsExamples.framework; path = GTComponentsExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78EFFF0E0AD4B757C623C4554C038686 /* GTCatalog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTCatalog.xcconfig; sourceTree = "<group>"; };
+		7A5B523806FB61A43D907C9D9E5A8008 /* GTCRectangleShapeGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTCRectangleShapeGenerator.m; path = components/private/Shapes/src/GTCRectangleShapeGenerator.m; sourceTree = "<group>"; };
+		7C59F9063ADBA7E39C5FCBA2F9FCCD38 /* UIApplication+AppExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+AppExtensions.m"; path = "components/private/Application/src/UIApplication+AppExtensions.m"; sourceTree = "<group>"; };
+		7CC292551594C97C5F8449A75A5F00B8 /* GTCPillShapeGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCPillShapeGenerator.h; path = components/private/ShapeLibrary/src/GTCPillShapeGenerator.h; sourceTree = "<group>"; };
+		8063444D563AB89D79255A6F65FB109C /* KeyboardWatcherNoopTest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KeyboardWatcherNoopTest.m; sourceTree = "<group>"; };
+		808A8ECBDB413777DDE38F9DB68B7224 /* GTCKeyboardWatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCKeyboardWatcher.h; path = components/private/KeyboardWatcher/src/GTCKeyboardWatcher.h; sourceTree = "<group>"; };
+		8336E1BCE75DD9EDEAE21B64D9F9B4BC /* GTKitComponents-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GTKitComponents-dummy.m"; sourceTree = "<group>"; };
+		8715AA1BC270720F5D02E8F60A8302B9 /* GTCTriangleEdgeTreatment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCTriangleEdgeTreatment.h; path = components/private/ShapeLibrary/src/GTCTriangleEdgeTreatment.h; sourceTree = "<group>"; };
+		87D452C83CE95B1CCBA6159E451E0B9A /* GTComponentsUnitTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GTComponentsUnitTests-dummy.m"; sourceTree = "<group>"; };
+		898D4C21C7501BE71508EC7D965C6A27 /* TypographyCustomFontViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TypographyCustomFontViewController.h; sourceTree = "<group>"; };
+		8A0D3D3B7150B374574E05D15F431E31 /* GTCatalog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTCatalog-umbrella.h"; sourceTree = "<group>"; };
+		8B226A853630DFBAF14340B562463A9A /* GTComponentsUnitTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTComponentsUnitTests-umbrella.h"; sourceTree = "<group>"; };
+		8C68E9113CF0E94CA82FDD4D51FB0DD1 /* GTCKeyboardWatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTCKeyboardWatcher.m; path = components/private/KeyboardWatcher/src/GTCKeyboardWatcher.m; sourceTree = "<group>"; };
+		8D911D9198B8EA46A6FC14C4B2A848A9 /* TypographySimpleExampleViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TypographySimpleExampleViewController.h; sourceTree = "<group>"; };
+		90D471790876D14C99076D7A5DBF9073 /* Pods-Catalog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Catalog-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95527534CD74C600B60A5A9F82D16731 /* GTCEdgeTreatment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCEdgeTreatment.h; path = components/private/Shapes/src/GTCEdgeTreatment.h; sourceTree = "<group>"; };
+		96719DD007FE32B217A1570494E51001 /* UIFont+GTCSimpleEquality.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIFont+GTCSimpleEquality.h"; path = "components/Typography/src/UIFont+GTCSimpleEquality.h"; sourceTree = "<group>"; };
+		9ADC7D8A2D91B4EF6FFCBAB9236E209F /* GTComponentsUnitTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GTComponentsUnitTests.modulemap; sourceTree = "<group>"; };
+		9FD607732597102287883DBC8EEE868E /* GTFNodeListViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTFNodeListViewController.m; path = src/GTFNodeListViewController.m; sourceTree = "<group>"; };
+		A1E85BAC024792BCBB69FF792231E48A /* GTCOverlayObserverTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTCOverlayObserverTransition.m; sourceTree = "<group>"; };
+		A33D5D365F078A68261B7ED891D5FD16 /* GTCatalog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GTCatalog-dummy.m"; sourceTree = "<group>"; };
+		A39A7594F81CAFD4FEAE4E7D3C369816 /* ShapesShadows.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShapesShadows.swift; sourceTree = "<group>"; };
+		A3B47F623F55990B1A87CE63C5E722BB /* GTKitComponents-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTKitComponents-prefix.pch"; sourceTree = "<group>"; };
+		A56A82EC52CE3A666856B41C24FA2B8B /* ZShadow.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ZShadow.xib; sourceTree = "<group>"; };
+		A766453322653C6157CD41B6FEDCF1BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		ABC10937CDA46DFB07CB55B578797E94 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFBBF05C531EF2F8D23760B5966C2FB5 /* GTCMath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCMath.h; path = components/private/Math/src/GTCMath.h; sourceTree = "<group>"; };
+		B180F520AB3B975A9F8195FDC18479D9 /* TypographyCustomFontViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TypographyCustomFontViewController.m; sourceTree = "<group>"; };
+		B1A562A1DF4BD73E8266F02213E9AA32 /* GTCMathTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTCMathTests.m; sourceTree = "<group>"; };
+		B1C02F4FFC04F818645B786D23286023 /* GTCFontTraits.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTCFontTraits.h; sourceTree = "<group>"; };
+		B444FD355BC3551E8E8C7276CC62231D /* GTCShadowElevations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCShadowElevations.h; path = components/ShadowElevations/src/GTCShadowElevations.h; sourceTree = "<group>"; };
+		B44C37885EBEF5A949929E9DDEE8E6BE /* GTCCutCornerTreatment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTCCutCornerTreatment.m; path = components/private/ShapeLibrary/src/GTCCutCornerTreatment.m; sourceTree = "<group>"; };
+		B5EF77A647CD2A355AAB68AE5145C6DC /* GTFNodeListViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTFNodeListViewController.h; path = src/GTFNodeListViewController.h; sourceTree = "<group>"; };
+		B6EF2888FF6BD0CE048C8A7057112109 /* GTCShapedShadowLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTCShapedShadowLayer.m; path = components/private/Shapes/src/GTCShapedShadowLayer.m; sourceTree = "<group>"; };
+		BA48F7E504479AA5E165821774A94394 /* GTFRuntime.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTFRuntime.m; path = src/private/GTFRuntime.m; sourceTree = "<group>"; };
+		C17B93BA05820321D14157F92B453CC9 /* GTCTypography.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTCTypography.m; path = components/Typography/src/GTCTypography.m; sourceTree = "<group>"; };
+		C1BB7D0C88ECD3403AD19DBD1C8B288D /* ZShadow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ZShadow.swift; sourceTree = "<group>"; };
+		C24CAC7C80673AC8D909D24EDBDE3BB3 /* Pods-UnitTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UnitTests-dummy.m"; sourceTree = "<group>"; };
+		C27A61B2F66BF0C84ACED70C3703B875 /* GTCShapedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTCShapedView.m; path = components/private/Shapes/src/GTCShapedView.m; sourceTree = "<group>"; };
+		C297D5DFEEA02C11C46286D243DEA74D /* ShadowDragSquareExample.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = ShadowDragSquareExample.storyboard; sourceTree = "<group>"; };
+		C31924EED90D8B7F34DF239DF081F0E3 /* GTCSlantedRectShapeGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTCSlantedRectShapeGenerator.m; path = components/private/ShapeLibrary/src/GTCSlantedRectShapeGenerator.m; sourceTree = "<group>"; };
+		C3AC038C95D14861FA168E59CDCD7204 /* GTCShadowLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTCShadowLayer.m; path = components/ShadowLayer/src/GTCShadowLayer.m; sourceTree = "<group>"; };
+		C5B9F8C85AFE1724CB94442DE9EEB9CC /* GTCatalog-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTCatalog-prefix.pch"; sourceTree = "<group>"; };
+		CCC077061F7802B474EC54A3852D077C /* GTFRuntime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTFRuntime.h; path = src/private/GTFRuntime.h; sourceTree = "<group>"; };
+		CCF75B07CDFD6B29BCBA731DA0CD5743 /* UIApplication+AppExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+AppExtensions.h"; path = "components/private/Application/src/UIApplication+AppExtensions.h"; sourceTree = "<group>"; };
+		CE88515B4E5D0FC94C078AFDCAC5CA05 /* GTKitComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTKitComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF0CFCBD249EF8EF8A02A830CD7A58E0 /* UIFontDescriptor+GTCTypography.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIFontDescriptor+GTCTypography.m"; path = "components/Typography/src/UIFontDescriptor+GTCTypography.m"; sourceTree = "<group>"; };
+		CFC11C63223CFC82C2D644DB66CF098B /* UIFont+GTCTypography.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIFont+GTCTypography.h"; path = "components/Typography/src/UIFont+GTCTypography.h"; sourceTree = "<group>"; };
+		D3DA1F52CDC782E69273D1A08679217C /* GTCSlantedRectShapeGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCSlantedRectShapeGenerator.h; path = components/private/ShapeLibrary/src/GTCSlantedRectShapeGenerator.h; sourceTree = "<group>"; };
+		D417254F3E63D450AA6A080AEA4221C1 /* Pods-UnitTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UnitTests-frameworks.sh"; sourceTree = "<group>"; };
+		D43DBFA4620FF5E91F66DE7104C89F7B /* GTComponentsExamples-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GTComponentsExamples-dummy.m"; sourceTree = "<group>"; };
+		D4A4A3DF17DEB2D6A3881328CBFF46F7 /* GTKitComponents-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTKitComponents-umbrella.h"; sourceTree = "<group>"; };
+		D526BC43F079A35F3943822FB06CBE32 /* GTCShapedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCShapedView.h; path = components/private/Shapes/src/GTCShapedView.h; sourceTree = "<group>"; };
+		D58EF3B6A00105E2DE3B10265D4CBE79 /* GTCOverlayAnimationObserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTCOverlayAnimationObserver.h; sourceTree = "<group>"; };
+		D7DEF246479E184879CAB3B061485E7D /* GTComponentsExamples.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GTComponentsExamples.modulemap; sourceTree = "<group>"; };
+		D9452B04214393DF388C885A13C61BCA /* Pods-UnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UnitTests.release.xcconfig"; sourceTree = "<group>"; };
+		DAE7DC76CD52BBF7A9172C923CCD6CB2 /* GTCOverlayObserver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTCOverlayObserver.m; path = components/private/Overlay/src/GTCOverlayObserver.m; sourceTree = "<group>"; };
+		DB64FBFC48AA5A3AA91FABB4256B4495 /* UIFont+GTCTypography.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIFont+GTCTypography.m"; path = "components/Typography/src/UIFont+GTCTypography.m"; sourceTree = "<group>"; };
+		DF97F365BA082ECBE0FACF72D143C7C2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E01E1FFDA61FCB7CF330616E524BD4D2 /* UIFont+GTCTypographyPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIFont+GTCTypographyPrivate.h"; sourceTree = "<group>"; };
+		E0637DD35E40848955DA48ED411095CE /* ShadowedViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShadowedViews.swift; sourceTree = "<group>"; };
+		E5359F145AFB8B44CF8D779EC8E08002 /* Pods-UnitTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UnitTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E758EF2E3AB5A2F05958D903756E8CAA /* Pods-Catalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Catalog.release.xcconfig"; sourceTree = "<group>"; };
+		E92635BACD1135F6123EDAA32558BE42 /* Pods-UnitTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UnitTests-resources.sh"; sourceTree = "<group>"; };
+		E9D31AFAE943A77D8E8464814C00BF5B /* GTCRectangleShapeGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCRectangleShapeGenerator.h; path = components/private/Shapes/src/GTCRectangleShapeGenerator.h; sourceTree = "<group>"; };
+		EBCE0A39D5B5ECCEE841077D9832AEA6 /* GTShadowElevations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTShadowElevations.h; path = components/ShadowElevations/src/GTShadowElevations.h; sourceTree = "<group>"; };
+		F0496C85D56F380706EAD3772F831F05 /* GTCCurvedRectShapeGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCCurvedRectShapeGenerator.h; path = components/private/ShapeLibrary/src/GTCCurvedRectShapeGenerator.h; sourceTree = "<group>"; };
+		F29AC9ED65FA69A7F2359310B7DCBFA2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F383217693C772440EC7CDF2544CE3AC /* GTCShapedShadowLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCShapedShadowLayer.h; path = components/private/Shapes/src/GTCShapedShadowLayer.h; sourceTree = "<group>"; };
+		F6C654F69CBB19876B88343B30E2BE7C /* GTCPillShapeGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTCPillShapeGenerator.m; path = components/private/ShapeLibrary/src/GTCPillShapeGenerator.m; sourceTree = "<group>"; };
+		F8C19CE44B87EAEFCBA9BF491A834F4A /* GTCOverlayUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTCOverlayUtilities.h; sourceTree = "<group>"; };
+		FD7D435AEF0EB9601B858EEEFFCBA2B6 /* GTCTypography.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTCTypography.h; path = components/Typography/src/GTCTypography.h; sourceTree = "<group>"; };
+		FDC46D4B7CD0A62DE796B566DAB9F284 /* GTCOverlayObserverTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTCOverlayObserverTransition.h; sourceTree = "<group>"; };
+		FDE48510B4E42DF7C8C35543E6E2C877 /* GTCFontTraits.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GTCFontTraits.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		279B9C4FB0C40EF2DC73BEF588AE22B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35972F0C822A29A2A88B794272DFDB42 /* Foundation.framework in Frameworks */,
+				EE1C38D6AD8DCC92F9096609892FB359 /* GTKitComponents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28145DE60D9D610F599740EFACAF4C51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9794932F02AD6655334C94078FAAF6D /* Foundation.framework in Frameworks */,
+				EF3A44E9892690E2E04E7959952E93C2 /* GTKitComponents.framework in Frameworks */,
+				304C63235763B57C3536850FDAFA8D0C /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75F159700EDD7507E7CC58D53A8086F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C57FC7EC8EEFCA2032B59F377097078 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C07B4A46E916495FE46480FEA7C0FC02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E5B0D3681E63B129519A39465C7D1D4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA81B82B0576384271CCF8269ABB445 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C7B282CAEFB100480FF53F2D51DEF7B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBE195C88DB7A12B60056826CBD1C316 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E96BA1805D4693FA9C231C2FB0B45378 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0228553C089449C775AF05B2E23C264B /* private */ = {
+			isa = PBXGroup;
+			children = (
+				FDBF110FD955A878ECF9025C7F7B8916 /* Dragons */,
+			);
+			name = private;
+			path = components/private;
+			sourceTree = "<group>";
+		};
+		04EF999003E3C79E8C4B07DCCD30C58C /* GTCatalog */ = {
+			isa = PBXGroup;
+			children = (
+				236B5C0B4E1A81524C5AC35E3ADD1320 /* GTCatalog.h */,
+				3B20AE2A6BD11B3EF42369C37B832942 /* GTFCatalogExample.h */,
+				B5EF77A647CD2A355AAB68AE5145C6DC /* GTFNodeListViewController.h */,
+				9FD607732597102287883DBC8EEE868E /* GTFNodeListViewController.m */,
+				CCC077061F7802B474EC54A3852D077C /* GTFRuntime.h */,
+				BA48F7E504479AA5E165821774A94394 /* GTFRuntime.m */,
+				E6A502A201D724B3E814C528D39D5639 /* Support Files */,
+			);
+			name = GTCatalog;
+			path = GTCatalog;
+			sourceTree = "<group>";
+		};
+		052B4C98373740CFDA3D607BDE6BBCA7 /* Pods-UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A58C2C9AD3CB1EF4122AD2F10758351 /* Info.plist */,
+				0EBC4E2704BDCE6FDF45A53E32EDBEEC /* Pods-UnitTests.modulemap */,
+				3E3706B47B6BB5ACC342B4C9B754B7A6 /* Pods-UnitTests-acknowledgements.markdown */,
+				E5359F145AFB8B44CF8D779EC8E08002 /* Pods-UnitTests-acknowledgements.plist */,
+				C24CAC7C80673AC8D909D24EDBDE3BB3 /* Pods-UnitTests-dummy.m */,
+				D417254F3E63D450AA6A080AEA4221C1 /* Pods-UnitTests-frameworks.sh */,
+				E92635BACD1135F6123EDAA32558BE42 /* Pods-UnitTests-resources.sh */,
+				5AFC7FA6503FD9C3D5522E60C612E891 /* Pods-UnitTests-umbrella.h */,
+				6E7EE40670E58D1ECCDC9B6A003AB422 /* Pods-UnitTests.debug.xcconfig */,
+				D9452B04214393DF388C885A13C61BCA /* Pods-UnitTests.release.xcconfig */,
+			);
+			name = "Pods-UnitTests";
+			path = "Target Support Files/Pods-UnitTests";
+			sourceTree = "<group>";
+		};
+		06DF4B1EA91AC44B6CD94584CEB23588 /* ShadowElevations */ = {
+			isa = PBXGroup;
+			children = (
+				B444FD355BC3551E8E8C7276CC62231D /* GTCShadowElevations.h */,
+				414C8323436304962D125DB51F91AEC0 /* GTCShadowElevations.m */,
+				EBCE0A39D5B5ECCEE841077D9832AEA6 /* GTShadowElevations.h */,
+			);
+			name = ShadowElevations;
+			sourceTree = "<group>";
+		};
+		10D004DCF7CB63337F874047B6106E7E /* ShapeLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				2B3892696EDC64E11801AEFF1AC26618 /* GTCCurvedCornerTreatment.h */,
+				591E863B7196AC0C8CD6E974B222A7DB /* GTCCurvedCornerTreatment.m */,
+				F0496C85D56F380706EAD3772F831F05 /* GTCCurvedRectShapeGenerator.h */,
+				6B5664AC70D67C8CFD17A9E81E818E12 /* GTCCurvedRectShapeGenerator.m */,
+				712ABEB1A63DF42CACBE344DE7D2B60F /* GTCCutCornerTreatment.h */,
+				B44C37885EBEF5A949929E9DDEE8E6BE /* GTCCutCornerTreatment.m */,
+				7CC292551594C97C5F8449A75A5F00B8 /* GTCPillShapeGenerator.h */,
+				F6C654F69CBB19876B88343B30E2BE7C /* GTCPillShapeGenerator.m */,
+				698C7CBEF5B1115C558E2E965826952B /* GTCRoundedCornerTreatment.h */,
+				111F470E71F9DDF6DB4E19DEAE041A19 /* GTCRoundedCornerTreatment.m */,
+				D3DA1F52CDC782E69273D1A08679217C /* GTCSlantedRectShapeGenerator.h */,
+				C31924EED90D8B7F34DF239DF081F0E3 /* GTCSlantedRectShapeGenerator.m */,
+				8715AA1BC270720F5D02E8F60A8302B9 /* GTCTriangleEdgeTreatment.h */,
+				14D656562C7B0EE77182FD560704B04D /* GTCTriangleEdgeTreatment.m */,
+				403CD9578C66D535F39C2C5548023A2D /* GTShapeLibrary.h */,
+			);
+			name = ShapeLibrary;
+			sourceTree = "<group>";
+		};
+		11077C8B4E60DF730C7818AE667161C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6578C448D7543D28E92F296E3B92BE82 /* GTCatalog.framework */,
+				78D9A1DC8B3F2EFD9CACE2B525CC94C5 /* GTComponentsExamples.framework */,
+				12EFEE67DB07D69A3578FF0A52A313F7 /* GTComponentsUnitTests.framework */,
+				2E9A4D2F82D5F56D07AB0DD67BDF70EE /* GTKitComponents.framework */,
+				2CC3B076246EFEC614B8CDE7037AC7AF /* Pods_Catalog.framework */,
+				510BAA448DB10AE71AFB2F4BA44C40AE /* Pods_UnitTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14DB85811B100F535B40AD2035EAEEC5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7DEF246479E184879CAB3B061485E7D /* GTComponentsExamples.modulemap */,
+				687719F80F5BA26E2444B13268FE7994 /* GTComponentsExamples.xcconfig */,
+				D43DBFA4620FF5E91F66DE7104C89F7B /* GTComponentsExamples-dummy.m */,
+				2D46A71357ECB7AD4189DBB05EE49E21 /* GTComponentsExamples-prefix.pch */,
+				19EC10143E80CA2B4B3E50A69C4C2BF8 /* GTComponentsExamples-umbrella.h */,
+				F29AC9ED65FA69A7F2359310B7DCBFA2 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "catalog/Pods/Target Support Files/GTComponentsExamples";
+			sourceTree = "<group>";
+		};
+		1C734AF31C808821755120B0864523DF /* private */ = {
+			isa = PBXGroup;
+			children = (
+				B1C02F4FFC04F818645B786D23286023 /* GTCFontTraits.h */,
+				FDE48510B4E42DF7C8C35543E6E2C877 /* GTCFontTraits.m */,
+				E01E1FFDA61FCB7CF330616E524BD4D2 /* UIFont+GTCTypographyPrivate.h */,
+				50928BECD50731C2E89D5A7758F43F3C /* UIFont+GTCTypographyPrivate.m */,
+			);
+			name = private;
+			path = components/Typography/src/private;
+			sourceTree = "<group>";
+		};
+		1F139FFFC19767945F582D54AC1AB60D /* ShadowLayer */ = {
+			isa = PBXGroup;
+			children = (
+				9C4D05037A72C5B09BEE6AE76A756BD7 /* examples */,
+			);
+			name = ShadowLayer;
+			path = components/ShadowLayer;
+			sourceTree = "<group>";
+		};
+		2EE68F93A6AA0F7B214BDF5868FEC3C1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9ADC7D8A2D91B4EF6FFCBAB9236E209F /* GTComponentsUnitTests.modulemap */,
+				3539AB09675AA3156703BE2F96A1D00F /* GTComponentsUnitTests.xcconfig */,
+				87D452C83CE95B1CCBA6159E451E0B9A /* GTComponentsUnitTests-dummy.m */,
+				539E25BAAADE882306F553ED00B5F96D /* GTComponentsUnitTests-prefix.pch */,
+				8B226A853630DFBAF14340B562463A9A /* GTComponentsUnitTests-umbrella.h */,
+				ABC10937CDA46DFB07CB55B578797E94 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "catalog/Pods/Target Support Files/GTComponentsUnitTests";
+			sourceTree = "<group>";
+		};
+		3B1116F926EB88DCB669EAD0EF0B5DCA /* Typography */ = {
+			isa = PBXGroup;
+			children = (
+				CFC433D63C019FD24283672F4FF15A5B /* examples */,
+			);
+			name = Typography;
+			path = components/Typography;
+			sourceTree = "<group>";
+		};
+		3D4F33CE625FB6FA0F7C5AB8FE273F6B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				04EF999003E3C79E8C4B07DCCD30C58C /* GTCatalog */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3DE429E7C47CFACC95DEF29B3E276D40 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				722EC171FEA60A3799AF48EFB53913D2 /* GTKitComponents.modulemap */,
+				47A5DC5A7960FC84AA1C80502AD69ABC /* GTKitComponents.xcconfig */,
+				8336E1BCE75DD9EDEAE21B64D9F9B4BC /* GTKitComponents-dummy.m */,
+				A3B47F623F55990B1A87CE63C5E722BB /* GTKitComponents-prefix.pch */,
+				D4A4A3DF17DEB2D6A3881328CBFF46F7 /* GTKitComponents-umbrella.h */,
+				2EBC7BC13CCBB71750372F67BF69A612 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "catalog/Pods/Target Support Files/GTKitComponents";
+			sourceTree = "<group>";
+		};
+		3FCB9BD76ADF9D0B352F112B39309306 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				D58EF3B6A00105E2DE3B10265D4CBE79 /* GTCOverlayAnimationObserver.h */,
+				04335D5DB2400D79A0FCC01459907A4B /* GTCOverlayAnimationObserver.m */,
+				074D11C32C86AEE1C76709D25F222452 /* GTCOverlayObserverOverlay.h */,
+				0B6D0617B12A730887E76138534C5E63 /* GTCOverlayObserverOverlay.m */,
+				FDC46D4B7CD0A62DE796B566DAB9F284 /* GTCOverlayObserverTransition.h */,
+				A1E85BAC024792BCBB69FF792231E48A /* GTCOverlayObserverTransition.m */,
+				F8C19CE44B87EAEFCBA9BF491A834F4A /* GTCOverlayUtilities.h */,
+				3F114476664CFEEC05EAC32853AF63BC /* GTCOverlayUtilities.m */,
+			);
+			name = private;
+			path = components/private/Overlay/src/private;
+			sourceTree = "<group>";
+		};
+		401D247085F594491444F88466CC32DE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A766453322653C6157CD41B6FEDCF1BD /* Foundation.framework */,
+				63D41C8778BF25F9D9E630450E6C67B2 /* XCTest.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4B87BE6F33B419A9407CE40DB354BE63 /* Dragons */ = {
+			isa = PBXGroup;
+			children = (
+				D88B2CF98A25FD067B3BE1E7360D2940 /* examples */,
+			);
+			name = Dragons;
+			path = Dragons;
+			sourceTree = "<group>";
+		};
+		5050C24184C241E838D4EE36BE6DEFCD /* private */ = {
+			isa = PBXGroup;
+			children = (
+				53A2D5E9C6E319EB05B130FDB3ACB3C7 /* Application */,
+				959A3CC36E359492D4F6B84D406A306F /* KeyboardWatcher */,
+				C245F900EE130FD8488585DC3BFA1381 /* Math */,
+				B773E70AB8EF66C733DB63E0C22096ED /* Overlay */,
+				10D004DCF7CB63337F874047B6106E7E /* ShapeLibrary */,
+				581C7FD74C448AB1D2C2F9312F8AD808 /* Shapes */,
+				C2D6AE9DDF843764F5E5353E986A6EF9 /* UIMetrics */,
+			);
+			name = private;
+			sourceTree = "<group>";
+		};
+		53A2D5E9C6E319EB05B130FDB3ACB3C7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				08A1E9C7934014A015AEAF7D5A05CDC3 /* GTApplication.h */,
+				CCF75B07CDFD6B29BCBA731DA0CD5743 /* UIApplication+AppExtensions.h */,
+				7C59F9063ADBA7E39C5FCBA2F9FCCD38 /* UIApplication+AppExtensions.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		5516944217CF28A10A48B3A4983C1D49 /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				F0ED68DF98CC4223354D99F541E354D7 /* tests */,
+			);
+			name = Overlay;
+			path = components/private/Overlay;
+			sourceTree = "<group>";
+		};
+		581C7FD74C448AB1D2C2F9312F8AD808 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				1F53693EAD6583601B190DAFCAD556D4 /* GTCCornerTreatment.h */,
+				14C257C61FF67E15D0C5C9D972B2912E /* GTCCornerTreatment.m */,
+				95527534CD74C600B60A5A9F82D16731 /* GTCEdgeTreatment.h */,
+				48F81989AE5F2AA856972FA2F52731CB /* GTCEdgeTreatment.m */,
+				2BED252A2318F2F15C16EC4A53DFE368 /* GTCPathGenerator.h */,
+				28E3F806ADC6D1CA1F1F7256B25F8E32 /* GTCPathGenerator.m */,
+				E9D31AFAE943A77D8E8464814C00BF5B /* GTCRectangleShapeGenerator.h */,
+				7A5B523806FB61A43D907C9D9E5A8008 /* GTCRectangleShapeGenerator.m */,
+				F383217693C772440EC7CDF2544CE3AC /* GTCShapedShadowLayer.h */,
+				B6EF2888FF6BD0CE048C8A7057112109 /* GTCShapedShadowLayer.m */,
+				D526BC43F079A35F3943822FB06CBE32 /* GTCShapedView.h */,
+				C27A61B2F66BF0C84ACED70C3703B875 /* GTCShapedView.m */,
+				4F6E4B35AAFB91B1E7708EFC1C7E5100 /* GTCShapeGenerating.h */,
+				71F065B29E47F8ABDA814CD2392EBBD5 /* GTShapes.h */,
+			);
+			name = Shapes;
+			sourceTree = "<group>";
+		};
+		593FE14FF169834B83492B7DE13E374C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE88515B4E5D0FC94C078AFDCAC5CA05 /* GTKitComponents.framework */,
+				401D247085F594491444F88466CC32DE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5973842835859EF414822A065F5F97DD /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC8BE4FE568861134CB6DBE3B5A1EC62 /* GTComponentsExamples */,
+				D4CD44176247706A93E8F8983FADCE88 /* GTComponentsUnitTests */,
+				F51E715915F04892D32BBD3E1B07B33F /* GTKitComponents */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		5C1940CDBC102AE0247C1564791C52C9 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				75196E2DE0A3FC31385923829FCCF899 /* GTComponentsUnitTests.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		627F5CAE7A9C2B800ED27587E1F14D48 /* ShadowLayer */ = {
+			isa = PBXGroup;
+			children = (
+				C7B95E10EAF36B73C7C0D2F769453CA7 /* examples */,
+			);
+			name = ShadowLayer;
+			path = components/ShadowLayer;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				5973842835859EF414822A065F5F97DD /* Development Pods */,
+				593FE14FF169834B83492B7DE13E374C /* Frameworks */,
+				3D4F33CE625FB6FA0F7C5AB8FE273F6B /* Pods */,
+				11077C8B4E60DF730C7818AE667161C6 /* Products */,
+				C9DE14432C6E1372BC7A0409BF6163E5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7FA855FDF3BFB8B703C9F2E2D422CA81 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				4B87BE6F33B419A9407CE40DB354BE63 /* Dragons */,
+			);
+			name = private;
+			path = components/private;
+			sourceTree = "<group>";
+		};
+		81155063DFCFEFFCE3082890962CF67D /* KeyboardWatcher */ = {
+			isa = PBXGroup;
+			children = (
+				D2DB990C93DDBF660E20D0C114432305 /* tests */,
+			);
+			name = KeyboardWatcher;
+			path = components/private/KeyboardWatcher;
+			sourceTree = "<group>";
+		};
+		81D88DC77587E509871CBDED040911C0 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				B13115A9190E09AC0183CF3341E17D7D /* resources */,
+			);
+			name = examples;
+			path = examples;
+			sourceTree = "<group>";
+		};
+		831F0E22C52ECB3C2B86205BC224C871 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				C297D5DFEEA02C11C46286D243DEA74D /* ShadowDragSquareExample.storyboard */,
+			);
+			name = resources;
+			path = resources;
+			sourceTree = "<group>";
+		};
+		959A3CC36E359492D4F6B84D406A306F /* KeyboardWatcher */ = {
+			isa = PBXGroup;
+			children = (
+				808A8ECBDB413777DDE38F9DB68B7224 /* GTCKeyboardWatcher.h */,
+				8C68E9113CF0E94CA82FDD4D51FB0DD1 /* GTCKeyboardWatcher.m */,
+				208DAF34610E8D6F89417CFC82392D3F /* GTKeyboardWatcher.h */,
+			);
+			name = KeyboardWatcher;
+			sourceTree = "<group>";
+		};
+		9C4D05037A72C5B09BEE6AE76A756BD7 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				0F4BB7B941C8238DDDEAFF35F651F973 /* ExampleShadowedView.swift */,
+				5A95E4338EB9CC6E5E2BE7EA4BEB097C /* ShadowDragSquareExampleViewController.swift */,
+				A39A7594F81CAFD4FEAE4E7D3C369816 /* ShapesShadows.swift */,
+			);
+			name = examples;
+			path = examples;
+			sourceTree = "<group>";
+		};
+		B13115A9190E09AC0183CF3341E17D7D /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				A56A82EC52CE3A666856B41C24FA2B8B /* ZShadow.xib */,
+			);
+			name = resources;
+			path = resources;
+			sourceTree = "<group>";
+		};
+		B773E70AB8EF66C733DB63E0C22096ED /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				6E0D6E587B9DD9822AFBE018481AD57C /* GTCOverlayImplementor.h */,
+				5896989F5BC79BA9773E368408095071 /* GTCOverlayObserver.h */,
+				DAE7DC76CD52BBF7A9172C923CCD6CB2 /* GTCOverlayObserver.m */,
+				7376013188799E0FE58C3AFC7A2FB61B /* GTCOverlayTransitioning.h */,
+				206E3FAC1A6D54A394DD69B5B1231BC1 /* GTOverlay.h */,
+				3FCB9BD76ADF9D0B352F112B39309306 /* private */,
+			);
+			name = Overlay;
+			sourceTree = "<group>";
+		};
+		BB0F61FA171ADC76852134DE9F4DED51 /* Pods-Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				DF97F365BA082ECBE0FACF72D143C7C2 /* Info.plist */,
+				576E67D4B27275BFF580F07666CA7BC5 /* Pods-Catalog.modulemap */,
+				5C02EA0F3D9F72EE854DE84DB16598D9 /* Pods-Catalog-acknowledgements.markdown */,
+				389BD6425ADF57E4C94E198CCECA9592 /* Pods-Catalog-acknowledgements.plist */,
+				90D471790876D14C99076D7A5DBF9073 /* Pods-Catalog-dummy.m */,
+				2DFF976D6A1DCA52AD8B0291A5B4A30D /* Pods-Catalog-frameworks.sh */,
+				2C80109308D3DB762862353159C9A97F /* Pods-Catalog-resources.sh */,
+				6523890F32CBF6207680357CA59D2FF2 /* Pods-Catalog-umbrella.h */,
+				1A29323EE3B7DBC236EAF6804F870884 /* Pods-Catalog.debug.xcconfig */,
+				E758EF2E3AB5A2F05958D903756E8CAA /* Pods-Catalog.release.xcconfig */,
+			);
+			name = "Pods-Catalog";
+			path = "Target Support Files/Pods-Catalog";
+			sourceTree = "<group>";
+		};
+		BCB27F5DBE35FB4943CDE080CFC7173C /* unit */ = {
+			isa = PBXGroup;
+			children = (
+				B1A562A1DF4BD73E8266F02213E9AA32 /* GTCMathTests.m */,
+			);
+			name = unit;
+			path = unit;
+			sourceTree = "<group>";
+		};
+		C245F900EE130FD8488585DC3BFA1381 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				AFBBF05C531EF2F8D23760B5966C2FB5 /* GTCMath.h */,
+				4C4CD3B18C1D9678F64F26D605A0DF6A /* GTMath.h */,
+			);
+			name = Math;
+			sourceTree = "<group>";
+		};
+		C2D6AE9DDF843764F5E5353E986A6EF9 /* UIMetrics */ = {
+			isa = PBXGroup;
+			children = (
+				118C1EC8CD8E4FD16DA7B1C954968902 /* GTCLayoutMetrics.h */,
+				5C71F81302819978A2D2DE2E96641DB1 /* GTCLayoutMetrics.m */,
+				207C772264E725D9D9AF327F47947585 /* GTUIMetrics.h */,
+			);
+			name = UIMetrics;
+			sourceTree = "<group>";
+		};
+		C7B95E10EAF36B73C7C0D2F769453CA7 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				831F0E22C52ECB3C2B86205BC224C871 /* resources */,
+			);
+			name = examples;
+			path = examples;
+			sourceTree = "<group>";
+		};
+		C9BFA94E3AEF644814D78C5E363B87C5 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				E68327DE3CE5DD67778FEF78C79F9837 /* tests */,
+			);
+			name = Math;
+			path = components/private/Math;
+			sourceTree = "<group>";
+		};
+		C9DE14432C6E1372BC7A0409BF6163E5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB0F61FA171ADC76852134DE9F4DED51 /* Pods-Catalog */,
+				052B4C98373740CFDA3D607BDE6BBCA7 /* Pods-UnitTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CC8BE4FE568861134CB6DBE3B5A1EC62 /* GTComponentsExamples */ = {
+			isa = PBXGroup;
+			children = (
+				FAD1386726E8B126D669D23A1AF7E82C /* Pod */,
+				7FA855FDF3BFB8B703C9F2E2D422CA81 /* private */,
+				DDE4FB018E4FB64964350314C0D58443 /* Resources */,
+				1F139FFFC19767945F582D54AC1AB60D /* ShadowLayer */,
+				14DB85811B100F535B40AD2035EAEEC5 /* Support Files */,
+				3B1116F926EB88DCB669EAD0EF0B5DCA /* Typography */,
+			);
+			name = GTComponentsExamples;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		CFC433D63C019FD24283672F4FF15A5B /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				898D4C21C7501BE71508EC7D965C6A27 /* TypographyCustomFontViewController.h */,
+				B180F520AB3B975A9F8195FDC18479D9 /* TypographyCustomFontViewController.m */,
+				22F37B355659E2BAB3E0BA00203B27C8 /* TypographyFontListExample.swift */,
+				5F5F7C579C35FEBFFA4BE9DEBE3C8945 /* TypographyMaterialStylesViewController.h */,
+				62C2DDA669368F650C989E0162437A2E /* TypographyMaterialStylesViewController.m */,
+				8D911D9198B8EA46A6FC14C4B2A848A9 /* TypographySimpleExampleViewController.h */,
+				2F66CAC2DEA1A665D44BDBA4BC8AC05F /* TypographySimpleExampleViewController.m */,
+			);
+			name = examples;
+			path = examples;
+			sourceTree = "<group>";
+		};
+		D2DB990C93DDBF660E20D0C114432305 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				E1337FD1CCF564D265FB7A7F396DFB2C /* unit */,
+			);
+			name = tests;
+			path = tests;
+			sourceTree = "<group>";
+		};
+		D4CD44176247706A93E8F8983FADCE88 /* GTComponentsUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				81155063DFCFEFFCE3082890962CF67D /* KeyboardWatcher */,
+				C9BFA94E3AEF644814D78C5E363B87C5 /* Math */,
+				5516944217CF28A10A48B3A4983C1D49 /* Overlay */,
+				5C1940CDBC102AE0247C1564791C52C9 /* Pod */,
+				2EE68F93A6AA0F7B214BDF5868FEC3C1 /* Support Files */,
+			);
+			name = GTComponentsUnitTests;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		D88B2CF98A25FD067B3BE1E7360D2940 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				E0637DD35E40848955DA48ED411095CE /* ShadowedViews.swift */,
+				C1BB7D0C88ECD3403AD19DBD1C8B288D /* ZShadow.swift */,
+			);
+			name = examples;
+			path = examples;
+			sourceTree = "<group>";
+		};
+		DDE4FB018E4FB64964350314C0D58443 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0228553C089449C775AF05B2E23C264B /* private */,
+				627F5CAE7A9C2B800ED27587E1F14D48 /* ShadowLayer */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E1337FD1CCF564D265FB7A7F396DFB2C /* unit */ = {
+			isa = PBXGroup;
+			children = (
+				8063444D563AB89D79255A6F65FB109C /* KeyboardWatcherNoopTest.m */,
+			);
+			name = unit;
+			path = unit;
+			sourceTree = "<group>";
+		};
+		E25B4B56D1B97394F96A008830CA8FA8 /* Typography */ = {
+			isa = PBXGroup;
+			children = (
+				21574817009D51F2E9D9DA4B74DA3AF8 /* GTCFontTextStyle.h */,
+				FD7D435AEF0EB9601B858EEEFFCBA2B6 /* GTCTypography.h */,
+				C17B93BA05820321D14157F92B453CC9 /* GTCTypography.m */,
+				4905633FA2A3549F16C987002D058109 /* GTTypography.h */,
+				96719DD007FE32B217A1570494E51001 /* UIFont+GTCSimpleEquality.h */,
+				6553B848DE8A328082C6915F048A8649 /* UIFont+GTCSimpleEquality.m */,
+				CFC11C63223CFC82C2D644DB66CF098B /* UIFont+GTCTypography.h */,
+				DB64FBFC48AA5A3AA91FABB4256B4495 /* UIFont+GTCTypography.m */,
+				1CC8F257A7D8AAA72626A6B1880F1DDF /* UIFontDescriptor+GTCTypography.h */,
+				CF0CFCBD249EF8EF8A02A830CD7A58E0 /* UIFontDescriptor+GTCTypography.m */,
+				1C734AF31C808821755120B0864523DF /* private */,
+			);
+			name = Typography;
+			sourceTree = "<group>";
+		};
+		E68327DE3CE5DD67778FEF78C79F9837 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				BCB27F5DBE35FB4943CDE080CFC7173C /* unit */,
+			);
+			name = tests;
+			path = tests;
+			sourceTree = "<group>";
+		};
+		E6A502A201D724B3E814C528D39D5639 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E8EB60BDE655D1FFC76C2719DA17B0F /* GTCatalog.modulemap */,
+				78EFFF0E0AD4B757C623C4554C038686 /* GTCatalog.xcconfig */,
+				A33D5D365F078A68261B7ED891D5FD16 /* GTCatalog-dummy.m */,
+				C5B9F8C85AFE1724CB94442DE9EEB9CC /* GTCatalog-prefix.pch */,
+				8A0D3D3B7150B374574E05D15F431E31 /* GTCatalog-umbrella.h */,
+				6DCE54197EC3594B026EFEA7CB82501D /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GTCatalog";
+			sourceTree = "<group>";
+		};
+		E94646B7D17DFA2A3C42A100705F7EF8 /* unit */ = {
+			isa = PBXGroup;
+			children = (
+				311C93AA5DC0B0E51D25B1C39872A3D9 /* OverlayNoopTests.m */,
+			);
+			name = unit;
+			path = unit;
+			sourceTree = "<group>";
+		};
+		EEA1505302D9181BBEFE4F9AE95315A9 /* ShadowLayer */ = {
+			isa = PBXGroup;
+			children = (
+				255F9F6CE67A110D31CDCCBF63B99CF8 /* GTCShadowLayer.h */,
+				C3AC038C95D14861FA168E59CDCD7204 /* GTCShadowLayer.m */,
+				414318E2A1FEA803597C69A092433850 /* GTShadowLayer.h */,
+			);
+			name = ShadowLayer;
+			sourceTree = "<group>";
+		};
+		F0ED68DF98CC4223354D99F541E354D7 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				E94646B7D17DFA2A3C42A100705F7EF8 /* unit */,
+			);
+			name = tests;
+			path = tests;
+			sourceTree = "<group>";
+		};
+		F51E715915F04892D32BBD3E1B07B33F /* GTKitComponents */ = {
+			isa = PBXGroup;
+			children = (
+				F7A89A8441A42D01A57986D93268A1FC /* Pod */,
+				5050C24184C241E838D4EE36BE6DEFCD /* private */,
+				06DF4B1EA91AC44B6CD94584CEB23588 /* ShadowElevations */,
+				EEA1505302D9181BBEFE4F9AE95315A9 /* ShadowLayer */,
+				3DE429E7C47CFACC95DEF29B3E276D40 /* Support Files */,
+				E25B4B56D1B97394F96A008830CA8FA8 /* Typography */,
+			);
+			name = GTKitComponents;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		F7A89A8441A42D01A57986D93268A1FC /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				3BD03B42E9580822D6781C61550772C3 /* GTKitComponents.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		FAD1386726E8B126D669D23A1AF7E82C /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				339E7863EDBB7532110D04A68D45608F /* GTComponentsExamples.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		FDBF110FD955A878ECF9025C7F7B8916 /* Dragons */ = {
+			isa = PBXGroup;
+			children = (
+				81D88DC77587E509871CBDED040911C0 /* examples */,
+			);
+			name = Dragons;
+			path = Dragons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		22D31EE2216F0CA6F6BCEF4E4BBF0A95 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8338A06E6738AE12AB03F3CBBDB39AD /* Pods-Catalog-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A2EBECF48D30418E5C579CF7BA3D8FB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				756570B56EB36C7C39FF46C4EDBE6861 /* GTComponentsUnitTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59B742DE6F8114678D9B698256F77E10 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE2CE2D0FBA788B0E58617E7B325C2C8 /* GTCatalog-umbrella.h in Headers */,
+				B8E939A8025F8B0FB4E8A019B7DAA059 /* GTCatalog.h in Headers */,
+				2CC454F9DCAD381E7D8B840E5F514429 /* GTFCatalogExample.h in Headers */,
+				D24C4968BD0855809091466381E2FE7C /* GTFNodeListViewController.h in Headers */,
+				129670419CF6D3695AB142DC656626D6 /* GTFRuntime.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B4274C23C8C419817CAA4F2B350438A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B82F8D45B4F438B9D79DB72A2DBD80A6 /* GTComponentsExamples-umbrella.h in Headers */,
+				2A0DC33A67788950B6E43B68B89F67E5 /* TypographyCustomFontViewController.h in Headers */,
+				D4D7331BBFAB937E59E46BE82D82BBAA /* TypographyMaterialStylesViewController.h in Headers */,
+				C18AE5082F49892BEF1004D9738F4086 /* TypographySimpleExampleViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C379725F4B07B701BB788A65FEEB339B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1712A82463D5D93DFFAE09F274D110E4 /* Pods-UnitTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E985DC05815FD1D3F934E06CD97E86E7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C1DFA5B2ACCB988329BCBCA1B71369A /* GTApplication.h in Headers */,
+				3A15CA0BDEB2ABFAE9199F0C8C59E723 /* GTCCornerTreatment.h in Headers */,
+				9CAB79DCCE57EA5427151421973437DE /* GTCCurvedCornerTreatment.h in Headers */,
+				293FD28042C6A858E003C07F56BFEF45 /* GTCCurvedRectShapeGenerator.h in Headers */,
+				C3631257B009F179DEF7935F0CB8FB55 /* GTCCutCornerTreatment.h in Headers */,
+				F37EE672911B52BDAE30F85B1D79F29F /* GTCEdgeTreatment.h in Headers */,
+				655D27A9171D49BFD6F0EA0538924FDC /* GTCFontTextStyle.h in Headers */,
+				BA5976834ED94430A9A04E7743F93F45 /* GTCFontTraits.h in Headers */,
+				FF4E03B975C4280240EBB4210B36402D /* GTCKeyboardWatcher.h in Headers */,
+				E741BEC64B224B0AF069722A3CBD9C35 /* GTCLayoutMetrics.h in Headers */,
+				8E817ABF3C7A5A3DFE5381AF46CEC778 /* GTCMath.h in Headers */,
+				BA3B4EB0AB50DECC148A3C0FC697D04A /* GTCOverlayAnimationObserver.h in Headers */,
+				52AD2DF2A78D6DABAA84EC7D77226170 /* GTCOverlayImplementor.h in Headers */,
+				24C17074D1CCA0DCBB8A4181B3CA7A21 /* GTCOverlayObserver.h in Headers */,
+				84D54A8898BDF0655EEC4B954458E555 /* GTCOverlayObserverOverlay.h in Headers */,
+				4F9038DDAC5DFA88F8E9762AE77451D4 /* GTCOverlayObserverTransition.h in Headers */,
+				5C6179C92281F090405C55A1E2C0FAB6 /* GTCOverlayTransitioning.h in Headers */,
+				62B0653B08576654B47F88B6339EC48A /* GTCOverlayUtilities.h in Headers */,
+				70369AA60D4B7CE92EBBA0039EAC08DB /* GTCPathGenerator.h in Headers */,
+				D4F1F0E38FAF373CD2FE46A482C84C1E /* GTCPillShapeGenerator.h in Headers */,
+				AF2A9F8533609152578E027E5C06F6C4 /* GTCRectangleShapeGenerator.h in Headers */,
+				4E2F762958E4627999F1960FA7478FBA /* GTCRoundedCornerTreatment.h in Headers */,
+				5D4590FA995F4A6FA54A9927E8FFFAE0 /* GTCShadowElevations.h in Headers */,
+				99022E551C82AC39E8E822A85181956F /* GTCShadowLayer.h in Headers */,
+				914F8BF2911762C7B4FAE0BFC469DF5A /* GTCShapedShadowLayer.h in Headers */,
+				94AD55D5F3E5760BFBF5D45B4F7E13CC /* GTCShapedView.h in Headers */,
+				D639A9DAC8BB6F849B31D4B06A7E6893 /* GTCShapeGenerating.h in Headers */,
+				4E08D17FD02689F0F59660713071341B /* GTCSlantedRectShapeGenerator.h in Headers */,
+				C4FCE3625C661EA846EF703A358713A8 /* GTCTriangleEdgeTreatment.h in Headers */,
+				01ADFAB465E6FE24ABD73BB5F868B07F /* GTCTypography.h in Headers */,
+				5E84BAEBA0B72F95B6FF7EDCA966EA30 /* GTKeyboardWatcher.h in Headers */,
+				6BC5A5C860B3DFD9DA59FC82ACBDC6E3 /* GTKitComponents-umbrella.h in Headers */,
+				FB4E960D436FAB053CF4386942F1FEB9 /* GTMath.h in Headers */,
+				45DB50DE9F299B0F9852093193992569 /* GTOverlay.h in Headers */,
+				EF4202083D7761F6C25ED0A7F43F3F00 /* GTShadowElevations.h in Headers */,
+				8C325F7AB18DB65DB6DD6E7D290B0044 /* GTShadowLayer.h in Headers */,
+				456C9825CFBBBC7FCA1C390086A3BE3A /* GTShapeLibrary.h in Headers */,
+				49B382532B2A9513B5565E2C4251582C /* GTShapes.h in Headers */,
+				112989B620FBCCE0301C8B29704BFFCF /* GTTypography.h in Headers */,
+				EFC88E4168434725BFCA9AF69B115BDD /* GTUIMetrics.h in Headers */,
+				0E867C4DDFC7481191BEC2EE5F2BECA4 /* UIApplication+AppExtensions.h in Headers */,
+				AE5C19D8FAFE95B6A4338932B1F0CCD2 /* UIFont+GTCSimpleEquality.h in Headers */,
+				95FBD7BC19FBDF4D49ECCEDDD72D7649 /* UIFont+GTCTypography.h in Headers */,
+				82CD19A8200456139B262D8733BC2CB0 /* UIFont+GTCTypographyPrivate.h in Headers */,
+				B83947B4933E9729F0D366F5C18A6845 /* UIFontDescriptor+GTCTypography.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		218CD328B2568BEC2DC8FD73B367C110 /* GTComponentsExamples */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79274F7ED63ED0714CB2F2EA2D23CD5A /* Build configuration list for PBXNativeTarget "GTComponentsExamples" */;
+			buildPhases = (
+				789D00F6B62AAA912E080A6E5427847B /* Sources */,
+				279B9C4FB0C40EF2DC73BEF588AE22B0 /* Frameworks */,
+				8B4274C23C8C419817CAA4F2B350438A /* Headers */,
+				411B0D785C0A4EB2D056FE915D249807 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3310DEA542B99078467351BB22393823 /* PBXTargetDependency */,
+			);
+			name = GTComponentsExamples;
+			productName = GTComponentsExamples;
+			productReference = 78D9A1DC8B3F2EFD9CACE2B525CC94C5 /* GTComponentsExamples.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4874224F6651E081609413A8B983176F /* Pods-Catalog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB240DEBCCEB8F0CBC67997E66079791 /* Build configuration list for PBXNativeTarget "Pods-Catalog" */;
+			buildPhases = (
+				6DA0470F5DB43AE93264A0D6BDC16DA6 /* Sources */,
+				CDA81B82B0576384271CCF8269ABB445 /* Frameworks */,
+				22D31EE2216F0CA6F6BCEF4E4BBF0A95 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0F6F9D632DF01A8A18204F65ACBCC52 /* PBXTargetDependency */,
+				20556DB016628C9332E9552CFA563A16 /* PBXTargetDependency */,
+				5184F31BA16C96FB45FB39AB17A49D09 /* PBXTargetDependency */,
+			);
+			name = "Pods-Catalog";
+			productName = "Pods-Catalog";
+			productReference = 2CC3B076246EFEC614B8CDE7037AC7AF /* Pods_Catalog.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		688A67C0E5F60FA3D9A0A044F5BC385B /* GTCatalog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0AF60ECAB7BCD088E278E0C0DF722FB /* Build configuration list for PBXNativeTarget "GTCatalog" */;
+			buildPhases = (
+				18D8D957CD17C097BAE100FC59A74B19 /* Sources */,
+				75F159700EDD7507E7CC58D53A8086F5 /* Frameworks */,
+				59B742DE6F8114678D9B698256F77E10 /* Headers */,
+				EF042B9FC353BBFB2983A54CCE99E2E3 /* Copy . Public Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GTCatalog;
+			productName = GTCatalog;
+			productReference = 6578C448D7543D28E92F296E3B92BE82 /* GTCatalog.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B75EE7DAC15838019EF4CFC71ECC1D0B /* GTComponentsUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAE6C6345A75334AEB6ADB2B4C5E69EE /* Build configuration list for PBXNativeTarget "GTComponentsUnitTests" */;
+			buildPhases = (
+				CAB25696EB85B7DD88A509BB7018CA4A /* Sources */,
+				28145DE60D9D610F599740EFACAF4C51 /* Frameworks */,
+				4A2EBECF48D30418E5C579CF7BA3D8FB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76B372BEEDEE238028E13A681F2DB8EB /* PBXTargetDependency */,
+			);
+			name = GTComponentsUnitTests;
+			productName = GTComponentsUnitTests;
+			productReference = 12EFEE67DB07D69A3578FF0A52A313F7 /* GTComponentsUnitTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C09F4236451228FDB645FDB63E278CD1 /* GTKitComponents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 667ACF2923B34A476215AE0441D03FD3 /* Build configuration list for PBXNativeTarget "GTKitComponents" */;
+			buildPhases = (
+				EDFDFB4B04649FC05EF514D9366CDE37 /* Sources */,
+				DBE195C88DB7A12B60056826CBD1C316 /* Frameworks */,
+				E985DC05815FD1D3F934E06CD97E86E7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GTKitComponents;
+			productName = GTKitComponents;
+			productReference = 2E9A4D2F82D5F56D07AB0DD67BDF70EE /* GTKitComponents.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D5F7F6A348C8C359775A4EF14A2674F1 /* Pods-UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F28E3D424206B617F4E60C030E3A3F60 /* Build configuration list for PBXNativeTarget "Pods-UnitTests" */;
+			buildPhases = (
+				E6D6DA11D34573B3154EF960A4DDCD52 /* Sources */,
+				C07B4A46E916495FE46480FEA7C0FC02 /* Frameworks */,
+				C379725F4B07B701BB788A65FEEB339B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D02AF421C4520F13E6949A2DE210E998 /* PBXTargetDependency */,
+				D88A8786A35E2453B83A4C0642F7DA1C /* PBXTargetDependency */,
+				60BFC07A520899BB980B12CD55037994 /* PBXTargetDependency */,
+			);
+			name = "Pods-UnitTests";
+			productName = "Pods-UnitTests";
+			productReference = 510BAA448DB10AE71AFB2F4BA44C40AE /* Pods_UnitTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 11077C8B4E60DF730C7818AE667161C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				688A67C0E5F60FA3D9A0A044F5BC385B /* GTCatalog */,
+				218CD328B2568BEC2DC8FD73B367C110 /* GTComponentsExamples */,
+				B75EE7DAC15838019EF4CFC71ECC1D0B /* GTComponentsUnitTests */,
+				C09F4236451228FDB645FDB63E278CD1 /* GTKitComponents */,
+				4874224F6651E081609413A8B983176F /* Pods-Catalog */,
+				D5F7F6A348C8C359775A4EF14A2674F1 /* Pods-UnitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		411B0D785C0A4EB2D056FE915D249807 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				822D200E1A1E65E14BC346768771F607 /* ShadowDragSquareExample.storyboard in Resources */,
+				D6418982E6BC5CCEE16147071EC42318 /* ZShadow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18D8D957CD17C097BAE100FC59A74B19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F721A8CD8BDBA81467EAFA2A54BD7017 /* GTCatalog-dummy.m in Sources */,
+				A9316D7CF0AC41BD13875F6397791D75 /* GTFNodeListViewController.m in Sources */,
+				5A460FE4638EC0B6348B15055E6DC56E /* GTFRuntime.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DA0470F5DB43AE93264A0D6BDC16DA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56AA0EC6E449FE2E53A2E62EA90B5ECA /* Pods-Catalog-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		789D00F6B62AAA912E080A6E5427847B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FFE6F62FB223D6E582864C34C2BE607 /* ExampleShadowedView.swift in Sources */,
+				6FE141F644CEAE89A39EF6720B49672F /* GTComponentsExamples-dummy.m in Sources */,
+				2FA8A77F53640D42C3919C9381D86297 /* ShadowDragSquareExampleViewController.swift in Sources */,
+				454D4535B77336B58D90FF4788977804 /* ShadowedViews.swift in Sources */,
+				E2B264CF9A15339EE5EB76DA418F0D25 /* ShapesShadows.swift in Sources */,
+				B8C5F8B59291C2D0218C5DBD736A8EF5 /* TypographyCustomFontViewController.m in Sources */,
+				3385D070A5C5A1616B31C3467826B752 /* TypographyFontListExample.swift in Sources */,
+				2D93DCB581160ECC10D43947C200A53D /* TypographyMaterialStylesViewController.m in Sources */,
+				6E92266A2B46B736C9B3064CA7386F42 /* TypographySimpleExampleViewController.m in Sources */,
+				79256A5A125FD864ED4954330624F6A1 /* ZShadow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAB25696EB85B7DD88A509BB7018CA4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D38B323F760E51CBF4886B4E63693C1 /* GTCMathTests.m in Sources */,
+				772D2F5F9857E645DF2D06AAC103D131 /* GTComponentsUnitTests-dummy.m in Sources */,
+				B2BB8BCE0098ACF9E8A1AB49137D1AE0 /* KeyboardWatcherNoopTest.m in Sources */,
+				05360FBCC4FAD381F92381BDB9556B87 /* OverlayNoopTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6D6DA11D34573B3154EF960A4DDCD52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC34357382182F3E6B3ED5C442D9E8EC /* Pods-UnitTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDFDFB4B04649FC05EF514D9366CDE37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3C0269DB156E6C87E81A1AEEE073F1A /* GTCCornerTreatment.m in Sources */,
+				90FE1EB6B2258957728F1B19171F7B69 /* GTCCurvedCornerTreatment.m in Sources */,
+				83B413219F7E57424C0A0C4344532414 /* GTCCurvedRectShapeGenerator.m in Sources */,
+				4FA2B62BC7102F244570C7F42CE0B832 /* GTCCutCornerTreatment.m in Sources */,
+				384203E4C9F1E1FC0914AB82CB20DEF1 /* GTCEdgeTreatment.m in Sources */,
+				836B5F5AEC498A5E7DA904C873D9BB74 /* GTCFontTraits.m in Sources */,
+				C78FF4FE6AE2AFD477E61C97C4EBD770 /* GTCKeyboardWatcher.m in Sources */,
+				77A1910C698E704BD7841DB30D0A9AD7 /* GTCLayoutMetrics.m in Sources */,
+				C40BAE5FCBC52C45BFB92A03012CA14B /* GTCOverlayAnimationObserver.m in Sources */,
+				014E61B52F051650A62E1D63DEE02F18 /* GTCOverlayObserver.m in Sources */,
+				ED01F40636EC849A6D2AD6A6DF67B450 /* GTCOverlayObserverOverlay.m in Sources */,
+				A6806A490404DF736BC3E141D948F68F /* GTCOverlayObserverTransition.m in Sources */,
+				79943D2AA1CD594EA7D1BADCA75DBD52 /* GTCOverlayUtilities.m in Sources */,
+				396BEDC87E95CF13F2B9DAA95A4554FC /* GTCPathGenerator.m in Sources */,
+				54E1C9F6CEB0CB8941705AF5A8BB34E5 /* GTCPillShapeGenerator.m in Sources */,
+				FF8B8E33C0A492BDA5C04008BF473CE7 /* GTCRectangleShapeGenerator.m in Sources */,
+				9DCE0D071124636324F0303CE3EDE6FC /* GTCRoundedCornerTreatment.m in Sources */,
+				0B53BF5B65253E9EEF008E84F7F18350 /* GTCShadowElevations.m in Sources */,
+				94E946A26E56505E98E85ED99238EBB5 /* GTCShadowLayer.m in Sources */,
+				1471249E548623E9523E814D0860B18D /* GTCShapedShadowLayer.m in Sources */,
+				305B59FDF47EB5ABE2BA6901846C1A58 /* GTCShapedView.m in Sources */,
+				CA9DD865D74BE9B476B58180EE76A476 /* GTCSlantedRectShapeGenerator.m in Sources */,
+				79FDA97E44024270A3A5B4532C9B10A7 /* GTCTriangleEdgeTreatment.m in Sources */,
+				FBC095C276BB776DF296CE62598E3CD3 /* GTCTypography.m in Sources */,
+				8FDE46265F9ABAFFDFDA5ACD1832D36D /* GTKitComponents-dummy.m in Sources */,
+				C185E2F4D5C93CD5E8205E6818E8BC6A /* UIApplication+AppExtensions.m in Sources */,
+				C46F4CCC66A59B94D8C56FE274DF2150 /* UIFont+GTCSimpleEquality.m in Sources */,
+				202017B3571522A1DC326A2023E6C9D4 /* UIFont+GTCTypography.m in Sources */,
+				DEB0D30209D2ED8A149C6CB221C52B16 /* UIFont+GTCTypographyPrivate.m in Sources */,
+				1F25B978F66F78BD0232E9B929ABF702 /* UIFontDescriptor+GTCTypography.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		20556DB016628C9332E9552CFA563A16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTComponentsExamples;
+			target = 218CD328B2568BEC2DC8FD73B367C110 /* GTComponentsExamples */;
+			targetProxy = 761CFB25B0385466350E14AF09252EB4 /* PBXContainerItemProxy */;
+		};
+		3310DEA542B99078467351BB22393823 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTKitComponents;
+			target = C09F4236451228FDB645FDB63E278CD1 /* GTKitComponents */;
+			targetProxy = FD72351F8205FF37A7726E0C1E51AFF2 /* PBXContainerItemProxy */;
+		};
+		5184F31BA16C96FB45FB39AB17A49D09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTKitComponents;
+			target = C09F4236451228FDB645FDB63E278CD1 /* GTKitComponents */;
+			targetProxy = AE9D5360F68B01D941BAFC29E627F8F5 /* PBXContainerItemProxy */;
+		};
+		60BFC07A520899BB980B12CD55037994 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTKitComponents;
+			target = C09F4236451228FDB645FDB63E278CD1 /* GTKitComponents */;
+			targetProxy = B8399BC74122E810785E440747DB2655 /* PBXContainerItemProxy */;
+		};
+		76B372BEEDEE238028E13A681F2DB8EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTKitComponents;
+			target = C09F4236451228FDB645FDB63E278CD1 /* GTKitComponents */;
+			targetProxy = 11AB5013CB9000DE5DB3A44CD337C32B /* PBXContainerItemProxy */;
+		};
+		D02AF421C4520F13E6949A2DE210E998 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTCatalog;
+			target = 688A67C0E5F60FA3D9A0A044F5BC385B /* GTCatalog */;
+			targetProxy = 37C08F182BEE9A67A6CD975545B4D9CA /* PBXContainerItemProxy */;
+		};
+		D0F6F9D632DF01A8A18204F65ACBCC52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTCatalog;
+			target = 688A67C0E5F60FA3D9A0A044F5BC385B /* GTCatalog */;
+			targetProxy = CA88CE61A6F5C6E032EEA134B0B008F0 /* PBXContainerItemProxy */;
+		};
+		D88A8786A35E2453B83A4C0642F7DA1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTComponentsUnitTests;
+			target = B75EE7DAC15838019EF4CFC71ECC1D0B /* GTComponentsUnitTests */;
+			targetProxy = 35C7B4481EFA310544FE7370F494B7DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1EE19F5DD95931924296F637BF18BD8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		22FBFBE9148EC373FFCD34E08A014287 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9452B04214393DF388C885A13C61BCA /* Pods-UnitTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-UnitTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-UnitTests/Pods-UnitTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3FB120D2C19A9114F6C08456692E3512 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E758EF2E3AB5A2F05958D903756E8CAA /* Pods-Catalog.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Catalog/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Catalog/Pods-Catalog.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		41D187392330132C55A0484FA125538C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47A5DC5A7960FC84AA1C80502AD69ABC /* GTKitComponents.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GTKitComponents/GTKitComponents-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GTKitComponents/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GTKitComponents/GTKitComponents.modulemap";
+				PRODUCT_MODULE_NAME = GTKitComponents;
+				PRODUCT_NAME = GTKitComponents;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5223B5C70C964505C05DD4445EB5D486 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78EFFF0E0AD4B757C623C4554C038686 /* GTCatalog.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GTCatalog/GTCatalog-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GTCatalog/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GTCatalog/GTCatalog.modulemap";
+				PRODUCT_MODULE_NAME = GTCatalog;
+				PRODUCT_NAME = GTCatalog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5AB8E2FB1E8B9DF42BE1908048ADB20A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E7EE40670E58D1ECCDC9B6A003AB422 /* Pods-UnitTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-UnitTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-UnitTests/Pods-UnitTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5E73BF1ED7D776E177DB14D07C42D315 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A29323EE3B7DBC236EAF6804F870884 /* Pods-Catalog.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Catalog/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Catalog/Pods-Catalog.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5EBAC5043DF4F61561C75A7C4DCD38FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3539AB09675AA3156703BE2F96A1D00F /* GTComponentsUnitTests.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GTComponentsUnitTests/GTComponentsUnitTests-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GTComponentsUnitTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GTComponentsUnitTests/GTComponentsUnitTests.modulemap";
+				PRODUCT_MODULE_NAME = GTComponentsUnitTests;
+				PRODUCT_NAME = GTComponentsUnitTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		881405862603B13F128EFA96ACC703AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47A5DC5A7960FC84AA1C80502AD69ABC /* GTKitComponents.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GTKitComponents/GTKitComponents-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GTKitComponents/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GTKitComponents/GTKitComponents.modulemap";
+				PRODUCT_MODULE_NAME = GTKitComponents;
+				PRODUCT_NAME = GTKitComponents;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8DA8CEB486467F7CEB23BE414CD598E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 687719F80F5BA26E2444B13268FE7994 /* GTComponentsExamples.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GTComponentsExamples/GTComponentsExamples-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GTComponentsExamples/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GTComponentsExamples/GTComponentsExamples.modulemap";
+				PRODUCT_MODULE_NAME = GTComponentsExamples;
+				PRODUCT_NAME = GTComponentsExamples;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9C9AEA1490D2DD544192CA0386D593D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78EFFF0E0AD4B757C623C4554C038686 /* GTCatalog.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GTCatalog/GTCatalog-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GTCatalog/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GTCatalog/GTCatalog.modulemap";
+				PRODUCT_MODULE_NAME = GTCatalog;
+				PRODUCT_NAME = GTCatalog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CF20985AC92EB03EFC6BB91B5840659F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3539AB09675AA3156703BE2F96A1D00F /* GTComponentsUnitTests.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GTComponentsUnitTests/GTComponentsUnitTests-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GTComponentsUnitTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GTComponentsUnitTests/GTComponentsUnitTests.modulemap";
+				PRODUCT_MODULE_NAME = GTComponentsUnitTests;
+				PRODUCT_NAME = GTComponentsUnitTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E9F732460B414C3650EB3C48F8F152A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 687719F80F5BA26E2444B13268FE7994 /* GTComponentsExamples.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GTComponentsExamples/GTComponentsExamples-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GTComponentsExamples/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GTComponentsExamples/GTComponentsExamples.modulemap";
+				PRODUCT_MODULE_NAME = GTComponentsExamples;
+				PRODUCT_NAME = GTComponentsExamples;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F4568DEE257655D290C2B9CEAB37C934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EE19F5DD95931924296F637BF18BD8F /* Debug */,
+				F4568DEE257655D290C2B9CEAB37C934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		667ACF2923B34A476215AE0441D03FD3 /* Build configuration list for PBXNativeTarget "GTKitComponents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41D187392330132C55A0484FA125538C /* Debug */,
+				881405862603B13F128EFA96ACC703AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79274F7ED63ED0714CB2F2EA2D23CD5A /* Build configuration list for PBXNativeTarget "GTComponentsExamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DA8CEB486467F7CEB23BE414CD598E6 /* Debug */,
+				E9F732460B414C3650EB3C48F8F152A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0AF60ECAB7BCD088E278E0C0DF722FB /* Build configuration list for PBXNativeTarget "GTCatalog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C9AEA1490D2DD544192CA0386D593D7 /* Debug */,
+				5223B5C70C964505C05DD4445EB5D486 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAE6C6345A75334AEB6ADB2B4C5E69EE /* Build configuration list for PBXNativeTarget "GTComponentsUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EBAC5043DF4F61561C75A7C4DCD38FC /* Debug */,
+				CF20985AC92EB03EFC6BB91B5840659F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB240DEBCCEB8F0CBC67997E66079791 /* Build configuration list for PBXNativeTarget "Pods-Catalog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E73BF1ED7D776E177DB14D07C42D315 /* Debug */,
+				3FB120D2C19A9114F6C08456692E3512 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F28E3D424206B617F4E60C030E3A3F60 /* Build configuration list for PBXNativeTarget "Pods-UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AB8E2FB1E8B9DF42BE1908048ADB20A /* Debug */,
+				22FBFBE9148EC373FFCD34E08A014287 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

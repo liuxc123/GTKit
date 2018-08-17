@@ -1,0 +1,66 @@
+PODS:
+  - GTCatalog (0.0.1)
+  - GTComponentsExamples (1.0.0):
+    - GTKitComponents
+  - GTComponentsUnitTests (1.0.0):
+    - GTKitComponents
+  - GTKitComponents (0.0.1):
+    - GTKitComponents/private (= 0.0.1)
+    - GTKitComponents/ShadowElevations (= 0.0.1)
+    - GTKitComponents/ShadowLayer (= 0.0.1)
+    - GTKitComponents/Typography (= 0.0.1)
+  - GTKitComponents/private (0.0.1):
+    - GTKitComponents/private/Application (= 0.0.1)
+    - GTKitComponents/private/KeyboardWatcher (= 0.0.1)
+    - GTKitComponents/private/Math (= 0.0.1)
+    - GTKitComponents/private/Overlay (= 0.0.1)
+    - GTKitComponents/private/ShapeLibrary (= 0.0.1)
+    - GTKitComponents/private/Shapes (= 0.0.1)
+    - GTKitComponents/private/UIMetrics (= 0.0.1)
+  - GTKitComponents/private/Application (0.0.1)
+  - GTKitComponents/private/KeyboardWatcher (0.0.1):
+    - GTKitComponents/private/Application
+  - GTKitComponents/private/Math (0.0.1)
+  - GTKitComponents/private/Overlay (0.0.1)
+  - GTKitComponents/private/ShapeLibrary (0.0.1):
+    - GTKitComponents/private/Math
+    - GTKitComponents/private/Shapes
+  - GTKitComponents/private/Shapes (0.0.1):
+    - GTKitComponents/private/Math
+    - GTKitComponents/ShadowLayer
+  - GTKitComponents/private/UIMetrics (0.0.1):
+    - GTKitComponents/private/Application
+  - GTKitComponents/ShadowElevations (0.0.1)
+  - GTKitComponents/ShadowLayer (0.0.1):
+    - GTKitComponents/ShadowElevations
+  - GTKitComponents/Typography (0.0.1):
+    - GTKitComponents/private/Application
+    - GTKitComponents/private/Math
+
+DEPENDENCIES:
+  - GTCatalog
+  - GTComponentsExamples (from `../`)
+  - GTComponentsUnitTests (from `../`)
+  - GTKitComponents (from `../`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - GTCatalog
+
+EXTERNAL SOURCES:
+  GTComponentsExamples:
+    :path: "../"
+  GTComponentsUnitTests:
+    :path: "../"
+  GTKitComponents:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  GTCatalog: d6bb60421469aaaf6bee50c6419881427843809a
+  GTComponentsExamples: c0b29cabafc28b939edcdbed2945e53e1617ad27
+  GTComponentsUnitTests: c0e79a23fbd9983285153beed5faeabd5acd079a
+  GTKitComponents: 857ea40c9e1543c6853637904783936de090fe3c
+
+PODFILE CHECKSUM: 856ea29b72f024aba96c78f51f6da1ec06896ef0
+
+COCOAPODS: 1.5.0

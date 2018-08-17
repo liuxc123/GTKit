@@ -1,0 +1,42 @@
+{
+  "name": "GTComponentsExamples",
+  "version": "1.0.0",
+  "summary": "This spec is an aggregate of all the GTKit Components examples.",
+  "homepage": "https://github.com/your/repo",
+  "authors": "Catalog",
+  "license": "Apache 2.0",
+  "source": {
+    "git": "https://github.com/your/repo.git",
+    "tag": "1.0.0"
+  },
+  "requires_arc": true,
+  "source_files": [
+    "components/*/examples/*.{h,m,swift}",
+    "components/*/examples/supplemental/*.{h,m,swift}",
+    "components/private/*/examples/*.{h,m,swift}",
+    "components/schemes/*/examples/*.{h,m,swift}",
+    "components/schemes/*/examples/supplemental/*.{h,m,swift}"
+  ],
+  "resources": [
+    "components/*/examples/resources/*",
+    "components/private/*/examples/resources/*",
+    "components/schemes/*/examples/resources/*"
+  ],
+  "public_header_files": [
+    "components/*/examples/*.h",
+    "components/*/examples/supplemental/*.h",
+    "components/private/*/examples/*.h",
+    "components/schemes/*/examples/*.h"
+  ],
+  "dependencies": {
+    "GTKitComponents": [
+
+    ]
+  },
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
+  }
+}
