@@ -4,13 +4,58 @@ PODS:
     - GTKitComponents
   - GTComponentsUnitTests (1.0.0):
     - GTKitComponents
+  - GTFInternationalization (0.0.1)
+  - GTFTextAccessibility (0.0.1)
   - GTKitComponents (0.0.1):
+    - GTKitComponents/AppBar (= 0.0.1)
+    - GTKitComponents/ButtonBar (= 0.0.1)
+    - GTKitComponents/Buttons (= 0.0.1)
+    - GTKitComponents/FlexibleHeader (= 0.0.1)
+    - GTKitComponents/HeaderStackView (= 0.0.1)
+    - GTKitComponents/Ink (= 0.0.1)
+    - GTKitComponents/NavigationBar (= 0.0.1)
     - GTKitComponents/private (= 0.0.1)
     - GTKitComponents/ShadowElevations (= 0.0.1)
     - GTKitComponents/ShadowLayer (= 0.0.1)
     - GTKitComponents/Typography (= 0.0.1)
+  - GTKitComponents/AppBar (0.0.1):
+    - GTFInternationalization
+    - GTKitComponents/FlexibleHeader
+    - GTKitComponents/HeaderStackView
+    - GTKitComponents/NavigationBar
+    - GTKitComponents/private/Application
+    - GTKitComponents/private/UIMetrics
+    - GTKitComponents/ShadowElevations
+    - GTKitComponents/ShadowLayer
+    - GTKitComponents/Typography
+  - GTKitComponents/ButtonBar (0.0.1):
+    - GTFInternationalization
+    - GTKitComponents/Buttons
+  - GTKitComponents/Buttons (0.0.1):
+    - GTFInternationalization
+    - GTFTextAccessibility
+    - GTKitComponents/Ink
+    - GTKitComponents/private/Math
+    - GTKitComponents/private/Shapes
+    - GTKitComponents/ShadowElevations
+    - GTKitComponents/ShadowLayer
+    - GTKitComponents/Typography
+  - GTKitComponents/FlexibleHeader (0.0.1):
+    - GTFTextAccessibility
+    - GTKitComponents/private/Application
+    - GTKitComponents/private/UIMetrics
+  - GTKitComponents/HeaderStackView (0.0.1)
+  - GTKitComponents/Ink (0.0.1):
+    - GTKitComponents/private/Math
+  - GTKitComponents/NavigationBar (0.0.1):
+    - GTFInternationalization
+    - GTFTextAccessibility
+    - GTKitComponents/ButtonBar
+    - GTKitComponents/private/Math
+    - GTKitComponents/Typography
   - GTKitComponents/private (0.0.1):
     - GTKitComponents/private/Application (= 0.0.1)
+    - GTKitComponents/private/Icons (= 0.0.1)
     - GTKitComponents/private/KeyboardWatcher (= 0.0.1)
     - GTKitComponents/private/Math (= 0.0.1)
     - GTKitComponents/private/Overlay (= 0.0.1)
@@ -18,6 +63,42 @@ PODS:
     - GTKitComponents/private/Shapes (= 0.0.1)
     - GTKitComponents/private/UIMetrics (= 0.0.1)
   - GTKitComponents/private/Application (0.0.1)
+  - GTKitComponents/private/Icons (0.0.1):
+    - GTKitComponents/private/Icons/Base (= 0.0.1)
+    - GTKitComponents/private/Icons/ic_arrow_back (= 0.0.1)
+    - GTKitComponents/private/Icons/ic_check (= 0.0.1)
+    - GTKitComponents/private/Icons/ic_check_circle (= 0.0.1)
+    - GTKitComponents/private/Icons/ic_chevron_right (= 0.0.1)
+    - GTKitComponents/private/Icons/ic_color_lens (= 0.0.1)
+    - GTKitComponents/private/Icons/ic_help_outline (= 0.0.1)
+    - GTKitComponents/private/Icons/ic_info (= 0.0.1)
+    - GTKitComponents/private/Icons/ic_more_horiz (= 0.0.1)
+    - GTKitComponents/private/Icons/ic_radio_button_unchecked (= 0.0.1)
+    - GTKitComponents/private/Icons/ic_reorder (= 0.0.1)
+    - GTKitComponents/private/Icons/ic_settings (= 0.0.1)
+  - GTKitComponents/private/Icons/Base (0.0.1)
+  - GTKitComponents/private/Icons/ic_arrow_back (0.0.1):
+    - GTKitComponents/private/Icons/Base
+  - GTKitComponents/private/Icons/ic_check (0.0.1):
+    - GTKitComponents/private/Icons/Base
+  - GTKitComponents/private/Icons/ic_check_circle (0.0.1):
+    - GTKitComponents/private/Icons/Base
+  - GTKitComponents/private/Icons/ic_chevron_right (0.0.1):
+    - GTKitComponents/private/Icons/Base
+  - GTKitComponents/private/Icons/ic_color_lens (0.0.1):
+    - GTKitComponents/private/Icons/Base
+  - GTKitComponents/private/Icons/ic_help_outline (0.0.1):
+    - GTKitComponents/private/Icons/Base
+  - GTKitComponents/private/Icons/ic_info (0.0.1):
+    - GTKitComponents/private/Icons/Base
+  - GTKitComponents/private/Icons/ic_more_horiz (0.0.1):
+    - GTKitComponents/private/Icons/Base
+  - GTKitComponents/private/Icons/ic_radio_button_unchecked (0.0.1):
+    - GTKitComponents/private/Icons/Base
+  - GTKitComponents/private/Icons/ic_reorder (0.0.1):
+    - GTKitComponents/private/Icons/Base
+  - GTKitComponents/private/Icons/ic_settings (0.0.1):
+    - GTKitComponents/private/Icons/Base
   - GTKitComponents/private/KeyboardWatcher (0.0.1):
     - GTKitComponents/private/Application
   - GTKitComponents/private/Math (0.0.1)
@@ -46,6 +127,8 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - GTCatalog
+    - GTFInternationalization
+    - GTFTextAccessibility
 
 EXTERNAL SOURCES:
   GTComponentsExamples:
@@ -57,9 +140,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   GTCatalog: d6bb60421469aaaf6bee50c6419881427843809a
-  GTComponentsExamples: c0b29cabafc28b939edcdbed2945e53e1617ad27
-  GTComponentsUnitTests: c0e79a23fbd9983285153beed5faeabd5acd079a
-  GTKitComponents: 857ea40c9e1543c6853637904783936de090fe3c
+  GTComponentsExamples: 8a6efd1fda1aebfe4ab41ce358b7c8c2deff1aa1
+  GTComponentsUnitTests: c00df0aa153664eb8ae081f04a3493453d9c19a7
+  GTFInternationalization: 9aa259ddf1deb8590d605128c92f6ce8e87baa64
+  GTFTextAccessibility: d5a28a7a603d1722727e33f27dcc27b5e7b0ce43
+  GTKitComponents: ef67952290b9e0528d90a95271c7cdaeafb2ce3e
 
 PODFILE CHECKSUM: 856ea29b72f024aba96c78f51f6da1ec06896ef0
 

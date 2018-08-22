@@ -5,8 +5,5 @@
 //  Created by liuxc on 2018/8/17.
 //
 
-#ifndef GTNavigationBar_h
-#define GTNavigationBar_h
+#import "GTCNavigationBar.h"
 
-
-#endif /* GTNavigationBar_h */

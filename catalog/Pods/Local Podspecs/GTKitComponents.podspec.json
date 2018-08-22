@@ -6,7 +6,7 @@
   "authors": "Catalog",
   "license": "Apache 2.0",
   "source": {
-    "git": "https://github.com/your/repo.git",
+    "git": "https://github.com/liuxc123/GTKit.git",
     "tag": "0.0.1"
   },
   "requires_arc": true,
@@ -17,6 +17,151 @@
     "watchos": null
   },
   "subspecs": [
+    {
+      "name": "AppBar",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/AppBar/src/*.h",
+      "source_files": [
+        "components/AppBar/src/*.{h,m}",
+        "components/AppBar/src/private/*.{h,m}"
+      ],
+      "resources": [
+        "components/AppBar/src/GTAppBar.bundle"
+      ],
+      "dependencies": {
+        "GTKitComponents/HeaderStackView": [
+
+        ],
+        "GTKitComponents/NavigationBar": [
+
+        ],
+        "GTKitComponents/Typography": [
+
+        ],
+        "GTKitComponents/private/Application": [
+
+        ],
+        "GTKitComponents/FlexibleHeader": [
+
+        ],
+        "GTKitComponents/ShadowElevations": [
+
+        ],
+        "GTKitComponents/ShadowLayer": [
+
+        ],
+        "GTFInternationalization": [
+
+        ],
+        "GTKitComponents/private/UIMetrics": [
+
+        ]
+      }
+    },
+    {
+      "name": "Buttons",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Buttons/src/*.h",
+      "source_files": [
+        "components/Buttons/src/*.{h,m}",
+        "components/Buttons/src/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTFInternationalization": [
+
+        ],
+        "GTFTextAccessibility": [
+
+        ],
+        "GTKitComponents/Ink": [
+
+        ],
+        "GTKitComponents/ShadowElevations": [
+
+        ],
+        "GTKitComponents/ShadowLayer": [
+
+        ],
+        "GTKitComponents/Typography": [
+
+        ],
+        "GTKitComponents/private/Math": [
+
+        ],
+        "GTKitComponents/private/Shapes": [
+
+        ]
+      }
+    },
+    {
+      "name": "ButtonBar",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/ButtonBar/src/*.h",
+      "source_files": [
+        "components/ButtonBar/src/*.{h,m}",
+        "components/ButtonBar/src/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTFInternationalization": [
+
+        ],
+        "GTKitComponents/Buttons": [
+
+        ]
+      }
+    },
+    {
+      "name": "FlexibleHeader",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/FlexibleHeader/src/*.h",
+      "source_files": [
+        "components/FlexibleHeader/src/*.{h,m}",
+        "components/FlexibleHeader/src/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTFTextAccessibility": [
+
+        ],
+        "GTKitComponents/private/Application": [
+
+        ],
+        "GTKitComponents/private/UIMetrics": [
+
+        ]
+      }
+    },
+    {
+      "name": "HeaderStackView",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/HeaderStackView/src/*.h",
+      "source_files": "components/HeaderStackView/src/*.{h,m}"
+    },
+    {
+      "name": "Ink",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Ink/src/*.h",
+      "source_files": [
+        "components/Ink/src/*.{h,m}",
+        "components/Ink/src/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTKitComponents/private/Math": [
+
+        ]
+      }
+    },
     {
       "name": "ShadowElevations",
       "platforms": {
@@ -58,8 +203,208 @@
       }
     },
     {
+      "name": "NavigationBar",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/NavigationBar/src/*.h",
+      "source_files": "components/NavigationBar/src/*.{h,m}",
+      "dependencies": {
+        "GTFTextAccessibility": [
+
+        ],
+        "GTKitComponents/ButtonBar": [
+
+        ],
+        "GTKitComponents/Typography": [
+
+        ],
+        "GTFInternationalization": [
+
+        ],
+        "GTKitComponents/private/Math": [
+
+        ]
+      }
+    },
+    {
       "name": "private",
       "subspecs": [
+        {
+          "name": "Icons",
+          "subspecs": [
+            {
+              "name": "Base",
+              "public_header_files": "components/private/Icons/src/*.h",
+              "source_files": "components/private/Icons/src/*.{h,m}"
+            },
+            {
+              "name": "ic_arrow_back",
+              "public_header_files": "components/private/Icons/icons/ic_arrow_back/src/*.h",
+              "source_files": "components/private/Icons/icons/ic_arrow_back/src/*.{h,m}",
+              "resource_bundles": {
+                "GTIcons_ic_arrow_back": [
+                  "components/private/Icons/icons/ic_arrow_back/src/GTIcons_ic_arrow_back.bundle/*.png"
+                ]
+              },
+              "dependencies": {
+                "GTKitComponents/private/Icons/Base": [
+
+                ]
+              }
+            },
+            {
+              "name": "ic_check",
+              "public_header_files": "components/private/Icons/icons/ic_check/src/*.h",
+              "source_files": "components/private/Icons/icons/ic_check/src/*.{h,m}",
+              "resource_bundles": {
+                "GTIcons_ic_check": [
+                  "components/private/Icons/icons/ic_check/src/GTIcons_ic_check.bundle/*.png"
+                ]
+              },
+              "dependencies": {
+                "GTKitComponents/private/Icons/Base": [
+
+                ]
+              }
+            },
+            {
+              "name": "ic_check_circle",
+              "public_header_files": "components/private/Icons/icons/ic_check_circle/src/*.h",
+              "source_files": "components/private/Icons/icons/ic_check_circle/src/*.{h,m}",
+              "resource_bundles": {
+                "GTIcons_ic_check_circle": [
+                  "components/private/Icons/icons/ic_check_circle/src/GTIcons_ic_check_circle.bundle/*.png"
+                ]
+              },
+              "dependencies": {
+                "GTKitComponents/private/Icons/Base": [
+
+                ]
+              }
+            },
+            {
+              "name": "ic_chevron_right",
+              "public_header_files": "components/private/Icons/icons/ic_chevron_right/src/*.h",
+              "source_files": "components/private/Icons/icons/ic_chevron_right/src/*.{h,m}",
+              "resource_bundles": {
+                "GTIcons_ic_chevron_right": [
+                  "components/private/Icons/icons/ic_chevron_right/src/GTIcons_ic_chevron_right.bundle/*.png"
+                ]
+              },
+              "dependencies": {
+                "GTKitComponents/private/Icons/Base": [
+
+                ]
+              }
+            },
+            {
+              "name": "ic_color_lens",
+              "public_header_files": "components/private/Icons/icons/ic_color_lens/src/*.h",
+              "source_files": "components/private/Icons/icons/ic_color_lens/src/*.{h,m}",
+              "resource_bundles": {
+                "GTIcons_ic_color_lens": [
+                  "components/private/Icons/icons/ic_color_lens/src/GTIcons_ic_color_lens.bundle/*.png"
+                ]
+              },
+              "dependencies": {
+                "GTKitComponents/private/Icons/Base": [
+
+                ]
+              }
+            },
+            {
+              "name": "ic_help_outline",
+              "public_header_files": "components/private/Icons/icons/ic_help_outline/src/*.h",
+              "source_files": "components/private/Icons/icons/ic_help_outline/src/*.{h,m}",
+              "resource_bundles": {
+                "GTIcons_ic_help_outline": [
+                  "components/private/Icons/icons/ic_help_outline/src/GTIcons_ic_help_outline.bundle/*.png"
+                ]
+              },
+              "dependencies": {
+                "GTKitComponents/private/Icons/Base": [
+
+                ]
+              }
+            },
+            {
+              "name": "ic_info",
+              "public_header_files": "components/private/Icons/icons/ic_info/src/*.h",
+              "source_files": "components/private/Icons/icons/ic_info/src/*.{h,m}",
+              "resource_bundles": {
+                "GTIcons_ic_info": [
+                  "components/private/Icons/icons/ic_info/src/GTIcons_ic_info.bundle/*.png"
+                ]
+              },
+              "dependencies": {
+                "GTKitComponents/private/Icons/Base": [
+
+                ]
+              }
+            },
+            {
+              "name": "ic_more_horiz",
+              "public_header_files": "components/private/Icons/icons/ic_more_horiz/src/*.h",
+              "source_files": "components/private/Icons/icons/ic_more_horiz/src/*.{h,m}",
+              "resource_bundles": {
+                "GTIcons_ic_more_horiz": [
+                  "components/private/Icons/icons/ic_more_horiz/src/GTIcons_ic_more_horiz.bundle/*.png"
+                ]
+              },
+              "dependencies": {
+                "GTKitComponents/private/Icons/Base": [
+
+                ]
+              }
+            },
+            {
+              "name": "ic_radio_button_unchecked",
+              "public_header_files": "components/private/Icons/icons/ic_radio_button_unchecked/src/*.h",
+              "source_files": "components/private/Icons/icons/ic_radio_button_unchecked/src/*.{h,m}",
+              "resource_bundles": {
+                "GTIcons_ic_radio_button_unchecked": [
+                  "components/private/Icons/icons/ic_radio_button_unchecked/src/GTIcons_ic_radio_button_unchecked.bundle/*.png"
+                ]
+              },
+              "dependencies": {
+                "GTKitComponents/private/Icons/Base": [
+
+                ]
+              }
+            },
+            {
+              "name": "ic_reorder",
+              "public_header_files": "components/private/Icons/icons/ic_reorder/src/*.h",
+              "source_files": "components/private/Icons/icons/ic_reorder/src/*.{h,m}",
+              "resource_bundles": {
+                "GTIcons_ic_reorder": [
+                  "components/private/Icons/icons/ic_reorder/src/GTIcons_ic_reorder.bundle/*.png"
+                ]
+              },
+              "dependencies": {
+                "GTKitComponents/private/Icons/Base": [
+
+                ]
+              }
+            },
+            {
+              "name": "ic_settings",
+              "public_header_files": "components/private/Icons/icons/ic_settings/src/*.h",
+              "source_files": "components/private/Icons/icons/ic_settings/src/*.{h,m}",
+              "resource_bundles": {
+                "GTIcons_ic_settings": [
+                  "components/private/Icons/icons/ic_settings/src/GTIcons_ic_settings.bundle/*.png"
+                ]
+              },
+              "dependencies": {
+                "GTKitComponents/private/Icons/Base": [
+
+                ]
+              }
+            }
+          ]
+        },
         {
           "name": "Application",
           "platforms": {

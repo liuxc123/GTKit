@@ -8,9 +8,10 @@
 
 import UIKit
 import GTCatalog
+import GTKitComponents.GTAppBar
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GTCAppBarNavigationControllerDelegate {
 
     var window: UIWindow?
 
@@ -22,7 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             GTFNodeListViewController(node: GTFCreateNavigationTree())
         rootViewController.title = "Catalog by Convention"
 
-        let navController = UINavigationController(rootViewController: rootViewController)
+        let navController = GTCAppBarNavigationController()
+        navController.pushViewController(rootViewController, animated: false)
+
         self.window?.rootViewController = navController
 
         self.window!.makeKeyAndVisible()

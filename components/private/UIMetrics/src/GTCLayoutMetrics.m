@@ -33,7 +33,7 @@ static BOOL HasHardwareSafeAreas(void) {
 }
 #endif
 
-CGFloat MDCDeviceTopSafeAreaInset(void) {
+CGFloat GTCDeviceTopSafeAreaInset(void) {
     CGFloat topInset = kFixedStatusBarHeightOnPreiPhoneXDevices;
 #if defined(__IPHONE_11_0) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_11_0)
     if (@available(iOS 11.0, *)) {

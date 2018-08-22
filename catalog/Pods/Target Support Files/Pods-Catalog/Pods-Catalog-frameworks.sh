@@ -145,11 +145,15 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/GTCatalog/GTCatalog.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GTComponentsExamples/GTComponentsExamples.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GTFInternationalization/GTFInternationalization.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GTFTextAccessibility/GTFTextAccessibility.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GTKitComponents/GTKitComponents.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/GTCatalog/GTCatalog.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GTComponentsExamples/GTComponentsExamples.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GTFInternationalization/GTFInternationalization.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GTFTextAccessibility/GTFTextAccessibility.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GTKitComponents/GTKitComponents.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
