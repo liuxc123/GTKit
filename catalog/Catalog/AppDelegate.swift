@@ -15,45 +15,101 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GTCAppBarNavigationContro
 
     var window: UIWindow?
 
+    let navigationController = GTCAppBarNavigationController()
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
+        UIApplication.shared.statusBarStyle = .lightContent
 
-        let rootViewController =
-            GTFNodeListViewController(node: GTFCreateNavigationTree())
-        rootViewController.title = "Catalog by Convention"
+        let tree = GTFCreateNavigationTree()
+        var rootNodeViewController: UIViewController
 
-        let navController = GTCAppBarNavigationController()
-        navController.pushViewController(rootViewController, animated: false)
+        /**
+         To have your example show up as the initial view controller, you need it to implement
+         the method `@objc class func catalogIsDebug() -> Bool` and have it return true.
+         That way it will become the debugLeaf and be presented first.
+         */
+        if let debugLeaf = tree.debugLeaf {
+            rootNodeViewController = debugLeaf.createExampleViewController()
+        } else {
+            rootNodeViewController = GTCDragonsController(node: tree)
+        }
 
-        self.window?.rootViewController = navController
+        navigationController.delegate = self
+        navigationController.pushViewController(rootNodeViewController, animated: false)
+        navigationController.interactivePopGestureRecognizer?.delegate = navigationController
 
+        self.configNotification()
+
+        self.window?.rootViewController = navigationController
         self.window!.makeKeyAndVisible()
         return true
     }
 
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    func configNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.themeDidChange), name: AppTheme.didChangeGlobalThemeNotificationName, object: nil)
     }
 
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
+    @objc func themeDidChange(notification: NSNotification) {
+        guard let colorScheme = notification.userInfo?[AppTheme.globalThemeNotificationColorSchemeKey]
+            as? GTCColorScheming else {
+                return
+        }
+        for viewController in navigationController.childViewControllers {
+            guard let appBar = navigationController.appBarViewController(for: viewController) else {
+                continue
+            }
 
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+//            GTCAppBarColorThemer.applySemanticColorScheme(colorScheme, to: appBar.ap)
+        }
     }
 
 
+    // MARK: GTCAppBarNavigationControllerInjectorDelegate
+
+    func appBarNavigationController(_ navigationController: GTCAppBarNavigationController,
+                                    willAdd appBarViewController: GTCAppBarViewController,
+                                    asChildOf viewController: UIViewController) {
+        GTCAppBarColorThemer.applyColorScheme(AppTheme.globalTheme.colorScheme,
+                                              to: appBarViewController)
+        GTCAppBarTypographyThemer.applyTypographyScheme(AppTheme.globalTheme.typographyScheme,
+                                                        to: appBarViewController)
+
+        if let injectee = viewController as? CatalogAppBarInjectee {
+            injectee.appBarNavigationControllerInjector(willAdd: appBarViewController)
+        }
+    }
+
+
+    func configShakeAction() {
+        UIApplication.shared.applicationSupportsShakeToEdit = true
+        self.becomeFirstResponder()
+    }
+
+    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+        return
+    }
+
+    override func motionCancelled(_ motion: UIEventSubtype, with event: UIEvent?) {
+        return
+    }
+
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if event?.subtype == .motionShake { // 判断是否是摇动结束
+            print("摇动结束");
+        }
+        return
+    }
+}
+
+protocol CatalogAppBarInjectee {
+    func appBarNavigationControllerInjector(willAdd appBarViewController: GTCAppBarViewController)
+}
+
+extension UINavigationController: UIGestureRecognizerDelegate {
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return viewControllers.count > 1
+    }
 }
 

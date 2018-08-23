@@ -55,7 +55,54 @@
         "GTFInternationalization": [
 
         ],
+        "GTKitComponents/private/Icons/ic_arrow_back": [
+
+        ],
         "GTKitComponents/private/UIMetrics": [
+
+        ]
+      }
+    },
+    {
+      "name": "AppBar+ColorThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/AppBar/src/ColorThemer/*.h",
+      "source_files": [
+        "components/AppBar/src/ColorThemer/*.{h,m}",
+        "components/AppBar/src/ColorThemer/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTKitComponents/AppBar": [
+
+        ],
+        "GTKitComponents/FlexibleHeader+ColorThemer": [
+
+        ],
+        "GTKitComponents/NavigationBar+ColorThemer": [
+
+        ],
+        "GTKitComponents/Themes": [
+
+        ]
+      }
+    },
+    {
+      "name": "AppBar+TypographyThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/AppBar/src/TypographyThemer/*.h",
+      "source_files": [
+        "components/AppBar/src/TypographyThemer/*.{h,m}",
+        "components/AppBar/src/TypographyThemer/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTKitComponents/AppBar": [
+
+        ],
+        "GTKitComponents/NavigationBar+TypographyThemer": [
 
         ]
       }
@@ -98,6 +145,82 @@
       }
     },
     {
+      "name": "Buttons+ColorThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Buttons/src/ColorThemer/*.h",
+      "source_files": [
+        "components/Buttons/src/ColorThemer/*.{h,m}",
+        "components/Buttons/src/ColorThemer/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTKitComponents/Buttons": [
+
+        ],
+        "GTKitComponents/schemes/Color": [
+
+        ]
+      }
+    },
+    {
+      "name": "Buttons+TitleColorAccessibilityMutator",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Buttons/src/TitleColorAccessibilityMutator/*.h",
+      "source_files": [
+        "components/Buttons/src/TitleColorAccessibilityMutator/*.{h,m}",
+        "components/Buttons/src/TitleColorAccessibilityMutator/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTFTextAccessibility": [
+
+        ],
+        "GTKitComponents/Buttons": [
+
+        ]
+      }
+    },
+    {
+      "name": "Buttons+TypographyThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Buttons/src/TypographyThemer/*.h",
+      "source_files": "components/Buttons/src/TypographyThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/Buttons": [
+
+        ],
+        "GTKitComponents/schemes/Typography": [
+
+        ]
+      }
+    },
+    {
+      "name": "Buttons+ButtonThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Buttons/src/ButtonThemer/*.h",
+      "source_files": [
+        "components/Buttons/src/ButtonThemer/*.{h,m}",
+        "components/Buttons/src/ButtonThemer/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTKitComponents/Buttons": [
+
+        ],
+        "GTKitComponents/Buttons+ColorThemer": [
+
+        ],
+        "GTKitComponents/Buttons+TypographyThemer": [
+
+        ]
+      }
+    },
+    {
       "name": "ButtonBar",
       "platforms": {
         "ios": "8.0"
@@ -112,6 +235,38 @@
 
         ],
         "GTKitComponents/Buttons": [
+
+        ]
+      }
+    },
+    {
+      "name": "ButtonBar+ColorThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/ButtonBar/src/ColorThemer/*.h",
+      "source_files": "components/ButtonBar/src/ColorThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/ButtonBar": [
+
+        ],
+        "GTKitComponents/Themes": [
+
+        ]
+      }
+    },
+    {
+      "name": "ButtonBar+TypographyThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/ButtonBar/src/TypographyThemer/*.h",
+      "source_files": "components/ButtonBar/src/TypographyThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/ButtonBar": [
+
+        ],
+        "GTKitComponents/schemes/Typography": [
 
         ]
       }
@@ -139,12 +294,44 @@
       }
     },
     {
+      "name": "FlexibleHeader+ColorThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/FlexibleHeader/src/ColorThemer/*.h",
+      "source_files": "components/FlexibleHeader/src/ColorThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/FlexibleHeader": [
+
+        ],
+        "GTKitComponents/schemes/Color": [
+
+        ]
+      }
+    },
+    {
       "name": "HeaderStackView",
       "platforms": {
         "ios": "8.0"
       },
       "public_header_files": "components/HeaderStackView/src/*.h",
       "source_files": "components/HeaderStackView/src/*.{h,m}"
+    },
+    {
+      "name": "HeaderStackView+ColorThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/HeaderStackView/src/ColorThemer/*.h",
+      "source_files": "components/HeaderStackView/src/ColorThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/HeaderStackView": [
+
+        ],
+        "GTKitComponents/Themes": [
+
+        ]
+      }
     },
     {
       "name": "Ink",
@@ -184,25 +371,6 @@
       }
     },
     {
-      "name": "Typography",
-      "platforms": {
-        "ios": "8.0"
-      },
-      "public_header_files": "components/Typography/src/*.h",
-      "source_files": [
-        "components/Typography/src/*.{h,m}",
-        "components/Typography/src/private/*.{h,m}"
-      ],
-      "dependencies": {
-        "GTKitComponents/private/Application": [
-
-        ],
-        "GTKitComponents/private/Math": [
-
-        ]
-      }
-    },
-    {
       "name": "NavigationBar",
       "platforms": {
         "ios": "8.0"
@@ -226,6 +394,113 @@
 
         ]
       }
+    },
+    {
+      "name": "NavigationBar+ColorThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/NavigationBar/src/ColorThemer/*.h",
+      "source_files": "components/NavigationBar/src/ColorThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/NavigationBar": [
+
+        ],
+        "GTKitComponents/schemes/Color": [
+
+        ]
+      }
+    },
+    {
+      "name": "NavigationBar+TypographyThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/NavigationBar/src/TypographyThemer/*.h",
+      "source_files": "components/NavigationBar/src/TypographyThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/NavigationBar": [
+
+        ],
+        "GTKitComponents/schemes/Typography": [
+
+        ]
+      }
+    },
+    {
+      "name": "OverlayWindow",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/OverlayWindow/src/*.h",
+      "source_files": [
+        "components/OverlayWindow/src/*.{h,m}",
+        "components/OverlayWindow/src/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTKitComponents/private/Application": [
+
+        ]
+      }
+    },
+    {
+      "name": "Themes",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Themes/src/*.h",
+      "source_files": [
+        "components/Themes/src/*.{h,m}",
+        "components/Themes/src/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTKitComponents/schemes/Color": [
+
+        ],
+        "GTKitComponents/schemes/Typography": [
+
+        ]
+      }
+    },
+    {
+      "name": "Typography",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Typography/src/*.h",
+      "source_files": [
+        "components/Typography/src/*.{h,m}",
+        "components/Typography/src/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTKitComponents/private/Application": [
+
+        ],
+        "GTKitComponents/private/Math": [
+
+        ]
+      }
+    },
+    {
+      "name": "schemes",
+      "subspecs": [
+        {
+          "name": "Color",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/schemes/Color/src/*.h",
+          "source_files": "components/schemes/Color/src/*.{h,m}"
+        },
+        {
+          "name": "Typography",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/schemes/Typography/src/*.h",
+          "source_files": "components/schemes/Typography/src/*.{h,m}"
+        }
+      ]
     },
     {
       "name": "private",

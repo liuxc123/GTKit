@@ -21,8 +21,19 @@ import GTKitComponents
 
 class TypographyFontListExampleViewController: UITableViewController {
 
+  let appBarViewController = GTCAppBarViewController()
+
+    deinit {
+        // Required for pre-iOS 11 devices because we've enabled observesTrackingScrollViewScrollEvents.
+        appBarViewController.headerView.trackingScrollView = nil
+    }
+
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.title = "Font List"
+    appBarViewController.headerView.observesTrackingScrollViewScrollEvents = false
+    appBarViewController.headerView.trackingScrollView = self.tableView
+
 
     self.tableView.separatorStyle = .none
 

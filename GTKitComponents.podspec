@@ -34,8 +34,26 @@ Pod::Spec.new do |s|
     component.dependency "GTKitComponents/ShadowLayer"
 
     component.dependency "GTFInternationalization"
-    # component.dependency "MaterialComponents/private/Icons/ic_arrow_back"
+    component.dependency "GTKitComponents/private/Icons/ic_arrow_back"
     component.dependency "GTKitComponents/private/UIMetrics"
+  end
+
+  s.subspec "AppBar+ColorThemer" do |extension|
+    extension.ios.deployment_target = '8.0'
+    extension.public_header_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.h"
+    extension.source_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.{h,m}", "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/private/*.{h,m}"
+    extension.dependency "GTKitComponents/#{extension.base_name.split('+')[0]}"
+    extension.dependency "GTKitComponents/FlexibleHeader+ColorThemer"
+    extension.dependency "GTKitComponents/NavigationBar+ColorThemer"
+    extension.dependency "GTKitComponents/Themes"
+  end
+
+  s.subspec "AppBar+TypographyThemer" do |extension|
+    extension.ios.deployment_target = '8.0'
+    extension.public_header_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.h"
+    extension.source_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.{h,m}", "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/private/*.{h,m}"
+    extension.dependency "GTKitComponents/#{extension.base_name.split('+')[0]}"
+    extension.dependency "GTKitComponents/NavigationBar+TypographyThemer"
   end
 
   # Buttons
@@ -55,6 +73,41 @@ Pod::Spec.new do |s|
     component.dependency "GTKitComponents/private/Shapes"
   end
 
+  s.subspec "Buttons+ColorThemer" do |extension|
+    extension.ios.deployment_target = '8.0'
+    extension.public_header_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.h"
+    extension.source_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.{h,m}", "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/private/*.{h,m}"
+    extension.dependency "GTKitComponents/#{extension.base_name.split('+')[0]}"
+    extension.dependency "GTKitComponents/schemes/Color"
+  end
+
+  s.subspec "Buttons+TitleColorAccessibilityMutator" do |extension|
+    extension.ios.deployment_target = '8.0'
+    extension.public_header_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.h"
+    extension.source_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.{h,m}", "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/private/*.{h,m}"
+
+    extension.dependency 'GTFTextAccessibility'
+    extension.dependency "GTKitComponents/#{extension.base_name.split('+')[0]}"
+  end
+
+  s.subspec "Buttons+TypographyThemer" do |extension|
+    extension.ios.deployment_target = '8.0'
+    extension.public_header_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.h"
+    extension.source_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.{h,m}"
+
+    extension.dependency "GTKitComponents/#{extension.base_name.split('+')[0]}"
+    extension.dependency "GTKitComponents/schemes/Typography"
+  end
+
+  s.subspec "Buttons+ButtonThemer" do |extension|
+    extension.ios.deployment_target = '8.0'
+    extension.public_header_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.h"
+    extension.source_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.{h,m}", "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/private/*.{h,m}"
+    extension.dependency "GTKitComponents/#{extension.base_name.split('+')[0]}"
+    extension.dependency "GTKitComponents/Buttons+ColorThemer"
+    extension.dependency "GTKitComponents/Buttons+TypographyThemer"
+  end
+
   # ButtonBar
 
   s.subspec "ButtonBar" do |component|
@@ -64,6 +117,24 @@ Pod::Spec.new do |s|
 
     component.dependency "GTFInternationalization"
     component.dependency "GTKitComponents/Buttons"
+  end
+
+  s.subspec "ButtonBar+ColorThemer" do |extension|
+    extension.ios.deployment_target = '8.0'
+    extension.public_header_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.h"
+    extension.source_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.{h,m}"
+
+    extension.dependency "GTKitComponents/#{extension.base_name.split('+')[0]}"
+    extension.dependency "GTKitComponents/Themes"
+  end
+
+  s.subspec "ButtonBar+TypographyThemer" do |extension|
+    extension.ios.deployment_target = '8.0'
+    extension.public_header_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.h"
+    extension.source_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.{h,m}"
+
+    extension.dependency "GTKitComponents/#{extension.base_name.split('+')[0]}"
+    extension.dependency "GTKitComponents/schemes/Typography"
   end
 
   # FlexibleHeader
@@ -78,12 +149,30 @@ Pod::Spec.new do |s|
     component.dependency "GTKitComponents/private/UIMetrics"
   end
 
-    # HeaderStackView
+  s.subspec "FlexibleHeader+ColorThemer" do |extension|
+    extension.ios.deployment_target = '8.0'
+    extension.public_header_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.h"
+    extension.source_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.{h,m}"
+
+    extension.dependency "GTKitComponents/#{extension.base_name.split('+')[0]}"
+    extension.dependency "GTKitComponents/schemes/Color"
+  end
+
+  # HeaderStackView
 
   s.subspec "HeaderStackView" do |component|
     component.ios.deployment_target = '8.0'
     component.public_header_files = "components/#{component.base_name}/src/*.h"
     component.source_files = "components/#{component.base_name}/src/*.{h,m}"
+  end
+
+  s.subspec "HeaderStackView+ColorThemer" do |extension|
+    extension.ios.deployment_target = '8.0'
+    extension.public_header_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.h"
+    extension.source_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.{h,m}"
+
+    extension.dependency "GTKitComponents/#{extension.base_name.split('+')[0]}"
+    extension.dependency "GTKitComponents/Themes"
   end
 
   # Ink
@@ -114,16 +203,7 @@ Pod::Spec.new do |s|
     component.dependency "GTKitComponents/ShadowElevations"
   end
 
-    # Typography
 
-  s.subspec "Typography" do |component|
-    component.ios.deployment_target = '8.0'
-    component.public_header_files = "components/#{component.base_name}/src/*.h"
-    component.source_files = "components/#{component.base_name}/src/*.{h,m}", "components/#{component.base_name}/src/private/*.{h,m}"
-
-    component.dependency "GTKitComponents/private/Application"
-    component.dependency "GTKitComponents/private/Math"
-  end
 
     # NavigationBar
 
@@ -139,6 +219,71 @@ Pod::Spec.new do |s|
     component.dependency "GTKitComponents/Typography"
     component.dependency "GTFInternationalization"
     component.dependency "GTKitComponents/private/Math"
+  end
+
+  s.subspec "NavigationBar+ColorThemer" do |extension|
+    extension.ios.deployment_target = '8.0'
+    extension.public_header_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.h"
+    extension.source_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.{h,m}"
+
+    extension.dependency "GTKitComponents/#{extension.base_name.split('+')[0]}"
+    extension.dependency "GTKitComponents/schemes/Color"
+  end
+
+  s.subspec "NavigationBar+TypographyThemer" do |extension|
+    extension.ios.deployment_target = '8.0'
+    extension.public_header_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.h"
+    extension.source_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.{h,m}"
+
+    extension.dependency "GTKitComponents/#{extension.base_name.split('+')[0]}"
+    extension.dependency "GTKitComponents/schemes/Typography"
+  end
+
+  # OverlayWindow
+
+  s.subspec "OverlayWindow" do |component|
+    component.ios.deployment_target = '8.0'
+    component.public_header_files = "components/#{component.base_name}/src/*.h"
+    component.source_files = "components/#{component.base_name}/src/*.{h,m}", "components/#{component.base_name}/src/private/*.{h,m}"
+
+    component.dependency "GTKitComponents/private/Application"
+  end
+
+  # Themes
+
+  s.subspec "Themes" do |component|
+    component.ios.deployment_target = '8.0'
+    component.public_header_files = "components/#{component.base_name}/src/*.h"
+    component.source_files = "components/#{component.base_name}/src/*.{h,m}", "components/#{component.base_name}/src/private/*.{h,m}"
+
+    component.dependency "GTKitComponents/schemes/Color"
+    component.dependency "GTKitComponents/schemes/Typography"
+  end
+
+  # Typography
+
+  s.subspec "Typography" do |component|
+    component.ios.deployment_target = '8.0'
+    component.public_header_files = "components/#{component.base_name}/src/*.h"
+    component.source_files = "components/#{component.base_name}/src/*.{h,m}", "components/#{component.base_name}/src/private/*.{h,m}"
+
+    component.dependency "GTKitComponents/private/Application"
+    component.dependency "GTKitComponents/private/Math"
+  end
+
+  # schemes
+
+  s.subspec "schemes" do |scheme_spec|
+    scheme_spec.subspec "Color" do |scheme|
+      scheme.ios.deployment_target = '8.0'
+      scheme.public_header_files = "components/schemes/#{scheme.base_name}/src/*.h"
+      scheme.source_files = "components/schemes/#{scheme.base_name}/src/*.{h,m}"
+    end
+    scheme_spec.subspec "Typography" do |scheme|
+      scheme.ios.deployment_target = '8.0'
+      scheme.public_header_files = "components/schemes/#{scheme.base_name}/src/*.h"
+      scheme.source_files = "components/schemes/#{scheme.base_name}/src/*.{h,m}"
+    end
   end
 
   # private
