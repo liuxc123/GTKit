@@ -70,6 +70,8 @@
 #import "GTNavigationBar+TypographyThemer.h"
 #import "GTCOverlayWindow.h"
 #import "GTOverlayWindow.h"
+#import "GTCPalettes.h"
+#import "GTPalettes.h"
 #import "GTCShadowElevations.h"
 #import "GTShadowElevations.h"
 #import "GTCShadowLayer.h"

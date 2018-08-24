@@ -49,6 +49,7 @@ class ButtonsSimpleExampleSwiftViewController: UIViewController {
         textButton.addTarget(self, action: #selector(tap), for: .touchUpInside)
         view.addSubview(textButton)
 
+
         let floatingButton = GTCFloatingButton()
         floatingButton.backgroundColor = backgroundColor
         floatingButton.mode = .expanded

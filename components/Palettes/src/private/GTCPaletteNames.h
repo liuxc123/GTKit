@@ -1,0 +1,26 @@
+//
+//  GTCPaletteNames.h
+//  GTCatalog
+//
+//  Created by liuxc on 2018/8/24.
+//
+
+#import <Foundation/Foundation.h>
+
+#define GTC_PALETTE_TINT_50_INTERNAL_NAME @"50"
+#define GTC_PALETTE_TINT_100_INTERNAL_NAME @"100"
+#define GTC_PALETTE_TINT_200_INTERNAL_NAME @"200"
+#define GTC_PALETTE_TINT_300_INTERNAL_NAME @"300"
+#define GTC_PALETTE_TINT_400_INTERNAL_NAME @"400"
+#define GTC_PALETTE_TINT_500_INTERNAL_NAME @"500"
+#define GTC_PALETTE_TINT_600_INTERNAL_NAME @"600"
+#define GTC_PALETTE_TINT_700_INTERNAL_NAME @"700"
+#define GTC_PALETTE_TINT_800_INTERNAL_NAME @"800"
+#define GTC_PALETTE_TINT_900_INTERNAL_NAME @"900"
+#define GTC_PALETTE_ACCENT_100_INTERNAL_NAME @"A100"
+#define GTC_PALETTE_ACCENT_200_INTERNAL_NAME @"A200"
+#define GTC_PALETTE_ACCENT_400_INTERNAL_NAME @"A400"
+#define GTC_PALETTE_ACCENT_700_INTERNAL_NAME @"A700"
+
+/** Return YES if a string is one of the pre-defined tint/accent names. */
+BOOL GTCPaletteIsTintOrAccentName(NSString* _Nonnull name);

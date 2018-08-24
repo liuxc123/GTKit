@@ -27,6 +27,7 @@ PODS:
     - "GTKitComponents/NavigationBar+ColorThemer (= 0.0.1)"
     - "GTKitComponents/NavigationBar+TypographyThemer (= 0.0.1)"
     - GTKitComponents/OverlayWindow (= 0.0.1)
+    - GTKitComponents/Palettes (= 0.0.1)
     - GTKitComponents/private (= 0.0.1)
     - GTKitComponents/schemes (= 0.0.1)
     - GTKitComponents/ShadowElevations (= 0.0.1)
@@ -110,6 +111,7 @@ PODS:
     - GTKitComponents/schemes/Typography
   - GTKitComponents/OverlayWindow (0.0.1):
     - GTKitComponents/private/Application
+  - GTKitComponents/Palettes (0.0.1)
   - GTKitComponents/private (0.0.1):
     - GTKitComponents/private/Application (= 0.0.1)
     - GTKitComponents/private/Icons (= 0.0.1)
@@ -209,7 +211,7 @@ SPEC CHECKSUMS:
   GTComponentsUnitTests: c00df0aa153664eb8ae081f04a3493453d9c19a7
   GTFInternationalization: 9aa259ddf1deb8590d605128c92f6ce8e87baa64
   GTFTextAccessibility: d5a28a7a603d1722727e33f27dcc27b5e7b0ce43
-  GTKitComponents: 7e37514bd18ecefd12175ca316ce84bb8aa87d91
+  GTKitComponents: b8f76a93dbf80f6aab6c4c639105a292366945dd
 
 PODFILE CHECKSUM: 856ea29b72f024aba96c78f51f6da1ec06896ef0
 

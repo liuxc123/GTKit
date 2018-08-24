@@ -13,6 +13,8 @@
 #import "TypographyCustomFontViewController.h"
 #import "TypographyMaterialStylesViewController.h"
 #import "TypographySimpleExampleViewController.h"
+#import "ButtonsTypicalUseSupplemental.h"
+#import "NavigationBarTypicalUseExampleSupplemental.h"
 
 FOUNDATION_EXPORT double GTComponentsExamplesVersionNumber;
 FOUNDATION_EXPORT const unsigned char GTComponentsExamplesVersionString[];

@@ -162,6 +162,10 @@ static NSAttributedString *uppercaseAttributedString(NSAttributedString *string)
     _minimumSize = CGSizeZero;
     _maximumSize = CGSizeZero;
 
+    // Default imagePosition
+    self.imagePosition = GTCButtonImagePositionLeft;
+    self.spacingBetweenImageAndTitle = 0;
+
     self.layer.cornerRadius = GTCButtonDefaultCornerRadius;
     if (!self.layer.shapeGenerator) {
         self.layer.shadowPath = [self boundingPath].CGPath;
@@ -352,6 +356,7 @@ static NSAttributedString *uppercaseAttributedString(NSAttributedString *string)
     [self updateShadowColor];
     [self updateTitleFont];
     [self updateImageTintColor];
+    [self updateImagePosition];
 }
 
 #pragma mark - Title Uppercasing
@@ -807,6 +812,10 @@ static NSAttributedString *uppercaseAttributedString(NSAttributedString *string)
     self.inkView.maxRippleRadius =
     (CGFloat)(GTCHypot(CGRectGetHeight(boundingBox), CGRectGetWidth(boundingBox)) / 2 + 10.f);
     self.inkView.layer.masksToBounds = NO;
+}
+
+- (void)updateImagePosition {
+
 }
 
 #pragma mark - Dynamic Type

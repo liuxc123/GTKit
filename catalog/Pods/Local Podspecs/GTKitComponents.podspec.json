@@ -444,6 +444,17 @@
       }
     },
     {
+      "name": "Palettes",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Palettes/src/*.h",
+      "source_files": [
+        "components/Palettes/src/*.{h,m}",
+        "components/Palettes/src/private/*.{h,m}"
+      ]
+    },
+    {
       "name": "Themes",
       "platforms": {
         "ios": "8.0"

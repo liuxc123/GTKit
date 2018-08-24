@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8648E3E6E56F08597D71DD533FEFE2A8"
+               BlueprintIdentifier = "C1269EC115459642F6E75F0E88B064DC"
                BlueprintName = "GTFInternationalization"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "GTFInternationalization.framework">
