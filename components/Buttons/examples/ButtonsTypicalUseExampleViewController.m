@@ -135,12 +135,12 @@ const CGSize kMinimumAccessibleButtonSize = {64.0, 48.0};
                             action:@selector(didTap:)
                   forControlEvents:UIControlEventTouchUpInside];
     self.floatingButton.mode = GTCFloatingButtonModeExpanded;
+    self.floatingButton.imageLocation = GTCFloatingButtonImageLocationTrailing;
     UIImage *plusImage =
     [[UIImage imageNamed:@"Plus"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     [self.floatingButton setImage:plusImage forState:UIControlStateNormal];
     [self.floatingButton setTitle:@"Button" forState:UIControlStateNormal];
     [GTCFloatingActionButtonThemer applyScheme:buttonScheme toButton:self.floatingButton];
-    self.floatingButton.imageLocation = GTCFloatingButtonImageLocationTrailing;
     self.floatingButton.accessibilityLabel = @"Create";
     [self.view addSubview:self.floatingButton];
 
@@ -148,10 +148,13 @@ const CGSize kMinimumAccessibleButtonSize = {64.0, 48.0};
 
     // Img text button
 
-    GTCButton *imgButton = [[GTCButton alloc] init];
+    GTCFloatingButton *imgButton = [[GTCFloatingButton alloc] init];
     [imgButton setTitle:@"Button" forState:UIControlStateNormal];
     [imgButton setImage:[UIImage imageNamed:@"Plus"] forState:UIControlStateNormal];
-    [GTCTextButtonThemer applyScheme:buttonScheme toButton:disabledTextButton];
+    [GTCContainedButtonThemer applyScheme:buttonScheme toButton:imgButton];
+    imgButton.mode = GTCFloatingButtonModeExpanded;
+    imgButton.imageLocation = GTCFloatingButtonImageLocationLeading;
+    imgButton.imageTitleSpace = 0;
     [imgButton sizeToFit];
     [imgButton addTarget:self
                   action:@selector(didTap:)

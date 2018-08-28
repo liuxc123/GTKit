@@ -249,6 +249,24 @@ Pod::Spec.new do |s|
     component.dependency "GTKitComponents/private/Application"
   end
 
+  # PageControl
+
+  s.subspec "PageControl" do |component|
+    component.ios.deployment_target = '8.0'
+    component.public_header_files = "components/#{component.base_name}/src/*.h"
+    component.source_files = "components/#{component.base_name}/src/*.{h,m}", "components/#{component.base_name}/src/private/*.{h,m}"
+    component.resources = ["components/#{component.base_name}/src/Material#{component.base_name}.bundle"]
+  end
+
+  s.subspec "PageControl+ColorThemer" do |extension|
+    extension.ios.deployment_target = '8.0'
+    extension.public_header_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.h"
+    extension.source_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.{h,m}"
+
+    extension.dependency "GTKitComponents/#{extension.base_name.split('+')[0]}"
+    extension.dependency "GTKitComponents/Themes"
+  end
+
   # Palettes
 
   s.subspec "Palettes" do |component|

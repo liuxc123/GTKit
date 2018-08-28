@@ -146,8 +146,7 @@
         return;
     }
 
-    [self.overlays
-     enumerateObjectsUsingBlock:^(GTCOverlayObserverOverlay *overlay, NSUInteger idx, BOOL *stop) {
+    [self.overlays enumerateObjectsUsingBlock:^(GTCOverlayObserverOverlay *overlay, NSUInteger idx, BOOL *stop) {
          handler(overlay, idx, stop);
      }];
 }

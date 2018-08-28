@@ -444,6 +444,36 @@
       }
     },
     {
+      "name": "PageControl",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/PageControl/src/*.h",
+      "source_files": [
+        "components/PageControl/src/*.{h,m}",
+        "components/PageControl/src/private/*.{h,m}"
+      ],
+      "resources": [
+        "components/PageControl/src/MaterialPageControl.bundle"
+      ]
+    },
+    {
+      "name": "PageControl+ColorThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/PageControl/src/ColorThemer/*.h",
+      "source_files": "components/PageControl/src/ColorThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/PageControl": [
+
+        ],
+        "GTKitComponents/Themes": [
+
+        ]
+      }
+    },
+    {
       "name": "Palettes",
       "platforms": {
         "ios": "8.0"

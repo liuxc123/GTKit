@@ -11,6 +11,14 @@
 
 #import <GTFInternationalization/GTFInternationalization.h>
 
+#import "GTIcons+ic_arrow_back.h"
+#import "GTIcons+ic_info.h"
+#import "GTIcons+ic_reorder.h"
+#import "GTNavigationBar.h"
+#import "GTNavigationBar+ColorThemer.h"
+#import "GTNavigationBar+TypographyThemer.h"
+#import "supplemental/NavigationBarTypicalUseExampleSupplemental.h"
+
 @interface NavigationBarIconsExample()
 
 @property(nonatomic, strong) GTCNavigationBar *navigationBar;
@@ -31,7 +39,69 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.title = @"Title";
+    self.view.backgroundColor = UIColor.darkGrayColor;
+
+    self.navigationBar = [[GTCNavigationBar alloc] initWithFrame:CGRectZero];
+    self.navigationBar.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.navigationBar observeNavigationItem:self.navigationItem];
+    [GTCNavigationBarTypographyThemer applyTypographyScheme:self.typographyScheme toNavigationBar:self.navigationBar];
+    [GTCNavigationBarColorThemer applySemanticColorScheme:self.colorScheme toNavigationBar:self.navigationBar];
+    [self.view addSubview:self.navigationBar];
+
+
+
+    UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc]
+                                       initWithImage:[[[GTCIcons imageFor_ic_arrow_back] gtf_imageWithHorizontallyFlippedOrientation] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]
+                                       style:UIBarButtonItemStylePlain
+                                       target:self
+                                       action:@selector(didTapBackButton)];
+
+    UIBarButtonItem *leadingButtonItem = [[UIBarButtonItem alloc]
+                                          initWithImage:[[GTCIcons imageFor_ic_info]
+                                                         imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]
+                                          style:UIBarButtonItemStylePlain
+                                          target:nil
+                                          action:nil];
+    UIBarButtonItem *trailingButtonItem = [[UIBarButtonItem alloc]
+                                           initWithImage:[[GTCIcons imageFor_ic_reorder]
+                                                          imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]
+                                           style:UIBarButtonItemStylePlain
+                                           target:nil
+                                           action:nil];
+
+    self.leadingBarButtonItem = leadingButtonItem;
+    self.trailingBarButtonItem = trailingButtonItem;
+    self.navigationItem.hidesBackButton = NO;
+    self.navigationItem.leftBarButtonItems = @[ leadingButtonItem ];
+    self.navigationItem.rightBarButtonItem = trailingButtonItem;
+    self.navigationItem.hidesBackButton = NO;
+    self.navigationItem.backBarButtonItem = backButtonItem;
+
+
+#if defined(__IPHONE_11_0) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_11_0)
+    if (@available(iOS 11.0, *)) {
+        [self.view.safeAreaLayoutGuide.topAnchor constraintEqualToAnchor:self.navigationBar.topAnchor].active = YES;
+    } else {
+#endif
+        [NSLayoutConstraint constraintWithItem:self.topLayoutGuide
+                                     attribute:NSLayoutAttributeBottom
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:self.navigationBar
+                                     attribute:NSLayoutAttributeTop
+                                    multiplier:1.0
+                                      constant:0].active = YES;
+#if defined(__IPHONE_11_0) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_11_0)
+    }
+#endif
+    NSDictionary *viewsBindings = NSDictionaryOfVariableBindings(_navigationBar);
+
+    [NSLayoutConstraint
+     activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_navigationBar]|"
+                                                                 options:0
+                                                                 metrics:nil
+                                                                   views:viewsBindings]];
 }
 
 - (BOOL)prefersStatusBarHidden {

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E301DA32E86E8AA4BB3EEB5CFC76FCC7"
+               BlueprintIdentifier = "711E43D562C19667995603FB54A9EF2D"
                BuildableName = "GTIcons_ic_arrow_back.bundle"
                BlueprintName = "GTKitComponents-GTIcons_ic_arrow_back"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E301DA32E86E8AA4BB3EEB5CFC76FCC7"
+            BlueprintIdentifier = "711E43D562C19667995603FB54A9EF2D"
             BuildableName = "GTIcons_ic_arrow_back.bundle"
             BlueprintName = "GTKitComponents-GTIcons_ic_arrow_back"
             ReferencedContainer = "container:Pods.xcodeproj">

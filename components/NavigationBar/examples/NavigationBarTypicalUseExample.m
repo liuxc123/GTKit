@@ -28,6 +28,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"aaa";
+    self.view.backgroundColor = UIColor.darkGrayColor;
+
 }
 
 - (BOOL)prefersStatusBarHidden {
