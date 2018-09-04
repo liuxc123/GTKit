@@ -16,32 +16,32 @@
 
 #import <XCTest/XCTest.h>
 #import "MaterialInk.h"
-#import "MDCLegacyInkLayer+Testing.h"
+#import "GTCLegacyInkLayer+Testing.h"
 
 #pragma mark - Property exposure
 
-@interface MDCLegacyInkLayer (UnitTests)
+@interface GTCLegacyInkLayer (UnitTests)
 
-@property(nonatomic, strong) NSMutableArray<MDCLegacyInkLayerForegroundRipple *> *foregroundRipples;
-@property(nonatomic, strong) NSMutableArray<MDCLegacyInkLayerBackgroundRipple *> *backgroundRipples;
+@property(nonatomic, strong) NSMutableArray<GTCLegacyInkLayerForegroundRipple *> *foregroundRipples;
+@property(nonatomic, strong) NSMutableArray<GTCLegacyInkLayerBackgroundRipple *> *backgroundRipples;
 
 @end
 
-@interface MDCLegacyInkLayerRipple (UnitTests)
+@interface GTCLegacyInkLayerRipple (UnitTests)
 
-@property(nonatomic, weak) id<MDCLegacyInkLayerRippleDelegate> animationDelegate;
+@property(nonatomic, weak) id<GTCLegacyInkLayerRippleDelegate> animationDelegate;
 
 @end
 
 #pragma mark - Subclasses for testing
 
-@interface MDCFakeForegroundRipple : MDCLegacyInkLayerForegroundRipple
+@interface GTCFakeForegroundRipple : GTCLegacyInkLayerForegroundRipple
 
 @property(nonatomic, assign) BOOL exitAnimationParameter;
 
 @end
 
-@implementation MDCFakeForegroundRipple
+@implementation GTCFakeForegroundRipple
 
 - (void)exit:(BOOL)animated {
   self.exitAnimationParameter = animated;
@@ -49,13 +49,13 @@
 
 @end
 
-@interface MDCFakeBackgroundRipple : MDCLegacyInkLayerBackgroundRipple
+@interface GTCFakeBackgroundRipple : GTCLegacyInkLayerBackgroundRipple
 
 @property(nonatomic, assign) BOOL exitAnimationParameter;
 
 @end
 
-@implementation MDCFakeBackgroundRipple
+@implementation GTCFakeBackgroundRipple
 
 - (void)exit:(BOOL)animated {
   self.exitAnimationParameter = animated;
@@ -65,14 +65,14 @@
 
 #pragma mark - XCTestCase
 
-@interface MDCLegacyInkLayerTests : XCTestCase <MDCLegacyInkLayerRippleDelegate>
+@interface GTCLegacyInkLayerTests : XCTestCase <GTCLegacyInkLayerRippleDelegate>
 @property(nonatomic, strong) XCTestExpectation *expectation;
-@property(nonatomic, strong) MDCLegacyInkLayer *inkLayer;
+@property(nonatomic, strong) GTCLegacyInkLayer *inkLayer;
 @end
 
-@implementation MDCLegacyInkLayerTests
+@implementation GTCLegacyInkLayerTests
 
-#pragma mark - <MDCLegacyInkLayerDelegate>
+#pragma mark - <GTCLegacyInkLayerDelegate>
 
 - (void)animationDidStop:(CAAnimation *)anim
               shapeLayer:(CAShapeLayer *)shapeLayer
@@ -90,7 +90,7 @@
 
 - (void)testInit {
   // Given
-  self.inkLayer = [[MDCLegacyInkLayer alloc] init];
+  self.inkLayer = [[GTCLegacyInkLayer alloc] init];
 
   // Then
   XCTAssertTrue(self.inkLayer.isBounded);
@@ -108,7 +108,7 @@
 
 - (void)testEncoding {
   // Given
-  self.inkLayer = [[MDCLegacyInkLayer alloc] init];
+  self.inkLayer = [[GTCLegacyInkLayer alloc] init];
   self.inkLayer.bounded = NO;
   self.inkLayer.useCustomInkCenter = YES;
   self.inkLayer.customInkCenter = CGPointMake(2, 3);
@@ -118,7 +118,7 @@
 
   // When
   NSData *archive = [NSKeyedArchiver archivedDataWithRootObject:self.inkLayer];
-  MDCLegacyInkLayer *unarchivedInkLayer = [NSKeyedUnarchiver unarchiveObjectWithData:archive];
+  GTCLegacyInkLayer *unarchivedInkLayer = [NSKeyedUnarchiver unarchiveObjectWithData:archive];
 
   // Then
   XCTAssertEqual(unarchivedInkLayer.isBounded, self.inkLayer.isBounded);
@@ -138,9 +138,9 @@
 
 - (void)testResetRipplesWithoutAnimation {
   // Given
-  MDCLegacyInkLayer *inkLayer = [[MDCLegacyInkLayer alloc] init];
-  MDCFakeForegroundRipple *fakeForegroundRipple = [[MDCFakeForegroundRipple alloc] init];
-  MDCFakeBackgroundRipple *fakeBackgroundRipple = [[MDCFakeBackgroundRipple alloc] init];
+  GTCLegacyInkLayer *inkLayer = [[GTCLegacyInkLayer alloc] init];
+  GTCFakeForegroundRipple *fakeForegroundRipple = [[GTCFakeForegroundRipple alloc] init];
+  GTCFakeBackgroundRipple *fakeBackgroundRipple = [[GTCFakeBackgroundRipple alloc] init];
 
   // When
   [inkLayer.foregroundRipples addObject:fakeForegroundRipple];
@@ -156,9 +156,9 @@
 
 - (void)testResetRipplesWithAnimation {
   // Given
-  MDCLegacyInkLayer *inkLayer = [[MDCLegacyInkLayer alloc] init];
-  MDCFakeForegroundRipple *fakeForegroundRipple = [[MDCFakeForegroundRipple alloc] init];
-  MDCFakeBackgroundRipple *fakeBackgroundRipple = [[MDCFakeBackgroundRipple alloc] init];
+  GTCLegacyInkLayer *inkLayer = [[GTCLegacyInkLayer alloc] init];
+  GTCFakeForegroundRipple *fakeForegroundRipple = [[GTCFakeForegroundRipple alloc] init];
+  GTCFakeBackgroundRipple *fakeBackgroundRipple = [[GTCFakeBackgroundRipple alloc] init];
 
   // When
   [inkLayer.foregroundRipples addObject:fakeForegroundRipple];
@@ -174,9 +174,9 @@
 
 - (void)testForegroundRippleExitWithoutAnimation {
   // Given
-  self.inkLayer = [[MDCLegacyInkLayer alloc] init];
-  MDCLegacyInkLayerForegroundRipple *foregroundRipple =
-      [[MDCLegacyInkLayerForegroundRipple alloc] init];
+  self.inkLayer = [[GTCLegacyInkLayer alloc] init];
+  GTCLegacyInkLayerForegroundRipple *foregroundRipple =
+      [[GTCLegacyInkLayerForegroundRipple alloc] init];
   foregroundRipple.animationDelegate = self;
   XCTAssertEqual(self.inkLayer.backgroundRipples.count, 0U,
                  @"There should be no foreground ripples at the start of the test.");
@@ -194,9 +194,9 @@
 
 - (void)testBackgroundRippleExitWithoutAnimation {
   // Given
-  self.inkLayer = [[MDCLegacyInkLayer alloc] init];
-  MDCLegacyInkLayerBackgroundRipple *backgroundRipple =
-      [[MDCLegacyInkLayerBackgroundRipple alloc] init];
+  self.inkLayer = [[GTCLegacyInkLayer alloc] init];
+  GTCLegacyInkLayerBackgroundRipple *backgroundRipple =
+      [[GTCLegacyInkLayerBackgroundRipple alloc] init];
   backgroundRipple.animationDelegate = self;
   XCTAssertEqual(self.inkLayer.backgroundRipples.count, 0U,
                  @"There should be no background ripples at the start of the test.");

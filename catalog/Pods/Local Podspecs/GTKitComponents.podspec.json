@@ -18,6 +18,86 @@
   },
   "subspecs": [
     {
+      "name": "ActivityIndicator",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/ActivityIndicator/src/*.h",
+      "source_files": [
+        "components/ActivityIndicator/src/*.{h,m}",
+        "components/ActivityIndicator/src/private/*.{h,m}"
+      ],
+      "resources": [
+        "components/ActivityIndicator/src/MaterialActivityIndicator.bundle"
+      ],
+      "dependencies": {
+        "GTFInternationalization": [
+
+        ],
+        "GTKitComponents/Palettes": [
+
+        ],
+        "GTKitComponents/private/Application": [
+
+        ],
+        "GTMotionAnimator": [
+
+        ]
+      }
+    },
+    {
+      "name": "ActivityIndicator+ColorThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/ActivityIndicator/src/ColorThemer/*.h",
+      "source_files": "components/ActivityIndicator/src/ColorThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/ActivityIndicator": [
+
+        ],
+        "GTKitComponents/schemes/Color": [
+
+        ]
+      }
+    },
+    {
+      "name": "AnimationTiming",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/AnimationTiming/src/*.h",
+      "source_files": [
+        "components/AnimationTiming/src/*.{h,m}",
+        "components/AnimationTiming/src/private/*.{h,m}"
+      ]
+    },
+    {
+      "name": "IBAnimatable",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/IBAnimatable/src/*.h",
+      "source_files": "components/IBAnimatable/src/**/*.{h,m}",
+      "dependencies": {
+        "GTFInternationalization": [
+
+        ],
+        "GTKitComponents/Palettes": [
+
+        ],
+        "GTKitComponents/private/Application": [
+
+        ],
+        "GTMotionAnimator": [
+
+        ],
+        "GTMotionTransitioning": [
+
+        ]
+      }
+    },
+    {
       "name": "AppBar",
       "platforms": {
         "ios": "8.0"
@@ -272,6 +352,111 @@
       }
     },
     {
+      "name": "CollectionCells",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/CollectionCells/src/*.h",
+      "source_files": [
+        "components/CollectionCells/src/*.{h,m}",
+        "components/CollectionCells/src/private/*.{h,m}"
+      ],
+      "resources": [
+        "components/CollectionCells/src/GTCollectionCells.bundle"
+      ],
+      "frameworks": [
+        "CoreGraphics",
+        "QuartzCore"
+      ],
+      "dependencies": {
+        "GTFInternationalization": [
+
+        ],
+        "GTKitComponents/CollectionLayoutAttributes": [
+
+        ],
+        "GTKitComponents/Ink": [
+
+        ],
+        "GTKitComponents/Typography": [
+
+        ],
+        "GTKitComponents/Palettes": [
+
+        ],
+        "GTKitComponents/private/Icons/ic_check": [
+
+        ],
+        "GTKitComponents/private/Icons/ic_check_circle": [
+
+        ],
+        "GTKitComponents/private/Icons/ic_chevron_right": [
+
+        ],
+        "GTKitComponents/private/Icons/ic_info": [
+
+        ],
+        "GTKitComponents/private/Icons/ic_radio_button_unchecked": [
+
+        ],
+        "GTKitComponents/private/Icons/ic_reorder": [
+
+        ],
+        "GTKitComponents/private/Math": [
+
+        ]
+      }
+    },
+    {
+      "name": "CollectionLayoutAttributes",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/CollectionLayoutAttributes/src/*.h",
+      "source_files": "components/CollectionLayoutAttributes/src/*.{h,m}"
+    },
+    {
+      "name": "Collections",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Collections/src/*.h",
+      "source_files": [
+        "components/Collections/src/*.{h,m}",
+        "components/Collections/src/private/*.{h,m}"
+      ],
+      "resources": [
+        "components/Collections/src/GTCollections.bundle"
+      ],
+      "frameworks": [
+        "CoreGraphics",
+        "QuartzCore"
+      ],
+      "dependencies": {
+        "GTKitComponents/CollectionCells": [
+
+        ],
+        "GTKitComponents/CollectionLayoutAttributes": [
+
+        ],
+        "GTKitComponents/Ink": [
+
+        ],
+        "GTKitComponents/Palettes": [
+
+        ],
+        "GTKitComponents/ShadowElevations": [
+
+        ],
+        "GTKitComponents/ShadowLayer": [
+
+        ],
+        "GTKitComponents/Typography": [
+
+        ]
+      }
+    },
+    {
       "name": "FlexibleHeader",
       "platforms": {
         "ios": "8.0"
@@ -454,7 +639,7 @@
         "components/PageControl/src/private/*.{h,m}"
       ],
       "resources": [
-        "components/PageControl/src/MaterialPageControl.bundle"
+        "components/PageControl/src/GTPageControl.bundle"
       ]
     },
     {
@@ -483,6 +668,66 @@
         "components/Palettes/src/*.{h,m}",
         "components/Palettes/src/private/*.{h,m}"
       ]
+    },
+    {
+      "name": "TextFields",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/TextFields/src/*.h",
+      "source_files": [
+        "components/TextFields/src/*.{h,m}",
+        "components/TextFields/src/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTKitComponents/AnimationTiming": [
+
+        ],
+        "GTKitComponents/Palettes": [
+
+        ],
+        "GTKitComponents/Typography": [
+
+        ],
+        "GTFInternationalization": [
+
+        ],
+        "GTKitComponents/private/Math": [
+
+        ]
+      }
+    },
+    {
+      "name": "TextFields+ColorThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/TextFields/src/ColorThemer/*.h",
+      "source_files": "components/TextFields/src/ColorThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/TextFields": [
+
+        ],
+        "GTKitComponents/Themes": [
+
+        ]
+      }
+    },
+    {
+      "name": "TextFields+TypographyThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/TextFields/src/TypographyThemer/*.h",
+      "source_files": "components/TextFields/src/TypographyThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/TextFields": [
+
+        ],
+        "GTKitComponents/schemes/Typography": [
+
+        ]
+      }
     },
     {
       "name": "Themes",

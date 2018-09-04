@@ -36,7 +36,7 @@
 
 /**
  Sets up an animation block (or none) and executes all of the animation blocks registered as part
- of the MDCOverlayTransitioning protocol.
+ of the GTCOverlayTransitioning protocol.
  */
 - (void)runAnimation;
 

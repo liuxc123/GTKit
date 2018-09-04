@@ -2,7 +2,7 @@
 //  PalettesExampleViewController.swift
 //  GTCatalog
 //
-//  Created by liuxc on 2018/8/24.
+//  Created by liuxc on 2018/8/30.
 //
 
 import GTKitComponents.GTPalettes
@@ -18,15 +18,17 @@ import GTFTextAccessibility
  black.
  */
 func TextColorFor(backgroundColor: UIColor) -> UIColor {
-    if let safeColor = GTFTextAccessibility.textColor(fromChoices: [.black, .white],
-                                                      onBackgroundColor: backgroundColor,
-                                                      options: [ .enhancedContrast, .preferDarker ]) {
-        return safeColor
-    } else if let safeColor = GTFTextAccessibility.textColor(fromChoices: [.black, .white],
-                                                             onBackgroundColor: backgroundColor,
-                                                             options: .preferDarker) {
-        return safeColor
-    }
+//    if let safeColor = GTFTextAccessibility.textColor(fromChoices: [.black, .white],
+//                                                      onBackgroundColor: backgroundColor,
+//                                                      options: [ .enhancedContrast, .preferDarker ]) {
+//        return safeColor
+//    } 
+//
+//    if let safeColor = GTFTextAccessibility.textColor(fromChoices: [.black, .white],
+//                                                             onBackgroundColor: backgroundColor,
+//                                                             options: .preferDarker) {
+//        return safeColor
+//    }
     return .black
 }
 
@@ -46,8 +48,8 @@ func ExampleTonesForPalette(_ palette: GTCPalette) -> [ExampleTone] {
 
     return tones
 }
-
 class PalettesExampleViewController: UITableViewController {
+
     var palettes : [(name: String, palette: GTCPalette)] = []
 
     override func viewDidLoad() {
@@ -113,5 +115,4 @@ class PalettesExampleViewController: UITableViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }

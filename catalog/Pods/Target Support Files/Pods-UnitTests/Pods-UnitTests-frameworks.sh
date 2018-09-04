@@ -147,6 +147,9 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/GTFInternationalization/GTFInternationalization.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GTFTextAccessibility/GTFTextAccessibility.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GTKitComponents/GTKitComponents.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GTMotionAnimator/GTMotionAnimator.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GTMotionInterchange/GTMotionInterchange.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GTMotionTransitioning/GTMotionTransitioning.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GTComponentsUnitTests/GTComponentsUnitTests.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -154,6 +157,9 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/GTFInternationalization/GTFInternationalization.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GTFTextAccessibility/GTFTextAccessibility.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GTKitComponents/GTKitComponents.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GTMotionAnimator/GTMotionAnimator.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GTMotionInterchange/GTMotionInterchange.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GTMotionTransitioning/GTMotionTransitioning.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GTComponentsUnitTests/GTComponentsUnitTests.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

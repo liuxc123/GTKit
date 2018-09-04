@@ -20,11 +20,11 @@
 
 #pragma mark - Fake classes
 
-@interface FakeMDCInkViewAnimationDelegate : NSObject <MDCInkViewDelegate, NSCoding>
-@property(nonatomic, strong) MDCInkView *inkView;
+@interface FakeGTCInkViewAnimationDelegate : NSObject <GTCInkViewDelegate, NSCoding>
+@property(nonatomic, strong) GTCInkView *inkView;
 @end
 
-@implementation FakeMDCInkViewAnimationDelegate
+@implementation FakeGTCInkViewAnimationDelegate
 
 - (void)encodeWithCoder:(nonnull NSCoder *)aCoder {
   [aCoder encodeObject:self.inkView forKey:@"inkView"];
@@ -42,15 +42,15 @@
 
 #pragma mark - Tests
 
-@interface MDCInkViewTests : XCTestCase
+@interface GTCInkViewTests : XCTestCase
 
 @end
 
-@implementation MDCInkViewTests
+@implementation GTCInkViewTests
 
 - (void)testInit {
   // Given
-  MDCInkView *inkView = [[MDCInkView alloc] init];
+  GTCInkView *inkView = [[GTCInkView alloc] init];
 
   // Then
   XCTAssertTrue(inkView.usesLegacyInkRipple);
@@ -61,22 +61,22 @@
                 NSStringFromCGPoint(CGPointZero));
   XCTAssertNil(inkView.animationDelegate);
   XCTAssertEqualObjects(inkView.inkColor, inkView.defaultInkColor);
-  XCTAssertEqual(inkView.inkStyle, MDCInkStyleBounded);
+  XCTAssertEqual(inkView.inkStyle, GTCInkStyleBounded);
   XCTAssertEqualWithAccuracy(inkView.maxRippleRadius, 0.0, 0.0001);
 }
 
 - (void)testNewInkUsesMaxRippleRadiusWhenUnbounded {
   // Given
-  MDCInkView *inkViewStyleThenRadius = [[MDCInkView alloc] init];
-  MDCInkView *inkViewRadiusThenStyle = [[MDCInkView alloc] init];
+  GTCInkView *inkViewStyleThenRadius = [[GTCInkView alloc] init];
+  GTCInkView *inkViewRadiusThenStyle = [[GTCInkView alloc] init];
   inkViewStyleThenRadius.usesLegacyInkRipple = NO;
   inkViewRadiusThenStyle.usesLegacyInkRipple = NO;
 
   // When
-  inkViewStyleThenRadius.inkStyle = MDCInkStyleUnbounded;
+  inkViewStyleThenRadius.inkStyle = GTCInkStyleUnbounded;
   inkViewStyleThenRadius.maxRippleRadius = 12;
   inkViewRadiusThenStyle.maxRippleRadius = 12;
-  inkViewRadiusThenStyle.inkStyle = MDCInkStyleUnbounded;
+  inkViewRadiusThenStyle.inkStyle = GTCInkStyleUnbounded;
 
 
   // Then
@@ -86,16 +86,16 @@
 
 - (void)testLegacyInkUsesMaxRippleRadiusWhenUnbounded {
   // Given
-  MDCInkView *inkViewStyleThenRadius = [[MDCInkView alloc] init];
-  MDCInkView *inkViewRadiusThenStyle = [[MDCInkView alloc] init];
+  GTCInkView *inkViewStyleThenRadius = [[GTCInkView alloc] init];
+  GTCInkView *inkViewRadiusThenStyle = [[GTCInkView alloc] init];
   inkViewStyleThenRadius.usesLegacyInkRipple = YES;
   inkViewRadiusThenStyle.usesLegacyInkRipple = YES;
 
   // When
-  inkViewStyleThenRadius.inkStyle = MDCInkStyleUnbounded;
+  inkViewStyleThenRadius.inkStyle = GTCInkStyleUnbounded;
   inkViewStyleThenRadius.maxRippleRadius = 12;
   inkViewRadiusThenStyle.maxRippleRadius = 12;
-  inkViewRadiusThenStyle.inkStyle = MDCInkStyleUnbounded;
+  inkViewRadiusThenStyle.inkStyle = GTCInkStyleUnbounded;
 
 
   // Then
@@ -105,16 +105,16 @@
 
 - (void)testNewInkIgnoresMaxRippleRadiusWhenBounded {
   // Given
-  MDCInkView *inkViewStyleThenRadius = [[MDCInkView alloc] init];
-  MDCInkView *inkViewRadiusThenStyle = [[MDCInkView alloc] init];
+  GTCInkView *inkViewStyleThenRadius = [[GTCInkView alloc] init];
+  GTCInkView *inkViewRadiusThenStyle = [[GTCInkView alloc] init];
   inkViewStyleThenRadius.usesLegacyInkRipple = NO;
   inkViewRadiusThenStyle.usesLegacyInkRipple = NO;
 
   // When
-  inkViewStyleThenRadius.inkStyle = MDCInkStyleBounded;
+  inkViewStyleThenRadius.inkStyle = GTCInkStyleBounded;
   inkViewStyleThenRadius.maxRippleRadius = 12;
   inkViewRadiusThenStyle.maxRippleRadius = 12;
-  inkViewRadiusThenStyle.inkStyle = MDCInkStyleBounded;
+  inkViewRadiusThenStyle.inkStyle = GTCInkStyleBounded;
 
 
   // Then
@@ -124,16 +124,16 @@
 
 - (void)testLegacyInkUsesMaxRippleRadiusWhenBounded {
   // Given
-  MDCInkView *inkViewStyleThenRadius = [[MDCInkView alloc] init];
-  MDCInkView *inkViewRadiusThenStyle = [[MDCInkView alloc] init];
+  GTCInkView *inkViewStyleThenRadius = [[GTCInkView alloc] init];
+  GTCInkView *inkViewRadiusThenStyle = [[GTCInkView alloc] init];
   inkViewStyleThenRadius.usesLegacyInkRipple = YES;
   inkViewRadiusThenStyle.usesLegacyInkRipple = YES;
 
   // When
-  inkViewStyleThenRadius.inkStyle = MDCInkStyleBounded;
+  inkViewStyleThenRadius.inkStyle = GTCInkStyleBounded;
   inkViewStyleThenRadius.maxRippleRadius = 12;
   inkViewRadiusThenStyle.maxRippleRadius = 12;
-  inkViewRadiusThenStyle.inkStyle = MDCInkStyleBounded;
+  inkViewRadiusThenStyle.inkStyle = GTCInkStyleBounded;
 
 
   // Then

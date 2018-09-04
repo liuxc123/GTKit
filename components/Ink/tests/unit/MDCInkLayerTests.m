@@ -16,16 +16,16 @@
 
 #import <XCTest/XCTest.h>
 
-#import "MDCInkLayer.h"
+#import "GTCInkLayer.h"
 
 #pragma mark - Fake classes
 
-@interface CapturingMDCInkLayerSubclass : MDCInkLayer
+@interface CapturingGTCInkLayerSubclass : GTCInkLayer
 @property(nonatomic, strong) NSMutableArray *addedAnimations;
 
 @end
 
-@implementation CapturingMDCInkLayerSubclass
+@implementation CapturingGTCInkLayerSubclass
 
 - (void)addAnimation:(CAAnimation *)anim forKey:(NSString *)key {
   if (!self.addedAnimations) {
@@ -37,11 +37,11 @@
 
 @end
 
-@interface FakeMDCInkLayerAnimationDelegate : NSObject <MDCInkLayerDelegate, NSSecureCoding>
-@property(nonatomic, strong) MDCInkLayer *inkLayer;
+@interface FakeGTCInkLayerAnimationDelegate : NSObject <GTCInkLayerDelegate, NSSecureCoding>
+@property(nonatomic, strong) GTCInkLayer *inkLayer;
 @end
 
-@implementation FakeMDCInkLayerAnimationDelegate
+@implementation FakeGTCInkLayerAnimationDelegate
 
 + (BOOL)supportsSecureCoding {
   return YES;
@@ -50,7 +50,7 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
   self = [super init];
   if (self) {
-    _inkLayer = [aDecoder decodeObjectOfClass:[MDCInkLayer class] forKey:@"inkLayer"];
+    _inkLayer = [aDecoder decodeObjectOfClass:[GTCInkLayer class] forKey:@"inkLayer"];
   }
   return self;
 }
@@ -63,15 +63,15 @@
 
 #pragma mark - Tests
 
-@interface MDCInkLayerTests : XCTestCase
+@interface GTCInkLayerTests : XCTestCase
 
 @end
 
-@implementation MDCInkLayerTests
+@implementation GTCInkLayerTests
 
 - (void)testInit {
   // Given
-  MDCInkLayer *inkLayer = [[MDCInkLayer alloc] init];
+  GTCInkLayer *inkLayer = [[GTCInkLayer alloc] init];
 
   // Then
   XCTAssertNil(inkLayer.delegate);
@@ -85,8 +85,8 @@
 
 - (void)testInitWithLayer {
   // Given
-  FakeMDCInkLayerAnimationDelegate *delegate = [[FakeMDCInkLayerAnimationDelegate alloc] init];
-  MDCInkLayer *inkLayer = [[MDCInkLayer alloc] init];
+  FakeGTCInkLayerAnimationDelegate *delegate = [[FakeGTCInkLayerAnimationDelegate alloc] init];
+  GTCInkLayer *inkLayer = [[GTCInkLayer alloc] init];
   delegate.inkLayer = inkLayer;
   inkLayer.delegate = delegate;
   inkLayer.endAnimationDelay = 1;
@@ -96,7 +96,7 @@
   inkLayer.inkColor = UIColor.magentaColor;
 
   // When
-  MDCInkLayer *copiedLayer = [[MDCInkLayer alloc] initWithLayer:inkLayer];
+  GTCInkLayer *copiedLayer = [[GTCInkLayer alloc] initWithLayer:inkLayer];
 
   // Then
   XCTAssertNil(copiedLayer.delegate);
@@ -110,8 +110,8 @@
 
 - (void)testEncoding {
   // Given
-  FakeMDCInkLayerAnimationDelegate *delegate = [[FakeMDCInkLayerAnimationDelegate alloc] init];
-  MDCInkLayer *inkLayer = [[MDCInkLayer alloc] init];
+  FakeGTCInkLayerAnimationDelegate *delegate = [[FakeGTCInkLayerAnimationDelegate alloc] init];
+  GTCInkLayer *inkLayer = [[GTCInkLayer alloc] init];
   delegate.inkLayer = inkLayer;
   inkLayer.animationDelegate = delegate;
   inkLayer.endAnimationDelay = 1;
@@ -122,9 +122,9 @@
 
   // When
   NSData *archive = [NSKeyedArchiver archivedDataWithRootObject:delegate];
-  FakeMDCInkLayerAnimationDelegate *unarchivedDelegate =
+  FakeGTCInkLayerAnimationDelegate *unarchivedDelegate =
       [NSKeyedUnarchiver unarchiveObjectWithData:archive];
-  MDCInkLayer *unarchivedInkLayer = unarchivedDelegate.inkLayer;
+  GTCInkLayer *unarchivedInkLayer = unarchivedDelegate.inkLayer;
 
   // Then
   XCTAssertEqual(unarchivedInkLayer.animationDelegate, unarchivedDelegate);
@@ -140,7 +140,7 @@
 
 - (void)testEndAnimationTimingInTimeScaledLayer {
   // Given
-  CapturingMDCInkLayerSubclass *inkLayer = [[CapturingMDCInkLayerSubclass alloc] init];
+  CapturingGTCInkLayerSubclass *inkLayer = [[CapturingGTCInkLayerSubclass alloc] init];
   inkLayer.bounds = CGRectMake(0, 0, 10, 10);
   inkLayer.speed = 0.5f;
   inkLayer.endAnimationDelay = (CGFloat)0.9;
@@ -160,7 +160,7 @@
 
 - (void)testChangeAnimationTimingInTimeScaledLayer {
   // Given
-  CapturingMDCInkLayerSubclass *inkLayer = [[CapturingMDCInkLayerSubclass alloc] init];
+  CapturingGTCInkLayerSubclass *inkLayer = [[CapturingGTCInkLayerSubclass alloc] init];
   inkLayer.bounds = CGRectMake(0, 0, 10, 10);
   inkLayer.speed = 0.5f;
 

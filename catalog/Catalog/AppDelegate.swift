@@ -9,38 +9,41 @@
 import UIKit
 import GTCatalog
 import GTKitComponents.GTAppBar
+import GTKitComponents.GTAppBar_ColorThemer
+import GTKitComponents.GTAppBar_TypographyThemer
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GTCAppBarNavigationControllerDelegate {
 
     var window: UIWindow?
 
-    let navigationController = GTCAppBarNavigationController()
+    let navigationController = UINavigationController()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         UIApplication.shared.statusBarStyle = .lightContent
 
-        let tree = GTFCreateNavigationTree()
-        var rootNodeViewController: UIViewController
-
-        /**
-         To have your example show up as the initial view controller, you need it to implement
-         the method `@objc class func catalogIsDebug() -> Bool` and have it return true.
-         That way it will become the debugLeaf and be presented first.
-         */
-        if let debugLeaf = tree.debugLeaf {
-            rootNodeViewController = debugLeaf.createExampleViewController()
-        } else {
-            rootNodeViewController = GTCDragonsController(node: tree)
-        }
-
-        navigationController.delegate = self
-        navigationController.pushViewController(rootNodeViewController, animated: false)
-        navigationController.interactivePopGestureRecognizer?.delegate = navigationController
-
-        self.configNotification()
+//        let tree = GTFCreateNavigationTree()
+//        var rootNodeViewController: UIViewController
+//
+//        /**
+//         To have your example show up as the initial view controller, you need it to implement
+//         the method `@objc class func catalogIsDebug() -> Bool` and have it return true.
+//         That way it will become the debugLeaf and be presented first.
+//         */
+//        if let debugLeaf = tree.debugLeaf {
+//            rootNodeViewController = debugLeaf.createExampleViewController()
+//        } else {
+//            rootNodeViewController = GTCDragonsController(node: tree)
+//        }
+//
+//        navigationController.delegate = self
+//        navigationController.pushViewController(rootNodeViewController, animated: false)
+//        navigationController.interactivePopGestureRecognizer?.delegate = navigationController
+//
+//        self.configNotification()
 
         self.window?.rootViewController = navigationController
         self.window!.makeKeyAndVisible()

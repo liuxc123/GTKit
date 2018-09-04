@@ -10,7 +10,7 @@
 /**
  Custom gesture recognizer to observe the various ink response states.
 
- MDCInkGestureRecognizer is a continuous recognizer that tracks single touches and optionally
+ GTCInkGestureRecognizer is a continuous recognizer that tracks single touches and optionally
  fails if the touch moves outside the recongizer's view. Multiple touches will cause the
  recognizer to transition to the UIGestureRecognizerStateCancelled state.
  */

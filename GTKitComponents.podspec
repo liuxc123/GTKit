@@ -14,6 +14,48 @@ Pod::Spec.new do |s|
   # s.source_files = 'components/private/*/src/**/*.{h,m,swift}', 'components/*/src/**/*.{h,m,swift}'
   # s.resources = ['components/*/examples/resources/*', 'components/private/*/examples/resources/*', 'components/schemes/*/examples/resources/*']
 
+  # ActivityIndicator
+
+  s.subspec "ActivityIndicator" do |component|
+    component.ios.deployment_target = '8.0'
+    component.public_header_files = "components/#{component.base_name}/src/*.h"
+    component.source_files = "components/#{component.base_name}/src/*.{h,m}", "components/#{component.base_name}/src/private/*.{h,m}"
+    component.resources = ["components/#{component.base_name}/src/Material#{component.base_name}.bundle"]
+
+    component.dependency "GTFInternationalization"
+    component.dependency "GTKitComponents/Palettes"
+    component.dependency "GTKitComponents/private/Application"
+    component.dependency "GTMotionAnimator"
+  end
+
+  s.subspec "ActivityIndicator+ColorThemer" do |extension|
+    extension.ios.deployment_target = '8.0'
+    extension.public_header_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.h"
+    extension.source_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.{h,m}"
+
+    extension.dependency "GTKitComponents/#{extension.base_name.split('+')[0]}"
+    extension.dependency "GTKitComponents/schemes/Color"
+  end
+
+  # AnimationTiming
+
+  s.subspec "AnimationTiming" do |component|
+    component.ios.deployment_target = '8.0'
+    component.public_header_files = "components/#{component.base_name}/src/*.h"
+    component.source_files = "components/#{component.base_name}/src/*.{h,m}", "components/#{component.base_name}/src/private/*.{h,m}"
+  end
+
+  s.subspec "IBAnimatable" do |component|
+    component.ios.deployment_target = '8.0'
+    component.public_header_files = "components/#{component.base_name}/src/*.h"
+    component.source_files = "components/#{component.base_name}/src/**/*.{h,m}"
+
+    component.dependency "GTFInternationalization"
+    component.dependency "GTKitComponents/Palettes"
+    component.dependency "GTKitComponents/private/Application"
+    component.dependency "GTMotionAnimator"
+    component.dependency "GTMotionTransitioning"
+  end
 
   # AppBar
 
@@ -137,6 +179,55 @@ Pod::Spec.new do |s|
     extension.dependency "GTKitComponents/schemes/Typography"
   end
 
+    # CollectionCells
+
+  s.subspec "CollectionCells" do |component|
+    component.ios.deployment_target = '8.0'
+    component.public_header_files = "components/#{component.base_name}/src/*.h"
+    component.source_files = "components/#{component.base_name}/src/*.{h,m}", "components/#{component.base_name}/src/private/*.{h,m}"
+    component.resources = ["components/#{component.base_name}/src/GT#{component.base_name}.bundle"]
+    component.framework = "CoreGraphics", "QuartzCore"
+
+    component.dependency "GTFInternationalization"
+    component.dependency "GTKitComponents/CollectionLayoutAttributes"
+    component.dependency "GTKitComponents/Ink"
+    component.dependency "GTKitComponents/Typography"
+    component.dependency "GTKitComponents/Palettes"
+    component.dependency "GTKitComponents/private/Icons/ic_check"
+    component.dependency "GTKitComponents/private/Icons/ic_check_circle"
+    component.dependency "GTKitComponents/private/Icons/ic_chevron_right"
+    component.dependency "GTKitComponents/private/Icons/ic_info"
+    component.dependency "GTKitComponents/private/Icons/ic_radio_button_unchecked"
+    component.dependency "GTKitComponents/private/Icons/ic_reorder"
+    component.dependency "GTKitComponents/private/Math"
+  end
+
+  # CollectionLayoutAttributes
+
+  s.subspec "CollectionLayoutAttributes" do |component|
+    component.ios.deployment_target = '8.0'
+    component.public_header_files = "components/#{component.base_name}/src/*.h"
+    component.source_files = "components/#{component.base_name}/src/*.{h,m}"
+  end
+
+  # Collections
+
+  s.subspec "Collections" do |component|
+    component.ios.deployment_target = '8.0'
+    component.public_header_files = "components/#{component.base_name}/src/*.h"
+    component.source_files = "components/#{component.base_name}/src/*.{h,m}", "components/#{component.base_name}/src/private/*.{h,m}"
+    component.resources = ["components/#{component.base_name}/src/GT#{component.base_name}.bundle"]
+    component.framework = "CoreGraphics", "QuartzCore"
+
+    component.dependency "GTKitComponents/CollectionCells"
+    component.dependency "GTKitComponents/CollectionLayoutAttributes"
+    component.dependency "GTKitComponents/Ink"
+    component.dependency "GTKitComponents/Palettes"
+    component.dependency "GTKitComponents/ShadowElevations"
+    component.dependency "GTKitComponents/ShadowLayer"
+    component.dependency "GTKitComponents/Typography"
+  end
+
   # FlexibleHeader
 
   s.subspec "FlexibleHeader" do |component|
@@ -255,7 +346,7 @@ Pod::Spec.new do |s|
     component.ios.deployment_target = '8.0'
     component.public_header_files = "components/#{component.base_name}/src/*.h"
     component.source_files = "components/#{component.base_name}/src/*.{h,m}", "components/#{component.base_name}/src/private/*.{h,m}"
-    component.resources = ["components/#{component.base_name}/src/Material#{component.base_name}.bundle"]
+    component.resources = ["components/#{component.base_name}/src/GT#{component.base_name}.bundle"]
   end
 
   s.subspec "PageControl+ColorThemer" do |extension|
@@ -273,6 +364,39 @@ Pod::Spec.new do |s|
     component.ios.deployment_target = '8.0'
     component.public_header_files = "components/#{component.base_name}/src/*.h"
     component.source_files = "components/#{component.base_name}/src/*.{h,m}", "components/#{component.base_name}/src/private/*.{h,m}"
+  end
+
+  # TextFields
+
+  s.subspec "TextFields" do |component|
+    component.ios.deployment_target = '8.0'
+    component.public_header_files = "components/#{component.base_name}/src/*.h"
+    component.source_files = "components/#{component.base_name}/src/*.{h,m}", "components/#{component.base_name}/src/private/*.{h,m}"
+
+    component.dependency "GTKitComponents/AnimationTiming"
+    component.dependency "GTKitComponents/Palettes"
+    component.dependency "GTKitComponents/Typography"
+    component.dependency "GTFInternationalization"
+    component.dependency "GTKitComponents/private/Math"
+    component.dependency "GTFInternationalization"
+  end
+
+  s.subspec "TextFields+ColorThemer" do |extension|
+    extension.ios.deployment_target = '8.0'
+    extension.public_header_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.h"
+    extension.source_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.{h,m}"
+
+    extension.dependency "GTKitComponents/#{extension.base_name.split('+')[0]}"
+    extension.dependency "GTKitComponents/Themes"
+  end
+
+  s.subspec "TextFields+TypographyThemer" do |extension|
+    extension.ios.deployment_target = '8.0'
+    extension.public_header_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.h"
+    extension.source_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.{h,m}"
+
+    extension.dependency "GTKitComponents/#{extension.base_name.split('+')[0]}"
+    extension.dependency "GTKitComponents/schemes/Typography"
   end
 
   # Themes

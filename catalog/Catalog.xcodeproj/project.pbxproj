@@ -13,13 +13,20 @@
 		04892E9F21256455003867C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04892E9D21256455003867C1 /* LaunchScreen.storyboard */; };
 		04892EAD2125654A003867C1 /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04892EAC2125654A003867C1 /* UnitTests.swift */; };
 		04C62359212E8F3B00D0564C /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C62358212E8F3B00D0564C /* AppTheme.swift */; };
-		04C6238C212EA27600D0564C /* GTCDrawDragons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C6238B212EA27600D0564C /* GTCDrawDragons.swift */; };
-		04C6238E212EA2B400D0564C /* DragonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C6238D212EA2B400D0564C /* DragonCell.swift */; };
-		04C62390212EA37D00D0564C /* GTCDragonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C6238F212EA37D00D0564C /* GTCDragonsController.swift */; };
-		04C62392212EA3BB00D0564C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C62391212EA3BB00D0564C /* HeaderView.swift */; };
-		04C62394212EA3CA00D0564C /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C62393212EA3CA00D0564C /* HeaderView.xib */; };
-		04C62396212EA6DF00D0564C /* GTCDragonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C62395212EA6DF00D0564C /* GTCDragonsTableViewCell.swift */; };
+		04C624092134F0D800D0564C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C624082134F0D800D0564C /* AppDelegate.swift */; };
+		04C6240E2134F0D800D0564C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C6240C2134F0D800D0564C /* Main.storyboard */; };
+		04C624102134F0D900D0564C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C6240F2134F0D900D0564C /* Assets.xcassets */; };
+		04C624132134F0D900D0564C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C624112134F0D900D0564C /* LaunchScreen.storyboard */; };
+		04C624182134F13000D0564C /* GTCDragonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C6238F212EA37D00D0564C /* GTCDragonsController.swift */; };
+		04C624192134F13000D0564C /* DragonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C6238D212EA2B400D0564C /* DragonCell.swift */; };
+		04C6241A2134F13000D0564C /* GTCDragonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C62395212EA6DF00D0564C /* GTCDragonsTableViewCell.swift */; };
+		04C6241B2134F13000D0564C /* GTCDrawDragons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C6238B212EA27600D0564C /* GTCDrawDragons.swift */; };
+		04C6241C2134F41000D0564C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C62391212EA3BB00D0564C /* HeaderView.swift */; };
+		04C6241D2135408E00D0564C /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C62393212EA3CA00D0564C /* HeaderView.xib */; };
+		04C6241F213541D800D0564C /* GTCCatalogWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C6241E213541D800D0564C /* GTCCatalogWindow.swift */; };
+		04C624212135421500D0564C /* GTCNodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C624202135421500D0564C /* GTCNodeListViewController.swift */; };
 		0E0D681050F96D515A17440F /* Pods_Catalog_Catalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136E0FECD48E58810FDA80E2 /* Pods_Catalog_Catalog.framework */; };
+		6DA226CAFB5BE293E96E8B0F /* Pods_GTCDragons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756DAC70919D6B0AC847EF42 /* Pods_GTCDragons.framework */; };
 		ABA8A074545AAD3EAC4D2A4D /* Pods_Catalog_UnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E48B5278BCFD9BB5C6D2D1 /* Pods_Catalog_UnitTests.framework */; };
 		AF042C168E8C662E9B70AB8D /* Pods_UnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721C628B59821A3230DC0978 /* Pods_UnitTests.framework */; };
 		F07E0603E11380371F80FD3A /* Pods_Catalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAC9684C307874F35D9AFC6 /* Pods_Catalog.framework */; };
@@ -52,12 +59,23 @@
 		04C62391212EA3BB00D0564C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		04C62393212EA3CA00D0564C /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		04C62395212EA6DF00D0564C /* GTCDragonsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTCDragonsTableViewCell.swift; sourceTree = "<group>"; };
+		04C624062134F0D800D0564C /* GTCDragons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GTCDragons.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04C624082134F0D800D0564C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04C6240D2134F0D800D0564C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04C6240F2134F0D900D0564C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04C624122134F0D900D0564C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04C624142134F0D900D0564C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C6241E213541D800D0564C /* GTCCatalogWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTCCatalogWindow.swift; sourceTree = "<group>"; };
+		04C624202135421500D0564C /* GTCNodeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTCNodeListViewController.swift; sourceTree = "<group>"; };
 		136E0FECD48E58810FDA80E2 /* Pods_Catalog_Catalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Catalog_Catalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EAC9684C307874F35D9AFC6 /* Pods_Catalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Catalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C64DF8CDFB3F376E00C8DFF /* Pods-GTCDragons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTCDragons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GTCDragons/Pods-GTCDragons.debug.xcconfig"; sourceTree = "<group>"; };
 		4BFCBC81CC226CC235E5911C /* Pods-Catalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catalog.release.xcconfig"; path = "Pods/Target Support Files/Pods-Catalog/Pods-Catalog.release.xcconfig"; sourceTree = "<group>"; };
 		584532BBD4D7D0933B486928 /* Pods-Catalog-UnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catalog-UnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Catalog-UnitTests/Pods-Catalog-UnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		58534213BE845811C66AA49F /* Pods-Catalog-UnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catalog-UnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Catalog-UnitTests/Pods-Catalog-UnitTests.release.xcconfig"; sourceTree = "<group>"; };
+		6DB322241AC1F757B779A336 /* Pods-GTCDragons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTCDragons.release.xcconfig"; path = "Pods/Target Support Files/Pods-GTCDragons/Pods-GTCDragons.release.xcconfig"; sourceTree = "<group>"; };
 		721C628B59821A3230DC0978 /* Pods_UnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		756DAC70919D6B0AC847EF42 /* Pods_GTCDragons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GTCDragons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD67812B887A7BF835CF7EA /* Pods-UnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8E2B989693BB0175611068B3 /* Pods-Catalog-Catalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catalog-Catalog.release.xcconfig"; path = "Pods/Target Support Files/Pods-Catalog-Catalog/Pods-Catalog-Catalog.release.xcconfig"; sourceTree = "<group>"; };
 		9C91C13A3818C41CB36388A9 /* Pods-Catalog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catalog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Catalog/Pods-Catalog.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +103,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04C624032134F0D800D0564C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA226CAFB5BE293E96E8B0F /* Pods_GTCDragons.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -93,6 +119,7 @@
 			children = (
 				04892E9321256454003867C1 /* Catalog */,
 				04892EAB2125654A003867C1 /* UnitTests */,
+				04C624072134F0D800D0564C /* GTCDragons */,
 				04892E9221256454003867C1 /* Products */,
 				FACB02DB1AC40EE19A35DFAD /* Pods */,
 				F3548CDDD397FD4527B5F877 /* Frameworks */,
@@ -104,6 +131,7 @@
 			children = (
 				04892E9121256454003867C1 /* Catalog.app */,
 				04892EAA2125654A003867C1 /* UnitTests.xctest */,
+				04C624062134F0D800D0564C /* GTCDragons.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,12 +141,8 @@
 			children = (
 				04892E9421256454003867C1 /* AppDelegate.swift */,
 				04C62358212E8F3B00D0564C /* AppTheme.swift */,
-				04C6238F212EA37D00D0564C /* GTCDragonsController.swift */,
-				04C6238B212EA27600D0564C /* GTCDrawDragons.swift */,
-				04C62395212EA6DF00D0564C /* GTCDragonsTableViewCell.swift */,
-				04C6238D212EA2B400D0564C /* DragonCell.swift */,
-				04C62391212EA3BB00D0564C /* HeaderView.swift */,
-				04C62393212EA3CA00D0564C /* HeaderView.xib */,
+				04C6241E213541D800D0564C /* GTCCatalogWindow.swift */,
+				04C624202135421500D0564C /* GTCNodeListViewController.swift */,
 				04892E9821256454003867C1 /* Main.storyboard */,
 				04892E9B21256455003867C1 /* Assets.xcassets */,
 				04892E9D21256455003867C1 /* LaunchScreen.storyboard */,
@@ -136,6 +160,24 @@
 			path = UnitTests;
 			sourceTree = "<group>";
 		};
+		04C624072134F0D800D0564C /* GTCDragons */ = {
+			isa = PBXGroup;
+			children = (
+				04C624082134F0D800D0564C /* AppDelegate.swift */,
+				04C6238F212EA37D00D0564C /* GTCDragonsController.swift */,
+				04C6238B212EA27600D0564C /* GTCDrawDragons.swift */,
+				04C62395212EA6DF00D0564C /* GTCDragonsTableViewCell.swift */,
+				04C6238D212EA2B400D0564C /* DragonCell.swift */,
+				04C62391212EA3BB00D0564C /* HeaderView.swift */,
+				04C62393212EA3CA00D0564C /* HeaderView.xib */,
+				04C6240C2134F0D800D0564C /* Main.storyboard */,
+				04C6240F2134F0D900D0564C /* Assets.xcassets */,
+				04C624112134F0D900D0564C /* LaunchScreen.storyboard */,
+				04C624142134F0D900D0564C /* Info.plist */,
+			);
+			path = GTCDragons;
+			sourceTree = "<group>";
+		};
 		F3548CDDD397FD4527B5F877 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +185,7 @@
 				136E0FECD48E58810FDA80E2 /* Pods_Catalog_Catalog.framework */,
 				D0E48B5278BCFD9BB5C6D2D1 /* Pods_Catalog_UnitTests.framework */,
 				721C628B59821A3230DC0978 /* Pods_UnitTests.framework */,
+				756DAC70919D6B0AC847EF42 /* Pods_GTCDragons.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -158,6 +201,8 @@
 				58534213BE845811C66AA49F /* Pods-Catalog-UnitTests.release.xcconfig */,
 				7CD67812B887A7BF835CF7EA /* Pods-UnitTests.debug.xcconfig */,
 				BCFD99AEE98506A049EAD7BC /* Pods-UnitTests.release.xcconfig */,
+				2C64DF8CDFB3F376E00C8DFF /* Pods-GTCDragons.debug.xcconfig */,
+				6DB322241AC1F757B779A336 /* Pods-GTCDragons.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -204,6 +249,25 @@
 			productReference = 04892EAA2125654A003867C1 /* UnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		04C624052134F0D800D0564C /* GTCDragons */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04C624172134F0D900D0564C /* Build configuration list for PBXNativeTarget "GTCDragons" */;
+			buildPhases = (
+				E3BEAD08C95D2DF21F432E3B /* [CP] Check Pods Manifest.lock */,
+				04C624022134F0D800D0564C /* Sources */,
+				04C624032134F0D800D0564C /* Frameworks */,
+				04C624042134F0D800D0564C /* Resources */,
+				1A8236667D2A5857A0E47AD5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GTCDragons;
+			productName = GTCDragons;
+			productReference = 04C624062134F0D800D0564C /* GTCDragons.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -220,6 +284,9 @@
 					04892EA92125654A003867C1 = {
 						CreatedOnToolsVersion = 9.3.1;
 						TestTargetID = 04892E9021256454003867C1;
+					};
+					04C624052134F0D800D0564C = {
+						CreatedOnToolsVersion = 9.3.1;
 					};
 				};
 			};
@@ -238,6 +305,7 @@
 			targets = (
 				04892E9021256454003867C1 /* Catalog */,
 				04892EA92125654A003867C1 /* UnitTests */,
+				04C624052134F0D800D0564C /* GTCDragons */,
 			);
 		};
 /* End PBXProject section */
@@ -250,7 +318,6 @@
 				04892E9F21256455003867C1 /* LaunchScreen.storyboard in Resources */,
 				04892E9C21256455003867C1 /* Assets.xcassets in Resources */,
 				04892E9A21256454003867C1 /* Main.storyboard in Resources */,
-				04C62394212EA3CA00D0564C /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,9 +328,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04C624042134F0D800D0564C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C624132134F0D900D0564C /* LaunchScreen.storyboard in Resources */,
+				04C624102134F0D900D0564C /* Assets.xcassets in Resources */,
+				04C6240E2134F0D800D0564C /* Main.storyboard in Resources */,
+				04C6241D2135408E00D0564C /* HeaderView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1A8236667D2A5857A0E47AD5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GTCDragons/Pods-GTCDragons-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTCatalog/GTCatalog.framework",
+				"${BUILT_PRODUCTS_DIR}/GTComponentsExamples/GTComponentsExamples.framework",
+				"${BUILT_PRODUCTS_DIR}/GTFInternationalization/GTFInternationalization.framework",
+				"${BUILT_PRODUCTS_DIR}/GTFTextAccessibility/GTFTextAccessibility.framework",
+				"${BUILT_PRODUCTS_DIR}/GTKitComponents/GTKitComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMotionAnimator/GTMotionAnimator.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMotionInterchange/GTMotionInterchange.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMotionTransitioning/GTMotionTransitioning.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTCatalog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTComponentsExamples.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTFInternationalization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTFTextAccessibility.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTKitComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMotionAnimator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMotionInterchange.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMotionTransitioning.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GTCDragons/Pods-GTCDragons-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2DA4386754382F80F506DF2D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -311,6 +421,9 @@
 				"${BUILT_PRODUCTS_DIR}/GTFInternationalization/GTFInternationalization.framework",
 				"${BUILT_PRODUCTS_DIR}/GTFTextAccessibility/GTFTextAccessibility.framework",
 				"${BUILT_PRODUCTS_DIR}/GTKitComponents/GTKitComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMotionAnimator/GTMotionAnimator.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMotionInterchange/GTMotionInterchange.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMotionTransitioning/GTMotionTransitioning.framework",
 				"${BUILT_PRODUCTS_DIR}/GTComponentsUnitTests/GTComponentsUnitTests.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -319,6 +432,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTFInternationalization.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTFTextAccessibility.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTKitComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMotionAnimator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMotionInterchange.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMotionTransitioning.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTComponentsUnitTests.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +454,9 @@
 				"${BUILT_PRODUCTS_DIR}/GTFInternationalization/GTFInternationalization.framework",
 				"${BUILT_PRODUCTS_DIR}/GTFTextAccessibility/GTFTextAccessibility.framework",
 				"${BUILT_PRODUCTS_DIR}/GTKitComponents/GTKitComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMotionAnimator/GTMotionAnimator.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMotionInterchange/GTMotionInterchange.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMotionTransitioning/GTMotionTransitioning.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -346,10 +465,31 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTFInternationalization.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTFTextAccessibility.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTKitComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMotionAnimator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMotionInterchange.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMotionTransitioning.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Catalog/Pods-Catalog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3BEAD08C95D2DF21F432E3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GTCDragons-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -359,13 +499,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04C6238E212EA2B400D0564C /* DragonCell.swift in Sources */,
 				04C62359212E8F3B00D0564C /* AppTheme.swift in Sources */,
-				04C6238C212EA27600D0564C /* GTCDrawDragons.swift in Sources */,
-				04C62390212EA37D00D0564C /* GTCDragonsController.swift in Sources */,
-				04C62396212EA6DF00D0564C /* GTCDragonsTableViewCell.swift in Sources */,
+				04C624212135421500D0564C /* GTCNodeListViewController.swift in Sources */,
+				04C6241F213541D800D0564C /* GTCCatalogWindow.swift in Sources */,
 				04892E9521256454003867C1 /* AppDelegate.swift in Sources */,
-				04C62392212EA3BB00D0564C /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +511,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				04892EAD2125654A003867C1 /* UnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04C624022134F0D800D0564C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C624182134F13000D0564C /* GTCDragonsController.swift in Sources */,
+				04C6241C2134F41000D0564C /* HeaderView.swift in Sources */,
+				04C624192134F13000D0564C /* DragonCell.swift in Sources */,
+				04C6241B2134F13000D0564C /* GTCDrawDragons.swift in Sources */,
+				04C624092134F0D800D0564C /* AppDelegate.swift in Sources */,
+				04C6241A2134F13000D0564C /* GTCDragonsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +550,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				04892E9E21256455003867C1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		04C6240C2134F0D800D0564C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04C6240D2134F0D800D0564C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04C624112134F0D900D0564C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04C624122134F0D900D0564C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -611,6 +777,46 @@
 			};
 			name = Release;
 		};
+		04C624152134F0D900D0564C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C64DF8CDFB3F376E00C8DFF /* Pods-GTCDragons.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E4RZEW9957;
+				INFOPLIST_FILE = GTCDragons/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.liuxc.GTCDragons;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04C624162134F0D900D0564C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DB322241AC1F757B779A336 /* Pods-GTCDragons.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E4RZEW9957;
+				INFOPLIST_FILE = GTCDragons/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.liuxc.GTCDragons;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -637,6 +843,15 @@
 			buildConfigurations = (
 				04892EB12125654A003867C1 /* Debug */,
 				04892EB22125654A003867C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04C624172134F0D900D0564C /* Build configuration list for PBXNativeTarget "GTCDragons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04C624152134F0D900D0564C /* Debug */,
+				04C624162134F0D900D0564C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

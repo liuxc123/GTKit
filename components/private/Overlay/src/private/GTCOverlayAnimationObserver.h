@@ -31,7 +31,7 @@
 @end
 
 /**
- Delegate protocol for @c MDCOverlayAnimationObserver.
+ Delegate protocol for @c GTCOverlayAnimationObserver.
  */
 @protocol GTCOverlayAnimationObserverDelegate <NSObject>
 

@@ -1,19 +1,21 @@
 workspace 'Catalog.xcworkspace'
 
-abstract_target 'Catalog' do
+target 'Catalog' do
   platform :ios, '8.0'
-  pod 'GTCatalog'
   project 'Catalog.xcodeproj'
-  use_frameworks! 
-end
-
-target "Catalog" do
-  platform :ios, '8.0'
+  use_frameworks!
   pod 'GTCatalog'
   pod 'GTComponentsExamples', :path => '../'
   pod 'GTKitComponents', :path => '../'
+end
 
-  use_frameworks! 
+target "GTCDragons" do
+    platform :ios, '8.0'
+    project 'Catalog.xcodeproj'
+    use_frameworks!
+    pod 'GTCatalog'
+    pod 'GTComponentsExamples', :path => '../'
+    pod 'GTKitComponents', :path => '../'
 end
   
 target "UnitTests" do

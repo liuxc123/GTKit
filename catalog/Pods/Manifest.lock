@@ -7,6 +7,9 @@ PODS:
   - GTFInternationalization (0.0.1)
   - GTFTextAccessibility (0.0.1)
   - GTKitComponents (0.0.1):
+    - GTKitComponents/ActivityIndicator (= 0.0.1)
+    - "GTKitComponents/ActivityIndicator+ColorThemer (= 0.0.1)"
+    - GTKitComponents/AnimationTiming (= 0.0.1)
     - GTKitComponents/AppBar (= 0.0.1)
     - "GTKitComponents/AppBar+ColorThemer (= 0.0.1)"
     - "GTKitComponents/AppBar+TypographyThemer (= 0.0.1)"
@@ -18,10 +21,14 @@ PODS:
     - "GTKitComponents/Buttons+ColorThemer (= 0.0.1)"
     - "GTKitComponents/Buttons+TitleColorAccessibilityMutator (= 0.0.1)"
     - "GTKitComponents/Buttons+TypographyThemer (= 0.0.1)"
+    - GTKitComponents/CollectionCells (= 0.0.1)
+    - GTKitComponents/CollectionLayoutAttributes (= 0.0.1)
+    - GTKitComponents/Collections (= 0.0.1)
     - GTKitComponents/FlexibleHeader (= 0.0.1)
     - "GTKitComponents/FlexibleHeader+ColorThemer (= 0.0.1)"
     - GTKitComponents/HeaderStackView (= 0.0.1)
     - "GTKitComponents/HeaderStackView+ColorThemer (= 0.0.1)"
+    - GTKitComponents/IBAnimatable (= 0.0.1)
     - GTKitComponents/Ink (= 0.0.1)
     - GTKitComponents/NavigationBar (= 0.0.1)
     - "GTKitComponents/NavigationBar+ColorThemer (= 0.0.1)"
@@ -34,8 +41,20 @@ PODS:
     - GTKitComponents/schemes (= 0.0.1)
     - GTKitComponents/ShadowElevations (= 0.0.1)
     - GTKitComponents/ShadowLayer (= 0.0.1)
+    - GTKitComponents/TextFields (= 0.0.1)
+    - "GTKitComponents/TextFields+ColorThemer (= 0.0.1)"
+    - "GTKitComponents/TextFields+TypographyThemer (= 0.0.1)"
     - GTKitComponents/Themes (= 0.0.1)
     - GTKitComponents/Typography (= 0.0.1)
+  - GTKitComponents/ActivityIndicator (0.0.1):
+    - GTFInternationalization
+    - GTKitComponents/Palettes
+    - GTKitComponents/private/Application
+    - GTMotionAnimator
+  - "GTKitComponents/ActivityIndicator+ColorThemer (0.0.1)":
+    - GTKitComponents/ActivityIndicator
+    - GTKitComponents/schemes/Color
+  - GTKitComponents/AnimationTiming (0.0.1)
   - GTKitComponents/AppBar (0.0.1):
     - GTFInternationalization
     - GTKitComponents/FlexibleHeader
@@ -86,6 +105,28 @@ PODS:
   - "GTKitComponents/Buttons+TypographyThemer (0.0.1)":
     - GTKitComponents/Buttons
     - GTKitComponents/schemes/Typography
+  - GTKitComponents/CollectionCells (0.0.1):
+    - GTFInternationalization
+    - GTKitComponents/CollectionLayoutAttributes
+    - GTKitComponents/Ink
+    - GTKitComponents/Palettes
+    - GTKitComponents/private/Icons/ic_check
+    - GTKitComponents/private/Icons/ic_check_circle
+    - GTKitComponents/private/Icons/ic_chevron_right
+    - GTKitComponents/private/Icons/ic_info
+    - GTKitComponents/private/Icons/ic_radio_button_unchecked
+    - GTKitComponents/private/Icons/ic_reorder
+    - GTKitComponents/private/Math
+    - GTKitComponents/Typography
+  - GTKitComponents/CollectionLayoutAttributes (0.0.1)
+  - GTKitComponents/Collections (0.0.1):
+    - GTKitComponents/CollectionCells
+    - GTKitComponents/CollectionLayoutAttributes
+    - GTKitComponents/Ink
+    - GTKitComponents/Palettes
+    - GTKitComponents/ShadowElevations
+    - GTKitComponents/ShadowLayer
+    - GTKitComponents/Typography
   - GTKitComponents/FlexibleHeader (0.0.1):
     - GTFTextAccessibility
     - GTKitComponents/private/Application
@@ -97,6 +138,12 @@ PODS:
   - "GTKitComponents/HeaderStackView+ColorThemer (0.0.1)":
     - GTKitComponents/HeaderStackView
     - GTKitComponents/Themes
+  - GTKitComponents/IBAnimatable (0.0.1):
+    - GTFInternationalization
+    - GTKitComponents/Palettes
+    - GTKitComponents/private/Application
+    - GTMotionAnimator
+    - GTMotionTransitioning
   - GTKitComponents/Ink (0.0.1):
     - GTKitComponents/private/Math
   - GTKitComponents/NavigationBar (0.0.1):
@@ -184,12 +231,28 @@ PODS:
   - GTKitComponents/ShadowElevations (0.0.1)
   - GTKitComponents/ShadowLayer (0.0.1):
     - GTKitComponents/ShadowElevations
+  - GTKitComponents/TextFields (0.0.1):
+    - GTFInternationalization
+    - GTKitComponents/AnimationTiming
+    - GTKitComponents/Palettes
+    - GTKitComponents/private/Math
+    - GTKitComponents/Typography
+  - "GTKitComponents/TextFields+ColorThemer (0.0.1)":
+    - GTKitComponents/TextFields
+    - GTKitComponents/Themes
+  - "GTKitComponents/TextFields+TypographyThemer (0.0.1)":
+    - GTKitComponents/schemes/Typography
+    - GTKitComponents/TextFields
   - GTKitComponents/Themes (0.0.1):
     - GTKitComponents/schemes/Color
     - GTKitComponents/schemes/Typography
   - GTKitComponents/Typography (0.0.1):
     - GTKitComponents/private/Application
     - GTKitComponents/private/Math
+  - GTMotionAnimator (0.0.1):
+    - GTMotionInterchange (~> 0.0.2)
+  - GTMotionInterchange (0.0.2)
+  - GTMotionTransitioning (0.0.1)
 
 DEPENDENCIES:
   - GTCatalog
@@ -202,6 +265,9 @@ SPEC REPOS:
     - GTCatalog
     - GTFInternationalization
     - GTFTextAccessibility
+    - GTMotionAnimator
+    - GTMotionInterchange
+    - GTMotionTransitioning
 
 EXTERNAL SOURCES:
   GTComponentsExamples:
@@ -217,8 +283,11 @@ SPEC CHECKSUMS:
   GTComponentsUnitTests: c00df0aa153664eb8ae081f04a3493453d9c19a7
   GTFInternationalization: 9aa259ddf1deb8590d605128c92f6ce8e87baa64
   GTFTextAccessibility: d5a28a7a603d1722727e33f27dcc27b5e7b0ce43
-  GTKitComponents: 3dd956d0143a48706ad11fb764b4c66ebb81e4d4
+  GTKitComponents: e9e7fe36deb7caaeb440ea5bcc8d42d1b541a33c
+  GTMotionAnimator: abf4c01aed3f74280d938518a1621de1044c072b
+  GTMotionInterchange: feec7166c3389a727f52e7bdda24f09298fc411f
+  GTMotionTransitioning: 7eba7fc50249ff8e0f0d923b1cb9c9d2d7324e46
 
-PODFILE CHECKSUM: 856ea29b72f024aba96c78f51f6da1ec06896ef0
+PODFILE CHECKSUM: 5673875f21364a65a309efe81896d605c87c980c
 
 COCOAPODS: 1.5.0
