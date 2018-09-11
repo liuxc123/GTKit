@@ -34,14 +34,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GTCAppBarNavigationContro
 //         That way it will become the debugLeaf and be presented first.
 //         */
 //        if let debugLeaf = tree.debugLeaf {
+
 //            rootNodeViewController = debugLeaf.createExampleViewController()
 //        } else {
 //            rootNodeViewController = GTCDragonsController(node: tree)
 //        }
 //
-//        navigationController.delegate = self
-//        navigationController.pushViewController(rootNodeViewController, animated: false)
-//        navigationController.interactivePopGestureRecognizer?.delegate = navigationController
+
+        let rootViewController = GTFNodeListViewController(node: GTFCreateNavigationTree())
+        rootViewController.title = "Catalog by Convention"
+        navigationController.delegate = self
+        navigationController.pushViewController(rootViewController, animated: false)
+        navigationController.interactivePopGestureRecognizer?.delegate = navigationController
 //
 //        self.configNotification()
 
@@ -60,10 +64,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GTCAppBarNavigationContro
                 return
         }
         for viewController in navigationController.childViewControllers {
-            guard let appBar = navigationController.appBarViewController(for: viewController) else {
-                continue
-            }
-
+//            guard let appBar = navigationController.appBarViewController(for: viewController) else {
+//                continue
+//            }
 //            GTCAppBarColorThemer.applySemanticColorScheme(colorScheme, to: appBar.ap)
         }
     }

@@ -479,6 +479,19 @@
       }
     },
     {
+      "name": "FlexibleHeader+CanAlwaysExpandToMaximumHeight",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/FlexibleHeader/src/CanAlwaysExpandToMaximumHeight/*.h",
+      "source_files": "components/FlexibleHeader/src/CanAlwaysExpandToMaximumHeight/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/FlexibleHeader": [
+
+        ]
+      }
+    },
+    {
       "name": "FlexibleHeader+ColorThemer",
       "platforms": {
         "ios": "8.0"
@@ -490,6 +503,19 @@
 
         ],
         "GTKitComponents/schemes/Color": [
+
+        ]
+      }
+    },
+    {
+      "name": "FlexibleHeader+CanAlwaysExpandToMaximumHeight",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/FlexibleHeader/src/CanAlwaysExpandToMaximumHeight/*.h",
+      "source_files": "components/FlexibleHeader/src/CanAlwaysExpandToMaximumHeight/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/FlexibleHeader": [
 
         ]
       }
@@ -533,6 +559,17 @@
 
         ]
       }
+    },
+    {
+      "name": "Layout",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Layout/src/*.h",
+      "source_files": [
+        "components/Layout/src/*.{h,m}",
+        "components/Layout/src/private/*.{h,m}"
+      ]
     },
     {
       "name": "ShadowElevations",

@@ -32,9 +32,14 @@ static const CGFloat GTCTextInputTextFieldOutlinedTextAreaHalfPadding = 8.f;
 // to add points to keep the versions at the same height.
 static const CGFloat GTCTextInputTextFieldOutlinedTextAreaPaddingAdjustment = 1.f;
 
+#pragma mark - Properties
+
+static BOOL _isFloatingEnabled = YES;
+
 #pragma mark - Class Properties
 
 static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
+
 
 @interface GTCTextInputControllerOutlinedTextArea ()
 
@@ -56,11 +61,11 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 #pragma mark - Properties Implementations
 
 - (BOOL)isFloatingEnabled {
-    return YES;
+    return _isFloatingEnabled;
 }
 
 - (void)setFloatingEnabled:(__unused BOOL)floatingEnabled {
-    // Unused. Floating is always enabled.
+    _isFloatingEnabled = floatingEnabled;
 }
 
 + (UIRectCorner)roundedCornersDefault {

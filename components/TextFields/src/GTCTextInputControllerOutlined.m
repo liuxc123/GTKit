@@ -19,6 +19,10 @@
 
 #import "GTMath.h"
 
+#pragma mark - Properties
+
+static BOOL _isFloatingEnabled = NO;
+
 #pragma mark - Class Properties
 
 static const CGFloat GTCTextInputOutlinedTextFieldFloatingPlaceholderPadding = 8.f;
@@ -51,11 +55,12 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 #pragma mark - Properties Implementations
 
 - (BOOL)isFloatingEnabled {
-    return YES;
+    return _isFloatingEnabled;
 }
 
 - (void)setFloatingEnabled:(__unused BOOL)floatingEnabled {
     // Unused. Floating is always enabled.
+    _isFloatingEnabled = floatingEnabled;
 }
 
 - (UIOffset)floatingPlaceholderOffset {
@@ -160,7 +165,8 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 }
 
 -(void)updateUnderline {
-    self.textInput.underline.hidden = YES;
+    self.textInput.underline.hidden = NO;
+    self.textInput.backgroundColor = [UIColor yellowColor];
 }
 
 - (void)updateBorder {
@@ -313,6 +319,28 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
     GTCCeil(self.textInput.placeholderLabel.font.lineHeight * scale) / scale;
     return GTCTextInputOutlinedTextFieldNormalPlaceholderPadding + placeholderEstimatedHeight +
     GTCTextInputOutlinedTextFieldNormalPlaceholderPadding;
+}
+
+// The measurement from bottom to underline center Y.
+- (CGFloat)underlineOffset {
+    // The amount of space underneath the underline depends on whether there is content in the
+    // underline labels.
+    CGFloat underlineLabelsOffset = 0;
+    CGFloat scale = UIScreen.mainScreen.scale;
+
+    if (self.textInput.leadingUnderlineLabel.text.length) {
+        underlineLabelsOffset =
+        GTCCeil(self.textInput.leadingUnderlineLabel.font.lineHeight * scale) / scale;
+    }
+    if (self.textInput.trailingUnderlineLabel.text.length || self.characterCountMax) {
+        underlineLabelsOffset =
+        MAX(underlineLabelsOffset,
+            GTCCeil(self.textInput.trailingUnderlineLabel.font.lineHeight * scale) / scale);
+    }
+
+    CGFloat underlineOffset = underlineLabelsOffset;
+
+    return -underlineOffset;
 }
 
 @end

@@ -25,11 +25,14 @@ PODS:
     - GTKitComponents/CollectionLayoutAttributes (= 0.0.1)
     - GTKitComponents/Collections (= 0.0.1)
     - GTKitComponents/FlexibleHeader (= 0.0.1)
+    - "GTKitComponents/FlexibleHeader+CanAlwaysExpandToMaximumHeight (= 0.0.1)"
+    - "GTKitComponents/FlexibleHeader+CanAlwaysExpandToMaximumHeight (= 0.0.1)"
     - "GTKitComponents/FlexibleHeader+ColorThemer (= 0.0.1)"
     - GTKitComponents/HeaderStackView (= 0.0.1)
     - "GTKitComponents/HeaderStackView+ColorThemer (= 0.0.1)"
     - GTKitComponents/IBAnimatable (= 0.0.1)
     - GTKitComponents/Ink (= 0.0.1)
+    - GTKitComponents/Layout (= 0.0.1)
     - GTKitComponents/NavigationBar (= 0.0.1)
     - "GTKitComponents/NavigationBar+ColorThemer (= 0.0.1)"
     - "GTKitComponents/NavigationBar+TypographyThemer (= 0.0.1)"
@@ -131,6 +134,8 @@ PODS:
     - GTFTextAccessibility
     - GTKitComponents/private/Application
     - GTKitComponents/private/UIMetrics
+  - "GTKitComponents/FlexibleHeader+CanAlwaysExpandToMaximumHeight (0.0.1)":
+    - GTKitComponents/FlexibleHeader
   - "GTKitComponents/FlexibleHeader+ColorThemer (0.0.1)":
     - GTKitComponents/FlexibleHeader
     - GTKitComponents/schemes/Color
@@ -146,6 +151,7 @@ PODS:
     - GTMotionTransitioning
   - GTKitComponents/Ink (0.0.1):
     - GTKitComponents/private/Math
+  - GTKitComponents/Layout (0.0.1)
   - GTKitComponents/NavigationBar (0.0.1):
     - GTFInternationalization
     - GTFTextAccessibility
@@ -283,7 +289,7 @@ SPEC CHECKSUMS:
   GTComponentsUnitTests: c00df0aa153664eb8ae081f04a3493453d9c19a7
   GTFInternationalization: 9aa259ddf1deb8590d605128c92f6ce8e87baa64
   GTFTextAccessibility: d5a28a7a603d1722727e33f27dcc27b5e7b0ce43
-  GTKitComponents: e9e7fe36deb7caaeb440ea5bcc8d42d1b541a33c
+  GTKitComponents: b151fd4db9eff1fb518af5377d3c1c9fa74b8f5c
   GTMotionAnimator: abf4c01aed3f74280d938518a1621de1044c072b
   GTMotionInterchange: feec7166c3389a727f52e7bdda24f09298fc411f
   GTMotionTransitioning: 7eba7fc50249ff8e0f0d923b1cb9c9d2d7324e46

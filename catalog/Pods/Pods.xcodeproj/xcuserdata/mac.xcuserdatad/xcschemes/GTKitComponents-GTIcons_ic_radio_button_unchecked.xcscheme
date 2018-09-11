@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F61FD39C76CB9E799768577E05C5A84E"
+               BlueprintIdentifier = "73732C8D1419EE81BF9F698E416B91CD"
                BuildableName = "GTIcons_ic_radio_button_unchecked.bundle"
                BlueprintName = "GTKitComponents-GTIcons_ic_radio_button_unchecked"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F61FD39C76CB9E799768577E05C5A84E"
+            BlueprintIdentifier = "73732C8D1419EE81BF9F698E416B91CD"
             BuildableName = "GTIcons_ic_radio_button_unchecked.bundle"
             BlueprintName = "GTKitComponents-GTIcons_ic_radio_button_unchecked"
             ReferencedContainer = "container:Pods.xcodeproj">

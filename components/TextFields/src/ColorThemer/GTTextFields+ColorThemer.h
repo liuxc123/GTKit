@@ -6,4 +6,6 @@
 //
 
 #import "GTCTextFieldColorThemer.h"
+#import "GTCFilledTextFieldColorThemer.h"
+#import "GTCOutlinedTextFieldColorThemer.h"
 

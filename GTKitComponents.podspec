@@ -240,6 +240,14 @@ Pod::Spec.new do |s|
     component.dependency "GTKitComponents/private/UIMetrics"
   end
 
+  s.subspec "FlexibleHeader+CanAlwaysExpandToMaximumHeight" do |extension|
+    extension.ios.deployment_target = '8.0'
+    extension.public_header_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.h"
+    extension.source_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.{h,m}"
+
+    extension.dependency "GTKitComponents/#{extension.base_name.split('+')[0]}"
+  end
+
   s.subspec "FlexibleHeader+ColorThemer" do |extension|
     extension.ios.deployment_target = '8.0'
     extension.public_header_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.h"
@@ -248,6 +256,14 @@ Pod::Spec.new do |s|
     extension.dependency "GTKitComponents/#{extension.base_name.split('+')[0]}"
     extension.dependency "GTKitComponents/schemes/Color"
   end
+
+   s.subspec "FlexibleHeader+CanAlwaysExpandToMaximumHeight" do |extension|
+    extension.ios.deployment_target = '8.0'
+    extension.public_header_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.h"
+    extension.source_files = "components/#{extension.base_name.split('+')[0]}/src/#{extension.base_name.split('+')[1]}/*.{h,m}"
+
+    extension.dependency "GTKitComponents/#{extension.base_name.split('+')[0]}"
+   end
 
   # HeaderStackView
 
@@ -274,6 +290,14 @@ Pod::Spec.new do |s|
     component.source_files = "components/#{component.base_name}/src/*.{h,m}", "components/#{component.base_name}/src/private/*.{h,m}"
 
     component.dependency "GTKitComponents/private/Math"
+  end
+
+  # Layout
+
+  s.subspec "Layout" do |component|
+    component.ios.deployment_target = '8.0'
+    component.public_header_files = "components/#{component.base_name}/src/*.h"
+    component.source_files = "components/#{component.base_name}/src/*.{h,m}", "components/#{component.base_name}/src/private/*.{h,m}"
   end
 
   # ShadowElevations

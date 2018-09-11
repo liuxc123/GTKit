@@ -78,6 +78,7 @@ compatibleWithTraitCollection:nil];
     self.textFieldControllerOutlined.placeholderText =
     @"GTCTextInputControllerOutlined";
     self.textFieldControllerOutlined.characterCountMax = characterCountMax;
+    [self.textFieldControllerOutlined setFloatingEnabled:NO];
 
     [self.textFieldControllerOutlined gtc_setAdjustsFontForContentSizeCategory:YES];
 
@@ -97,7 +98,7 @@ compatibleWithTraitCollection:nil];
     [[GTCTextInputControllerFilled alloc] initWithTextInput:textFieldFilled];
     self.textFieldControllerFilled.placeholderText = @"GTCTextInputControllerFilled";
     self.textFieldControllerFilled.characterCountMax = characterCountMax;
-
+    [self.textFieldControllerFilled setFloatingEnabled:NO];
     [self.textFieldControllerFilled gtc_setAdjustsFontForContentSizeCategory:YES];
 
     [NSLayoutConstraint
@@ -152,6 +153,7 @@ compatibleWithTraitCollection:nil];
     [[GTCTextInputControllerUnderline alloc] initWithTextInput:textFieldUnderline];
     self.textFieldControllerUnderline.placeholderText = @"GTCTextInputControllerUnderline";
     self.textFieldControllerUnderline.characterCountMax = characterCountMax;
+    [self.textFieldControllerUnderline setFloatingEnabled:YES];
 
     [self.textFieldControllerUnderline gtc_setAdjustsFontForContentSizeCategory:YES];
 
@@ -236,6 +238,7 @@ compatibleWithTraitCollection:nil];
     .active = YES;
 #endif
 
+ 
 }
 
 #pragma mark - UITextFieldDelegate
