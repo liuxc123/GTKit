@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "15775F341F2265EA78195A6D579A38E3"
+               BlueprintIdentifier = "12BC2146648D4A557A5C0713F82096D8"
                BlueprintName = "GTComponentsExamples"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "GTComponentsExamples.framework">

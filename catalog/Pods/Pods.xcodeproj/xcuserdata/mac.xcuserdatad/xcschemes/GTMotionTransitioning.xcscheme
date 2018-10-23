@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4E6AD30FE301A7602983406115D4D373"
+               BlueprintIdentifier = "61AC7DC9824DB40D9255C333AB59C460"
                BlueprintName = "GTMotionTransitioning"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "GTMotionTransitioning.framework">

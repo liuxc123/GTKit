@@ -47,6 +47,13 @@ typedef NS_OPTIONS(NSUInteger, GTCButtonBarLayoutPosition) {
 IB_DESIGNABLE
 @interface GTCButtonBar : UIView
 
+#pragma mark Delegating
+
+/**
+ The delegate will be informed of events related to the layout of the button bar.
+ */
+@property(nonatomic, weak, nullable) id<GTCButtonBarDelegate> delegate;
+
 #pragma mark Button Items
 
 /**
@@ -94,6 +101,15 @@ IB_DESIGNABLE
  Default: 0
  */
 @property(nonatomic) CGFloat buttonTitleBaseline;
+
+/**
+ If true, all button titles will be converted to uppercase.
+
+ Changing this property to NO will update the current title string for all buttons.
+
+ Default is YES.
+ */
+@property(nonatomic) BOOL uppercasesButtonTitles;
 
 /**
  Sets the title font for the given state for all buttons.
@@ -155,7 +171,6 @@ IB_DESIGNABLE
 
 @end
 
-
 typedef NS_OPTIONS(NSUInteger, GTCBarButtonItemLayoutHints) {
     GTCBarButtonItemLayoutHintsNone = 0,
 
@@ -180,11 +195,24 @@ typedef NS_OPTIONS(NSUInteger, GTCBarButtonItemLayoutHints) {
  @seealso GTCBarButtonItemLayoutHints
  */
 @protocol GTCButtonBarDelegate <NSObject>
-@required
+@optional
+
+/**
+ Informs the receiver that the button bar requires a layout pass.
+
+ The receiver is expected to call propagate this setNeedsLayout call to the view responsible for
+ setting the frame of the button bar so that the button bar can expand or contract as necessary.
+
+ This method is typically called as a result of a UIBarButtonItem property changing or as a result
+ of the items property being changed.
+ */
+- (void)buttonBarDidInvalidateIntrinsicContentSize:(nonnull GTCButtonBar *)buttonBar;
 
 /** Asks the receiver to return a view that represents the given bar button item. */
 - (nonnull UIView *)buttonBar:(nonnull GTCButtonBar *)buttonBar
                   viewForItem:(nonnull UIBarButtonItem *)barButtonItem
-                  layoutHints:(GTCBarButtonItemLayoutHints)layoutHints;
+                  layoutHints:(GTCBarButtonItemLayoutHints)layoutHints
+__deprecated_msg("There will be no replacement for this API.");
 
 @end
+

@@ -7,9 +7,5 @@
 
 #import <UIKit/UIKit.h>
 
-struct GTCAnimatorFactory {
-
-    
-};
 
 

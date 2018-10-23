@@ -14,6 +14,11 @@
 #import "TypographyMaterialStylesViewController.h"
 #import "TypographySimpleExampleViewController.h"
 #import "AnimationTimingExampleSupplemental.h"
+#import "BottomSheetAutolayoutDummyViewController.h"
+#import "BottomSheetDummyCollectionViewController.h"
+#import "BottomSheetDummyStaticViewController.h"
+#import "BottomSheetPresenterViewController.h"
+#import "BottomSheetSupplemental.h"
 #import "ButtonsTypicalUseSupplemental.h"
 #import "CollectionCellsLayoutExample.h"
 #import "CollectionCellsTextExample.h"
@@ -38,6 +43,7 @@
 #import "NavigationBarTypicalUseExampleSupplemental.h"
 #import "TextFieldControllerStylesExampleSupplemental.h"
 #import "TextFieldInterfaceBuilderExampleSupplemental.h"
+#import "GTCShapeSchemeExampleViewController.h"
 
 FOUNDATION_EXPORT double GTComponentsExamplesVersionNumber;
 FOUNDATION_EXPORT const unsigned char GTComponentsExamplesVersionString[];

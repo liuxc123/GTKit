@@ -73,31 +73,6 @@
       ]
     },
     {
-      "name": "IBAnimatable",
-      "platforms": {
-        "ios": "8.0"
-      },
-      "public_header_files": "components/IBAnimatable/src/*.h",
-      "source_files": "components/IBAnimatable/src/**/*.{h,m}",
-      "dependencies": {
-        "GTFInternationalization": [
-
-        ],
-        "GTKitComponents/Palettes": [
-
-        ],
-        "GTKitComponents/private/Application": [
-
-        ],
-        "GTMotionAnimator": [
-
-        ],
-        "GTMotionTransitioning": [
-
-        ]
-      }
-    },
-    {
       "name": "AppBar",
       "platforms": {
         "ios": "8.0"
@@ -183,6 +158,191 @@
 
         ],
         "GTKitComponents/NavigationBar+TypographyThemer": [
+
+        ]
+      }
+    },
+    {
+      "name": "BottomAppBar",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/BottomAppBar/src/*.h",
+      "source_files": [
+        "components/BottomAppBar/src/*.{h,m}",
+        "components/BottomAppBar/src/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTFInternationalization": [
+
+        ],
+        "GTKitComponents/Buttons": [
+
+        ],
+        "GTKitComponents/NavigationBar": [
+
+        ],
+        "GTKitComponents/private/Math": [
+
+        ]
+      },
+      "testspecs": [
+        {
+          "name": "tests",
+          "test_type": "unit",
+          "testspecs": [
+            {
+              "name": "unit",
+              "test_type": "unit",
+              "source_files": [
+                "components/BottomAppBar/tests/unit/*.{h,m,swift}",
+                "components/BottomAppBar/tests/unit/supplemental/*.{h,m,swift}"
+              ],
+              "resources": "components/BottomAppBar/tests/unit/resources/*"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BottomAppBar+ColorThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/BottomAppBar/src/ColorThemer/*.h",
+      "source_files": "components/BottomAppBar/src/ColorThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/BottomAppBar": [
+
+        ],
+        "GTKitComponents/Themes": [
+
+        ]
+      }
+    },
+    {
+      "name": "BottomNavigation",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/BottomNavigation/src/*.h",
+      "source_files": [
+        "components/BottomNavigation/src/*.{h,m}",
+        "components/BottomNavigation/src/private/*.{h,m}"
+      ],
+      "resources": [
+        "components/BottomNavigation/src/GTBottomNavigation.bundle"
+      ],
+      "dependencies": {
+        "GTFInternationalization": [
+
+        ],
+        "GTKitComponents/Ink": [
+
+        ],
+        "GTKitComponents/ShadowElevations": [
+
+        ],
+        "GTKitComponents/ShadowLayer": [
+
+        ],
+        "GTKitComponents/Typography": [
+
+        ],
+        "GTKitComponents/private/Math": [
+
+        ]
+      },
+      "testspecs": [
+        {
+          "name": "tests",
+          "test_type": "unit",
+          "testspecs": [
+            {
+              "name": "unit",
+              "test_type": "unit",
+              "source_files": [
+                "components/BottomNavigation/tests/unit/*.{h,m,swift}",
+                "components/BottomNavigation/tests/unit/supplemental/*.{h,m,swift}"
+              ],
+              "resources": "components/BottomNavigation/tests/unit/resources/*"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BottomNavigation+ColorThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/BottomNavigation/src/ColorThemer/*.h",
+      "source_files": "components/BottomNavigation/src/ColorThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/BottomNavigation": [
+
+        ],
+        "GTKitComponents/schemes/Color": [
+
+        ]
+      }
+    },
+    {
+      "name": "BottomNavigation+TypographyThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/BottomNavigation/src/TypographyThemer/*.h",
+      "source_files": "components/BottomNavigation/src/TypographyThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/BottomNavigation": [
+
+        ],
+        "GTKitComponents/schemes/Typography": [
+
+        ]
+      }
+    },
+    {
+      "name": "BottomSheet",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/BottomSheet/src/*.h",
+      "source_files": [
+        "components/BottomSheet/src/*.{h,m}",
+        "components/BottomSheet/src/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTKitComponents/private/KeyboardWatcher": [
+
+        ],
+        "GTKitComponents/private/Math": [
+
+        ],
+        "GTKitComponents/private/ShapeLibrary": [
+
+        ],
+        "GTKitComponents/private/Shapes": [
+
+        ]
+      }
+    },
+    {
+      "name": "BottomSheet+ShapeThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/BottomSheet/src/ShapeThemer/*.h",
+      "source_files": [
+        "components/BottomSheet/src/ShapeThemer/*.{h,m}",
+        "components/BottomSheet/src/ShapeThemer/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTKitComponents/BottomSheet": [
+
+        ],
+        "GTKitComponents/schemes/Shape": [
 
         ]
       }
@@ -336,6 +496,22 @@
       }
     },
     {
+      "name": "Buttons+ShapeThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Buttons/src/ShapeThemer/*.h",
+      "source_files": "components/Buttons/src/ShapeThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/Buttons": [
+
+        ],
+        "GTKitComponents/schemes/Shape": [
+
+        ]
+      }
+    },
+    {
       "name": "ButtonBar+TypographyThemer",
       "platforms": {
         "ios": "8.0"
@@ -344,6 +520,226 @@
       "source_files": "components/ButtonBar/src/TypographyThemer/*.{h,m}",
       "dependencies": {
         "GTKitComponents/ButtonBar": [
+
+        ],
+        "GTKitComponents/schemes/Typography": [
+
+        ]
+      }
+    },
+    {
+      "name": "Cards",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Cards/src/*.h",
+      "source_files": "components/Cards/src/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/Ink": [
+
+        ],
+        "GTKitComponents/ShadowLayer": [
+
+        ],
+        "GTKitComponents/private/Icons/ic_check_circle": [
+
+        ],
+        "GTKitComponents/private/Math": [
+
+        ],
+        "GTKitComponents/private/Shapes": [
+
+        ]
+      },
+      "testspecs": [
+        {
+          "name": "tests",
+          "test_type": "unit",
+          "testspecs": [
+            {
+              "name": "unit",
+              "test_type": "unit",
+              "source_files": [
+                "components/Cards/tests/unit/*.{h,m,swift}",
+                "components/Cards/tests/unit/supplemental/*.{h,m,swift}"
+              ],
+              "resources": "components/Cards/tests/unit/resources/*"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cards+ColorThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Cards/src/ColorThemer/*.h",
+      "source_files": "components/Cards/src/ColorThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/Cards": [
+
+        ],
+        "GTKitComponents/schemes/Color": [
+
+        ]
+      }
+    },
+    {
+      "name": "Cards+ShapeThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Cards/src/ShapeThemer/*.h",
+      "source_files": "components/Cards/src/ShapeThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/Cards": [
+
+        ],
+        "GTKitComponents/schemes/Shape": [
+
+        ]
+      }
+    },
+    {
+      "name": "Cards+CardThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Cards/src/CardThemer/*.h",
+      "source_files": "components/Cards/src/CardThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/Cards": [
+
+        ],
+        "GTKitComponents/Cards+ColorThemer": [
+
+        ],
+        "GTKitComponents/Cards+ShapeThemer": [
+
+        ]
+      }
+    },
+    {
+      "name": "Chips",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Chips/src/*.h",
+      "source_files": [
+        "components/Chips/src/*.{h,m}",
+        "components/Chips/src/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTFInternationalization": [
+
+        ],
+        "GTKitComponents/Ink": [
+
+        ],
+        "GTKitComponents/ShadowLayer": [
+
+        ],
+        "GTKitComponents/ShadowElevations": [
+
+        ],
+        "GTKitComponents/TextFields": [
+
+        ],
+        "GTKitComponents/Typography": [
+
+        ],
+        "GTKitComponents/private/Math": [
+
+        ],
+        "GTKitComponents/private/ShapeLibrary": [
+
+        ],
+        "GTKitComponents/private/Shapes": [
+
+        ]
+      },
+      "testspecs": [
+        {
+          "name": "tests",
+          "test_type": "unit",
+          "testspecs": [
+            {
+              "name": "unit",
+              "test_type": "unit",
+              "source_files": [
+                "components/Chips/tests/unit/*.{h,m,swift}",
+                "components/Chips/tests/unit/supplemental/*.{h,m,swift}"
+              ],
+              "resources": "components/Chips/tests/unit/resources/*"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chips+ChipThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Chips/src/ChipThemer/*.h",
+      "source_files": "components/Chips/src/ChipThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/Chips": [
+
+        ],
+        "GTKitComponents/Chips+ColorThemer": [
+
+        ],
+        "GTKitComponents/Chips+ShapeThemer": [
+
+        ],
+        "GTKitComponents/Chips+TypographyThemer": [
+
+        ]
+      }
+    },
+    {
+      "name": "Chips+ColorThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Chips/src/ColorThemer/*.h",
+      "source_files": "components/Chips/src/ColorThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/Chips": [
+
+        ],
+        "GTKitComponents/schemes/Color": [
+
+        ]
+      }
+    },
+    {
+      "name": "Chips+ShapeThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Chips/src/ShapeThemer/*.h",
+      "source_files": "components/Chips/src/ShapeThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/Chips": [
+
+        ],
+        "GTKitComponents/schemes/Shape": [
+
+        ]
+      }
+    },
+    {
+      "name": "Chips+TypographyThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Chips/src/TypographyThemer/*.h",
+      "source_files": "components/Chips/src/TypographyThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/Chips": [
 
         ],
         "GTKitComponents/schemes/Typography": [
@@ -457,6 +853,178 @@
       }
     },
     {
+      "name": "Dialogs",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Dialogs/src/*.h",
+      "source_files": [
+        "components/Dialogs/src/*.{h,m}",
+        "components/Dialogs/src/private/*.{h,m}"
+      ],
+      "resources": [
+        "components/Dialogs/src/MaterialDialogs.bundle"
+      ],
+      "dependencies": {
+        "GTKitComponents/Buttons": [
+
+        ],
+        "GTKitComponents/ShadowElevations": [
+
+        ],
+        "GTKitComponents/ShadowLayer": [
+
+        ],
+        "GTKitComponents/Typography": [
+
+        ],
+        "GTKitComponents/private/KeyboardWatcher": [
+
+        ],
+        "GTFInternationalization": [
+
+        ]
+      }
+    },
+    {
+      "name": "Dialogs+ColorThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Dialogs/src/ColorThemer/*.h",
+      "source_files": "components/Dialogs/src/ColorThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/Dialogs": [
+
+        ],
+        "GTKitComponents/Themes": [
+
+        ]
+      }
+    },
+    {
+      "name": "Dialogs+TypographyThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Dialogs/src/TypographyThemer/*.h",
+      "source_files": "components/Dialogs/src/TypographyThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/Dialogs": [
+
+        ],
+        "GTKitComponents/schemes/Typography": [
+
+        ]
+      }
+    },
+    {
+      "name": "FeatureHighlight",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/FeatureHighlight/src/*.h",
+      "source_files": [
+        "components/FeatureHighlight/src/*.{h,m}",
+        "components/FeatureHighlight/src/private/*.{h,m}"
+      ],
+      "resources": [
+        "components/FeatureHighlight/src/GTFeatureHighlight.bundle"
+      ],
+      "dependencies": {
+        "GTKitComponents/private/Math": [
+
+        ],
+        "GTKitComponents/Typography": [
+
+        ],
+        "GTFTextAccessibility": [
+
+        ]
+      },
+      "testspecs": [
+        {
+          "name": "tests",
+          "test_type": "unit",
+          "testspecs": [
+            {
+              "name": "unit",
+              "test_type": "unit",
+              "source_files": [
+                "components/FeatureHighlight/tests/unit/*.{h,m,swift}",
+                "components/FeatureHighlight/tests/unit/supplemental/*.{h,m,swift}"
+              ],
+              "resources": "components/FeatureHighlight/tests/unit/resources/*"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "FeatureHighlight+ColorThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/FeatureHighlight/src/ColorThemer/*.h",
+      "source_files": "components/FeatureHighlight/src/ColorThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/FeatureHighlight": [
+
+        ],
+        "GTKitComponents/Themes": [
+
+        ]
+      }
+    },
+    {
+      "name": "FeatureHighlight+FontThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/FeatureHighlight/src/FontThemer/*.h",
+      "source_files": "components/FeatureHighlight/src/FontThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/FeatureHighlight": [
+
+        ],
+        "GTKitComponents/Themes": [
+
+        ]
+      }
+    },
+    {
+      "name": "FeatureHighlight+TypographyThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/FeatureHighlight/src/TypographyThemer/*.h",
+      "source_files": "components/FeatureHighlight/src/TypographyThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/FeatureHighlight": [
+
+        ],
+        "GTKitComponents/schemes/Typography": [
+
+        ]
+      }
+    },
+    {
+      "name": "FeatureHighlight+FeatureHighlightAccessibilityMutator",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/FeatureHighlight/src/FeatureHighlightAccessibilityMutator/*.h",
+      "source_files": "components/FeatureHighlight/src/FeatureHighlightAccessibilityMutator/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/FeatureHighlight": [
+
+        ],
+        "GTFTextAccessibility": [
+
+        ]
+      }
+    },
+    {
       "name": "FlexibleHeader",
       "platforms": {
         "ios": "8.0"
@@ -521,6 +1089,13 @@
       }
     },
     {
+      "name": "Form",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "source_files": "components/Form/src/**/*"
+    },
+    {
       "name": "HeaderStackView",
       "platforms": {
         "ios": "8.0"
@@ -572,22 +1147,106 @@
       ]
     },
     {
-      "name": "ShadowElevations",
+      "name": "List",
       "platforms": {
         "ios": "8.0"
       },
-      "public_header_files": "components/ShadowElevations/src/*.h",
-      "source_files": "components/ShadowElevations/src/*.{h,m}"
+      "public_header_files": "components/List/src/*.h",
+      "source_files": [
+        "components/List/src/*.{h,m}",
+        "components/List/src/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTKitComponents/Ink": [
+
+        ],
+        "GTKitComponents/ShadowElevations": [
+
+        ],
+        "GTKitComponents/ShadowLayer": [
+
+        ],
+        "GTKitComponents/Typography": [
+
+        ],
+        "GTFInternationalization": [
+
+        ],
+        "GTKitComponents/private/Math": [
+
+        ]
+      },
+      "testspecs": [
+        {
+          "name": "tests",
+          "test_type": "unit",
+          "testspecs": [
+            {
+              "name": "unit",
+              "test_type": "unit",
+              "source_files": [
+                "components/List/tests/unit/*.{h,m,swift}",
+                "components/List/tests/unit/supplemental/*.{h,m,swift}"
+              ],
+              "resources": "components/List/tests/unit/resources/*"
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "ShadowLayer",
+      "name": "List+TypographyThemer",
       "platforms": {
         "ios": "8.0"
       },
-      "public_header_files": "components/ShadowLayer/src/*.h",
-      "source_files": "components/ShadowLayer/src/*.{h,m}",
+      "public_header_files": "components/List/src/TypographyThemer/*.h",
+      "source_files": "components/List/src/TypographyThemer/*.{h,m}",
       "dependencies": {
-        "GTKitComponents/ShadowElevations": [
+        "GTKitComponents/List": [
+
+        ],
+        "GTKitComponents/schemes/Typography": [
+
+        ]
+      }
+    },
+    {
+      "name": "List+ColorThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/List/src/ColorThemer/*.h",
+      "source_files": [
+        "components/List/src/ColorThemer/*.{h,m}",
+        "components/List/src/ColorThemer/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTKitComponents/List": [
+
+        ],
+        "GTKitComponents/schemes/Color": [
+
+        ]
+      }
+    },
+    {
+      "name": "MaskedTransition",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/MaskedTransition/src/*.h",
+      "source_files": [
+        "components/MaskedTransition/src/*.{h,m}",
+        "components/MaskedTransition/src/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTMotionTransitioning": [
+
+        ],
+        "GTMotionAnimator": [
+
+        ],
+        "GTMotionInterchange": [
 
         ]
       }
@@ -707,6 +1366,273 @@
       ]
     },
     {
+      "name": "PickerView",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/PickerView/src/*.h",
+      "source_files": [
+        "components/PickerView/src/*.{h,m}",
+        "components/PickerView/src/private/*.{h,m}"
+      ],
+      "testspecs": [
+        {
+          "name": "tests",
+          "test_type": "unit",
+          "testspecs": [
+            {
+              "name": "unit",
+              "test_type": "unit",
+              "source_files": [
+                "components/PickerView/tests/unit/*.{h,m,swift}",
+                "components/PickerView/tests/unit/supplemental/*.{h,m,swift}"
+              ],
+              "resources": "components/PickerView/tests/unit/resources/*"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ProgressView",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/ProgressView/src/*.h",
+      "source_files": [
+        "components/ProgressView/src/*.{h,m}",
+        "components/ProgressView/src/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTFInternationalization": [
+
+        ],
+        "GTKitComponents/Palettes": [
+
+        ],
+        "GTKitComponents/private/Math": [
+
+        ],
+        "GTMotionAnimator": [
+
+        ]
+      },
+      "testspecs": [
+        {
+          "name": "tests",
+          "test_type": "unit",
+          "testspecs": [
+            {
+              "name": "unit",
+              "test_type": "unit",
+              "source_files": [
+                "components/ProgressView/tests/unit/*.{h,m,swift}",
+                "components/ProgressView/tests/unit/supplemental/*.{h,m,swift}"
+              ],
+              "resources": "components/ProgressView/tests/unit/resources/*"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ProgressView+ColorThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/ProgressView/src/ColorThemer/*.h",
+      "source_files": "components/ProgressView/src/ColorThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/ProgressView": [
+
+        ],
+        "GTKitComponents/Themes": [
+
+        ]
+      }
+    },
+    {
+      "name": "ShadowElevations",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/ShadowElevations/src/*.h",
+      "source_files": "components/ShadowElevations/src/*.{h,m}"
+    },
+    {
+      "name": "ShadowLayer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/ShadowLayer/src/*.h",
+      "source_files": "components/ShadowLayer/src/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/ShadowElevations": [
+
+        ]
+      }
+    },
+    {
+      "name": "Slider",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Slider/src/*.h",
+      "source_files": [
+        "components/Slider/src/*.{h,m}",
+        "components/Slider/src/private/*.{h,m}"
+      ],
+      "dependencies": {
+        "GTKitComponents/Palettes": [
+
+        ],
+        "GTKitComponents/ShadowElevations": [
+
+        ],
+        "GTKitComponents/private/ThumbTrack": [
+
+        ]
+      },
+      "testspecs": [
+        {
+          "name": "tests",
+          "test_type": "unit",
+          "testspecs": [
+            {
+              "name": "unit",
+              "test_type": "unit",
+              "source_files": [
+                "components/Slider/tests/unit/*.{h,m,swift}",
+                "components/Slider/tests/unit/supplemental/*.{h,m,swift}"
+              ],
+              "resources": "components/Slider/tests/unit/resources/*"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Slider+ColorThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Slider/src/ColorThemer/*.h",
+      "source_files": "components/Slider/src/ColorThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/Palettes": [
+
+        ],
+        "GTKitComponents/Slider": [
+
+        ],
+        "GTKitComponents/schemes/Color": [
+
+        ]
+      }
+    },
+    {
+      "name": "Tabs",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Tabs/src/*.h",
+      "source_files": [
+        "components/Tabs/src/*.{h,m}",
+        "components/Tabs/src/private/*.{h,m}"
+      ],
+      "resources": [
+        "components/Tabs/src/GTTabs.bundle"
+      ],
+      "dependencies": {
+        "GTFInternationalization": [
+
+        ],
+        "GTKitComponents/AnimationTiming": [
+
+        ],
+        "GTKitComponents/Ink": [
+
+        ],
+        "GTKitComponents/ShadowElevations": [
+
+        ],
+        "GTKitComponents/ShadowLayer": [
+
+        ],
+        "GTKitComponents/Typography": [
+
+        ],
+        "GTKitComponents/private/Math": [
+
+        ]
+      },
+      "testspecs": [
+        {
+          "name": "tests",
+          "test_type": "unit",
+          "testspecs": [
+            {
+              "name": "unit",
+              "test_type": "unit",
+              "source_files": [
+                "components/Tabs/tests/unit/*.{h,m,swift}",
+                "components/Tabs/tests/unit/supplemental/*.{h,m,swift}"
+              ],
+              "resources": "components/Tabs/tests/unit/resources/*"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tabs+ColorThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Tabs/src/ColorThemer/*.h",
+      "source_files": "components/Tabs/src/ColorThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/schemes/Color": [
+
+        ],
+        "GTKitComponents/Tabs": [
+
+        ]
+      }
+    },
+    {
+      "name": "Tabs+FontThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Tabs/src/FontThemer/*.h",
+      "source_files": "components/Tabs/src/FontThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/Tabs": [
+
+        ],
+        "GTKitComponents/Themes": [
+
+        ]
+      }
+    },
+    {
+      "name": "Tabs+TypographyThemer",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "public_header_files": "components/Tabs/src/TypographyThemer/*.h",
+      "source_files": "components/Tabs/src/TypographyThemer/*.{h,m}",
+      "dependencies": {
+        "GTKitComponents/Tabs": [
+
+        ],
+        "GTKitComponents/schemes/Typography": [
+
+        ]
+      }
+    },
+    {
       "name": "TextFields",
       "platforms": {
         "ios": "8.0"
@@ -814,6 +1740,22 @@
           },
           "public_header_files": "components/schemes/Color/src/*.h",
           "source_files": "components/schemes/Color/src/*.{h,m}"
+        },
+        {
+          "name": "Shape",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/schemes/Shape/src/*.h",
+          "source_files": "components/schemes/Shape/src/*.{h,m}",
+          "dependencies": {
+            "GTKitComponents/private/ShapeLibrary": [
+
+            ],
+            "GTKitComponents/private/Shapes": [
+
+            ]
+          }
         },
         {
           "name": "Typography",
@@ -1080,6 +2022,54 @@
 
             ]
           }
+        },
+        {
+          "name": "ThumbTrack",
+          "platforms": {
+            "ios": "8.0"
+          },
+          "public_header_files": "components/private/ThumbTrack/src/*.h",
+          "source_files": [
+            "components/private/ThumbTrack/src/*.{h,m}",
+            "components/private/ThumbTrack/src/private/*.{h,m}"
+          ],
+          "dependencies": {
+            "GTKitComponents/Ink": [
+
+            ],
+            "GTKitComponents/ShadowElevations": [
+
+            ],
+            "GTKitComponents/ShadowLayer": [
+
+            ],
+            "GTKitComponents/Typography": [
+
+            ],
+            "GTFInternationalization": [
+
+            ],
+            "GTKitComponents/private/Math": [
+
+            ]
+          },
+          "testspecs": [
+            {
+              "name": "tests",
+              "test_type": "unit",
+              "testspecs": [
+                {
+                  "name": "unit",
+                  "test_type": "unit",
+                  "source_files": [
+                    "components/private/ThumbTrack/tests/unit/*.{h,m,swift}",
+                    "components/private/ThumbTrack/tests/unit/supplemental/*.{h,m,swift}"
+                  ],
+                  "resources": "components/private/ThumbTrack/tests/unit/resources/*"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "UIMetrics",

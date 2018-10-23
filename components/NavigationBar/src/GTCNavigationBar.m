@@ -18,10 +18,8 @@
 
 static const NSUInteger kTitleFontSize = 20;
 static const CGFloat kNavigationBarDefaultHeight = 56;
-static const CGFloat kNavigationBarPadDefaultHeight = 64;
 static const CGFloat kNavigationBarMinHeight = 24;
 static const UIEdgeInsets kTextInsets = {0, 16, 0, 16};
-static const UIEdgeInsets kTextPadInsets = {0, 16, 0, 16};
 
 // KVO contexts
 static char *const kKVOContextGTCNavigationBar = "kKVOContextGTCNavigationBar";
@@ -98,7 +96,7 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
 @implementation GTCNavigationBarSandbagView
 @end
 
-@interface GTCNavigationBar (PrivateAPIs)
+@interface GTCNavigationBar (PrivateAPIs) <GTCButtonBarDelegate>
 
 /// titleLabel is hidden if there is a titleView. When not hidden, displays self.title.
 - (UILabel *)titleLabel;
@@ -107,10 +105,7 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
 
 @end
 
-
-@implementation GTCNavigationBar
-
-{
+@implementation GTCNavigationBar {
     id _observedNavigationItemLock;
     UINavigationItem *_observedNavigationItem;
 
@@ -133,6 +128,7 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
 }
 
 - (void)commonGTCNavigationBarInit {
+    _uppercasesButtonTitles = YES;
     _observedNavigationItemLock = [[NSObject alloc] init];
     _titleFont = [GTCTypography titleFont];
 
@@ -143,8 +139,10 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
     _titleLabel.textAlignment = NSTextAlignmentCenter;
     _leadingButtonBar = [[GTCButtonBar alloc] init];
     _leadingButtonBar.layoutPosition = GTCButtonBarLayoutPositionLeading;
+    _leadingButtonBar.delegate = self;
     _trailingButtonBar = [[GTCButtonBar alloc] init];
     _trailingButtonBar.layoutPosition = GTCButtonBarLayoutPositionTrailing;
+    _trailingButtonBar.delegate = self;
 
     [self addSubview:_titleLabel];
     [self addSubview:_leadingButtonBar];
@@ -169,8 +167,19 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
     return self;
 }
 
+- (void)setUppercasesButtonTitles:(BOOL)uppercasesButtonTitles {
+    _uppercasesButtonTitles = uppercasesButtonTitles;
+
+    _leadingButtonBar.uppercasesButtonTitles = uppercasesButtonTitles;
+    _trailingButtonBar.uppercasesButtonTitles = uppercasesButtonTitles;
+}
+
 - (void)setTitleFont:(UIFont *)titleFont {
-    _titleFont = [UIFont fontWithDescriptor:titleFont.fontDescriptor size:kTitleFontSize];
+    if (self.allowAnyTitleFontSize) {
+        _titleFont = titleFont;
+    } else {
+        _titleFont = [UIFont fontWithDescriptor:titleFont.fontDescriptor size:kTitleFontSize];
+    }
     if (!_titleFont) {
         _titleFont = [GTCTypography titleFont];
     }
@@ -207,6 +216,12 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
     return [self.accessibilityElements indexOfObject:element];
 }
 
+#pragma mark - GTCButtonBarDelegate
+
+- (void)buttonBarDidInvalidateIntrinsicContentSize:(GTCButtonBar *)buttonBar {
+    [self setNeedsLayout];
+}
+
 #pragma mark UIView Overrides
 
 - (void)layoutSubviews {
@@ -215,7 +230,6 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
     // For pre iOS 11 devices, it's safe to assume that the Safe Area insets' left and right
     // values are zero. DO NOT use this to get the top or bottom Safe Area insets.
     UIEdgeInsets RTLFriendlySafeAreaInsets = UIEdgeInsetsZero;
-#if defined(__IPHONE_11_0) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_11_0)
     if (@available(iOS 11.0, *)) {
         RTLFriendlySafeAreaInsets =
         GTFInsetsMakeWithLayoutDirection(self.safeAreaInsets.top,
@@ -224,7 +238,6 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
                                          self.safeAreaInsets.right,
                                          self.gtf_effectiveUserInterfaceLayoutDirection);
     }
-#endif
 
     CGSize leadingButtonBarSize = [_leadingButtonBar sizeThatFits:self.bounds.size];
     CGRect leadingButtonBarFrame = CGRectMake(RTLFriendlySafeAreaInsets.left,
@@ -247,18 +260,16 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
     _leadingButtonBar.frame = leadingButtonBarFrame;
     _trailingButtonBar.frame = trailingButtonBarFrame;
 
-    UIEdgeInsets textInsets = [self usePadInsets] ? kTextPadInsets : kTextInsets;
+    UIEdgeInsets textInsets = kTextInsets;
 
     // textFrame is used to determine layout of both TitleLabel and TitleView
     CGRect textFrame = UIEdgeInsetsInsetRect(self.bounds, textInsets);
     textFrame.origin.x += _leadingButtonBar.frame.size.width;
     textFrame.size.width -= _leadingButtonBar.frame.size.width + _trailingButtonBar.frame.size.width;
-#if defined(__IPHONE_11_0) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_11_0)
     if (@available(iOS 11.0, *)) {
         textFrame.origin.x += self.safeAreaInsets.left;
         textFrame.size.width -= self.safeAreaInsets.left + self.safeAreaInsets.right;
     }
-#endif
 
     // Layout TitleLabel
     NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
@@ -279,10 +290,10 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
         titleFrame = GTFRectFlippedHorizontally(titleFrame, CGRectGetWidth(self.bounds));
     }
     UIControlContentVerticalAlignment titleVerticalAlignment = UIControlContentVerticalAlignmentTop;
-    CGRect alignedFrame = [self gtc_frameAlignedVertically:titleFrame
+    CGRect alignedFrame = [self GTC_frameAlignedVertically:titleFrame
                                               withinBounds:textFrame
                                                  alignment:titleVerticalAlignment];
-    alignedFrame = [self gtc_frameAlignedHorizontally:alignedFrame alignment:self.titleAlignment];
+    alignedFrame = [self GTC_frameAlignedHorizontally:alignedFrame alignment:self.titleAlignment];
     _titleLabel.frame = GTCRectAlignToScale(alignedFrame, self.window.screen.scale);
 
     // Layout TitleView
@@ -300,13 +311,11 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
             CGFloat availableWidth = UIEdgeInsetsInsetRect(self.bounds, textInsets).size.width;
             availableWidth -= MAX(_leadingButtonBar.frame.size.width,
                                   _trailingButtonBar.frame.size.width) * 2;
-#if defined(__IPHONE_11_0) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_11_0)
             if (@available(iOS 11.0, *)) {
                 availableWidth -= self.safeAreaInsets.left + self.safeAreaInsets.right;
             }
-#endif
             titleViewFrame.size.width = availableWidth;
-            titleViewFrame = [self gtc_frameAlignedHorizontally:titleViewFrame
+            titleViewFrame = [self GTC_frameAlignedHorizontally:titleViewFrame
                                                       alignment:GTCNavigationBarTitleAlignmentCenter];
             break;
         }
@@ -314,8 +323,7 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
     // No insets for the titleView, and a height that is the same as the button bars. Clients
     // can vertically center their titleView subviews to align them with buttons.
     titleViewFrame.origin.y = 0;
-    CGFloat maxHeight =
-    [self usePadInsets] ? kNavigationBarPadDefaultHeight : kNavigationBarDefaultHeight;
+    CGFloat maxHeight = kNavigationBarDefaultHeight;
     CGFloat minHeight = kNavigationBarMinHeight;
     titleViewFrame.size.height = MIN(MAX(self.bounds.size.height, minHeight), maxHeight);
     self.titleView.frame = titleViewFrame;
@@ -339,14 +347,13 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
 }
 
 - (CGSize)sizeThatFits:(CGSize)size {
-    CGFloat maxHeight =
-    [self usePadInsets] ? kNavigationBarPadDefaultHeight : kNavigationBarDefaultHeight;
+    CGFloat maxHeight = kNavigationBarDefaultHeight;
     CGFloat height = MIN(MAX(size.height, kNavigationBarMinHeight), maxHeight);
     return CGSizeMake(size.width, height);
 }
 
 - (CGSize)intrinsicContentSize {
-    CGFloat height = [self usePadInsets] ? kNavigationBarPadDefaultHeight : kNavigationBarDefaultHeight;
+    CGFloat height = kNavigationBarDefaultHeight;
     return CGSizeMake(UIViewNoIntrinsicMetric, height);
 }
 
@@ -360,17 +367,6 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
 }
 
 #pragma mark Private
-
-// Used to determine whether or not to apply insets relevant for iPad or use smaller iPhone size.
-// As the difference between iPad/iPhone is only in top & bottom insets, we should use vertical
-// size class to determine
-- (BOOL)usePadInsets {
-    const BOOL isPad = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad;
-    if (isPad && self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClassRegular) {
-        return YES;
-    }
-    return NO;
-}
 
 + (NSTextAlignment)textAlignmentFromTitleAlignment:(GTCNavigationBarTitleAlignment)titleAlignment {
     switch (titleAlignment) {
@@ -444,7 +440,7 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
 
 #pragma mark Layout
 
-- (CGRect)gtc_frameAlignedVertically:(CGRect)frame
+- (CGRect)GTC_frameAlignedVertically:(CGRect)frame
                         withinBounds:(CGRect)bounds
                            alignment:(UIControlContentVerticalAlignment)alignment {
     switch (alignment) {
@@ -461,8 +457,7 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
         case UIControlContentVerticalAlignmentTop: {
             // The title frame is vertically centered with the back button but will stick to the top of
             // the header regardless of the header's height.
-            CGFloat maxHeight =
-            [self usePadInsets] ? kNavigationBarPadDefaultHeight : kNavigationBarDefaultHeight;
+            CGFloat maxHeight = kNavigationBarDefaultHeight;
             CGFloat height = MIN(CGRectGetHeight(bounds), maxHeight);
             CGFloat navigationBarCenteredY = GTCFloor((height - CGRectGetHeight(frame)) / 2);
             navigationBarCenteredY = MAX(0, navigationBarCenteredY);
@@ -476,7 +471,7 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
     }
 }
 
-- (CGRect)gtc_frameAlignedHorizontally:(CGRect)frame
+- (CGRect)GTC_frameAlignedHorizontally:(CGRect)frame
                              alignment:(GTCNavigationBarTitleAlignment)alignment {
     switch (alignment) {
             // Center align title
@@ -486,7 +481,7 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
 
             GTCButtonBar *leftButtonBar = self.leadingButtonBar;
             GTCButtonBar *rightButtonBar = self.trailingButtonBar;
-            UIEdgeInsets textInsets = [self usePadInsets] ? kTextPadInsets : kTextInsets;
+            UIEdgeInsets textInsets = kTextInsets;
             CGFloat titleLeftInset = textInsets.left;
             CGFloat titleRightInset = textInsets.right;
 
@@ -529,7 +524,7 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
     }
 }
 
-- (NSArray<UIBarButtonItem *> *)gtc_buttonItemsForLeadingBar {
+- (NSArray<UIBarButtonItem *> *)GTC_buttonItemsForLeadingBar {
     if (!self.leadingItemsSupplementBackButton && self.leadingBarButtonItems.count > 0) {
         return self.leadingBarButtonItems;
     }
@@ -548,8 +543,8 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
     [super tintColorDidChange];
 
     // Tint color should only modify interactive elements
-    _leadingButtonBar.tintColor = self.tintColor;
-    _trailingButtonBar.tintColor = self.tintColor;
+    _leadingButtonBar.tintColor = self.leadingBarItemsTintColor ?: self.tintColor;
+    _trailingButtonBar.tintColor = self.trailingBarItemsTintColor ?: self.tintColor;
 }
 
 #pragma mark Public
@@ -639,9 +634,19 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
     return [_leadingButtonBar buttonsTitleColorForState:state];
 }
 
+- (void)setLeadingBarItemsTintColor:(UIColor *)leadingBarItemsTintColor {
+    _leadingBarItemsTintColor = leadingBarItemsTintColor;
+    self.leadingButtonBar.tintColor = leadingBarItemsTintColor;
+}
+
+- (void)setTrailingBarItemsTintColor:(UIColor *)trailingBarItemsTintColor {
+    _trailingBarItemsTintColor = trailingBarItemsTintColor;
+    self.trailingButtonBar.tintColor = trailingBarItemsTintColor;
+}
+
 - (void)setLeadingBarButtonItems:(NSArray<UIBarButtonItem *> *)leadingBarButtonItems {
     _leadingBarButtonItems = [leadingBarButtonItems copy];
-    _leadingButtonBar.items = [self gtc_buttonItemsForLeadingBar];
+    _leadingButtonBar.items = [self GTC_buttonItemsForLeadingBar];
     [self setNeedsLayout];
 }
 
@@ -680,7 +685,7 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
         return;
     }
     _backItem = backItem;
-    _leadingButtonBar.items = [self gtc_buttonItemsForLeadingBar];
+    _leadingButtonBar.items = [self GTC_buttonItemsForLeadingBar];
     [self setNeedsLayout];
 }
 
@@ -689,7 +694,7 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
         return;
     }
     _hidesBackButton = hidesBackButton;
-    _leadingButtonBar.items = [self gtc_buttonItemsForLeadingBar];
+    _leadingButtonBar.items = [self GTC_buttonItemsForLeadingBar];
     [self setNeedsLayout];
 }
 
@@ -698,7 +703,7 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
         return;
     }
     _leadingItemsSupplementBackButton = leadingItemsSupplementBackButton;
-    _leadingButtonBar.items = [self gtc_buttonItemsForLeadingBar];
+    _leadingButtonBar.items = [self GTC_buttonItemsForLeadingBar];
     [self setNeedsLayout];
 }
 
@@ -797,6 +802,5 @@ static NSArray<NSString *> *GTCNavigationBarNavigationItemKVOPaths(void) {
     return [GTCNavigationBar textAlignmentFromTitleAlignment:self.titleAlignment];
 }
 
-
-
 @end
+

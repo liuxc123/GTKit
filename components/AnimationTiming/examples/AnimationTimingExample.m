@@ -40,7 +40,7 @@ const NSTimeInterval kAnimationTimeDelay = 0.5f;
     [self applyAnimationToView:_linearView withTimingFunction:linearTimingCurve];
 
     CAMediaTimingFunction *materialStandardCurve =
-    [CAMediaTimingFunction gtc_functionWithType:GTCAnimationTimingFunctionStandard];
+    [CAMediaTimingFunction gtc_functionWithType:GTCAnimationTimingFunctionFadeIn];
     [self applyAnimationToView:_materialStandardView withTimingFunction:materialStandardCurve];
 
     CAMediaTimingFunction *materialDecelerationCurve =

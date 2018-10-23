@@ -5,6 +5,7 @@
 //  Created by liuxc on 2018/8/17.
 //
 
+#import "GTCCornerTreatment+CornerTypeInitalizer.h"
 #import "GTCCurvedCornerTreatment.h"
 #import "GTCCurvedRectShapeGenerator.h"
 #import "GTCPillShapeGenerator.h"

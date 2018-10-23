@@ -17,4 +17,5 @@
     [GTCNavigationBarTypographyThemer applyTypographyScheme:typographyScheme
                                             toNavigationBar:appBarViewController.navigationBar];
 }
+
 @end

@@ -5,6 +5,7 @@
 //  Created by liuxc on 2018/8/23.
 //
 #import "GTColorScheme.h"
+#import "GTShapeScheme.h"
 #import "GTTypographyScheme.h"
 
 #import <Foundation/Foundation.h>
@@ -49,6 +50,13 @@
  By default, this is initialized with the latest color scheme defaults.
  */
 @property(nonnull, readwrite, nonatomic) id<GTCColorScheming> colorScheme;
+
+/**
+ A mutable representation of a shape scheme.
+
+ By default, this is initialized with the latest shape scheme defaults.
+ */
+@property(nonnull, readwrite, nonatomic) id<GTCShapeScheming> shapeScheme;
 
 /**
  A mutable representation of a typography scheme.

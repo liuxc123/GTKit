@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class LinearLayoutExample2: UIViewController {
 
     override func viewDidLoad() {
@@ -22,4 +23,19 @@ class LinearLayoutExample2: UIViewController {
     
 
    
+}
+
+
+extension LinearLayoutExample2 {
+    @objc class func catalogBreadcrumbs() -> [String] {
+        return [ "Layout", "LinearLayout", "LinearLayout-Combine with UIScrollView"]
+    }
+
+    @objc class func catalogIsPrimaryDemo() -> Bool {
+        return false
+    }
+
+    @objc class func catalogIsPresentable() -> Bool {
+        return false
+    }
 }

@@ -154,7 +154,7 @@ extension LinearLayoutExample1 {
 
 extension LinearLayoutExample1 {
     @objc class func catalogBreadcrumbs() -> [String] {
-        return [ "Layout", "LinearLayout", "LinearLayoutExample1"]
+        return [ "Layout", "LinearLayout", "LinearLayout-Vert&Horz"]
     }
 
     @objc class func catalogIsPrimaryDemo() -> Bool {

@@ -13,6 +13,7 @@
     self = [super init];
     if (self) {
         _colorScheme = [[GTCSemanticColorScheme alloc] init];
+        _shapeScheme = [[GTCShapeScheme alloc] init];
         _typographyScheme = [[GTCTypographyScheme alloc] init];
         _minimumHeight = 36;
         _cornerRadius = (CGFloat)4;

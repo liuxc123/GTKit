@@ -691,7 +691,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9C91C13A3818C41CB36388A9 /* Pods-Catalog.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconInverse;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = E4RZEW9957;
 				INFOPLIST_FILE = Catalog/Info.plist;
@@ -714,7 +714,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4BFCBC81CC226CC235E5911C /* Pods-Catalog.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconInverse;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = E4RZEW9957;
 				INFOPLIST_FILE = Catalog/Info.plist;

@@ -5,8 +5,5 @@
 //  Created by liuxc on 2018/8/23.
 //
 
-#ifndef GTOverlayWindow_h
-#define GTOverlayWindow_h
+#import "GTCOverlayWindow.h"
 
-
-#endif /* GTOverlayWindow_h */
