@@ -44,6 +44,7 @@ PODS:
     - GTKitComponents/Dialogs (= 0.0.1)
     - "GTKitComponents/Dialogs+ColorThemer (= 0.0.1)"
     - "GTKitComponents/Dialogs+TypographyThemer (= 0.0.1)"
+    - GTKitComponents/EmptyView (= 0.0.1)
     - GTKitComponents/FeatureHighlight (= 0.0.1)
     - "GTKitComponents/FeatureHighlight+ColorThemer (= 0.0.1)"
     - "GTKitComponents/FeatureHighlight+FeatureHighlightAccessibilityMutator (= 0.0.1)"
@@ -253,6 +254,7 @@ PODS:
   - "GTKitComponents/Dialogs+TypographyThemer (0.0.1)":
     - GTKitComponents/Dialogs
     - GTKitComponents/schemes/Typography
+  - GTKitComponents/EmptyView (0.0.1)
   - GTKitComponents/FeatureHighlight (0.0.1):
     - GTFTextAccessibility
     - GTKitComponents/private/Math
@@ -486,7 +488,7 @@ SPEC CHECKSUMS:
   GTComponentsUnitTests: c00df0aa153664eb8ae081f04a3493453d9c19a7
   GTFInternationalization: 9aa259ddf1deb8590d605128c92f6ce8e87baa64
   GTFTextAccessibility: d5a28a7a603d1722727e33f27dcc27b5e7b0ce43
-  GTKitComponents: 8864f1a3129a5d56444ecc68329fb8bbd7ee335d
+  GTKitComponents: 4947f27a5d6f8d9307c1898cab16f7305423619a
   GTMotionAnimator: abf4c01aed3f74280d938518a1621de1044c072b
   GTMotionInterchange: feec7166c3389a727f52e7bdda24f09298fc411f
   GTMotionTransitioning: 7eba7fc50249ff8e0f0d923b1cb9c9d2d7324e46

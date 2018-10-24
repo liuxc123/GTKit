@@ -919,6 +919,16 @@
       }
     },
     {
+      "name": "EmptyView",
+      "platforms": {
+        "ios": "8.0"
+      },
+      "source_files": [
+        "components/EmptyView/src/*.{h,m}",
+        "components/EmptyView/src/private/*.{h,m}"
+      ]
+    },
+    {
       "name": "FeatureHighlight",
       "platforms": {
         "ios": "8.0"

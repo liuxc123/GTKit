@@ -11,6 +11,7 @@
 #endif
 
 #import "GTActivityIndicator.h"
+#import "GTActivityIndicatorAnimationType.h"
 #import "GTCActivityIndicator.h"
 #import "CAMediaTimingFunction+GTCAnimationTiming.h"
 #import "GTAnimationTiming.h"
@@ -120,6 +121,15 @@
 #import "GTDialogConfig.h"
 #import "GTDialogs.h"
 #import "UIViewController+GTDialogs.h"
+#import "GTCEmptyView.h"
+#import "GTCLoadingView.h"
+#import "GTEmptyView.h"
+#import "UIView+GTCEmptyView.h"
+#import "GTCEmptyBaseView.h"
+#import "GTCLoadingAnimationView.h"
+#import "GTCLoadingBaseView.h"
+#import "UIImage+GTCGIF.h"
+#import "UIView+GTCExtensions.h"
 #import "GTCFeatureHighlightView.h"
 #import "GTCFeatureHighlightViewController.h"
 #import "GTFeatureHighlight.h"

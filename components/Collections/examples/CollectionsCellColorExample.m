@@ -41,6 +41,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
     // Customize collection view settings.
     self.styler.cellStyle = GTCCollectionViewCellStyleCard;
+
 }
 
 #pragma mark - <UICollectionViewDataSource>
